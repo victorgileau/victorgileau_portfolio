@@ -7,13 +7,37 @@
     --red: rgb(255, 51, 51);
 }
 
+@font-face {
+    font-family: 'Lostar';
+    src: url(../medias/fonts/lostar/Lostar.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../medias/fonts/Bebas_Neue/BebasNeue-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'TitilliumLight';
+    src: url(../medias/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format(truetype);
+}
+
+
+
 body {
     height: 120vh;
+    overflow-x: hidden;
 }
 
 /*---Tout----*/
 
+h1, .h1 {
+    font-family: 'BebasNeue';
+    letter-spacing: 0.1em;
+}
+
 p.text {
+    font-family: 'TitilliumLight';
     font-size: 20px;
 }
 
@@ -29,6 +53,10 @@ p.text {
     flex-wrap: wrap;
     flex-shrink: 0;
     background-image: linear-gradient(to right, var(--TurkeyRed), var(--Bittersweet));
+
+    /*--Text--*/
+    font-family: 'BebasNeue';
+    letter-spacing: 0.1em;
 }
 
 .navigationAccueil .logoNav, .navigationAccueil .logoNavMobile  {
@@ -77,6 +105,7 @@ p.text {
 
 .navigationAccueil .lien .lienPage:hover::after, .navigationAccueil .lien .lienPage:hover::before {
     transform: scaleX(1);
+    
 }
 
 /*----Code de w3School----*/
@@ -171,6 +200,13 @@ p.text {
     stroke-width: 0;
 }
 
+/*-- Section Hero Page Projet 1 --*/
+
+.hero.pageProjet1 {
+    background-image: url(../medias/img/projets/projet_web/escadron_des_morts_cap1.png), linear-gradient(var(--Bittersweet), var(--Maize));
+    background-blend-mode: luminosity;
+}
+
 /*Changment de couleur svg*/
 
 .iconPage svg .cls-1.lineSVG {
@@ -233,6 +269,10 @@ p.text {
     width: 75%;
 }
 
+.iconPage:active svg {
+    width: 60%;
+}
+
 .photoVG {
     width: 25vw;
     aspect-ratio: 1/1;
@@ -251,6 +291,10 @@ p.text {
     border: 2vw solid var(--TurkeyRed);
     box-shadow: 0 0 3vw var(--TurkeyRed);
     background-blend-mode: normal;
+}
+
+.photoVG:active {
+    border-width: 1vw;
 }
 
 .sprite {
@@ -288,7 +332,14 @@ section.info {
 
 section.info .card img {
     min-width: 25vw;
-    aspect-ratio: 1/1;
+    min-height: 25vw;
+    /*aspect-ratio: 1/1;*/
+}
+
+section.infoProjet .card img {
+    align-self: center;
+    max-width: 45vw;
+    height: auto;
 }
 
 /*---Media query---*/
@@ -331,6 +382,7 @@ section.info .card img {
     }
 
     .photoVG {
+        margin-top: 4em;
         width: 50vw;
     }
 
@@ -344,6 +396,15 @@ section.info .card img {
 
     p.text {
         font-size: 18px;
+    }
+
+    /*--Page projet--*/
+
+    section.infoProjet .card img {
+        align-self: center;
+        min-width: 120vw;
+        max-width: 120vw;
+        height: auto;
     }
 }
 
