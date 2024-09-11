@@ -41,6 +41,28 @@ p.text {
     font-size: 20px;
 }
 
+/*--Fixed Btn to top--*/
+
+main button.btnTop {
+    position: fixed;
+    bottom: 2vw;
+    right: 5vw;
+    z-index: 10;
+    background-color: var(--Maize);
+    padding: 2vw;
+    border: 2px solid var(--TurkeyRed);
+    border-radius: 100%;
+
+    color: var(--TurkeyRed);
+    font-family: 'TitilliumLight';
+    text-decoration: none;
+}
+
+main button.btnTop:hover {
+    background-color: var(--OrangeWeb);
+}
+
+
 /*-------Navigation--------*/
 
 .navigationAccueil {
