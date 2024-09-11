@@ -332,8 +332,8 @@ section.info {
 }
 
 section.info .card img {
-    min-width: 25vw;
-    min-height: 25vw;
+    min-width: 15vw;
+    min-height: 15vw;
     max-width: 50vw;
     max-height: 50vw;
     margin: auto;
@@ -341,16 +341,16 @@ section.info .card img {
 }
 
 section.info .card .iconPage {
-    min-width: 25vw;
-    min-height: 25vw;
+    min-width: 15vw;
+    min-height: 15vw;
     max-width: 50vw;
     max-height: 50vw;
     margin: auto;
 }
 
 section.info .card .iconPage .illustrationIcon {
-    min-width: 15vw;
-    min-height: 15vw;
+    min-width: 12vw;
+    min-height: 12vw;
     max-width: 40vw;
     max-height: 40vw;
 }
@@ -361,6 +361,12 @@ section.infoProjet .card img {
 }
 
 /*---Media query---*/
+
+@media screen and (min-width: 2000px) {
+    section.info .card .sprite {
+        width: 15vw;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .navigationAccueil .lien a.lienPage, .navigationAccueil .lienPage.logoNav, .navigationAccueil .lienPage.logoNavMobile {
