@@ -261,15 +261,15 @@ p.text {
 
 /*Fin changment de couleur svg*/
 
-.iconPage:hover {
+.hero .iconPage:hover {
     background-image: radial-gradient(var(--Bittersweet) 50%, var(--OrangeWeb));
 }
 
-.iconPage:hover svg {
+.hero .iconPage:hover svg {
     width: 75%;
 }
 
-.iconPage:active svg {
+.hero .iconPage:active svg {
     width: 60%;
 }
 
@@ -298,12 +298,13 @@ p.text {
 }
 
 .sprite {
+    margin: auto;
     width: 20vw;
     aspect-ratio: 1/1;
     border-radius: 50%;
   
     /* Styles pour l'image d'arrière plan */
-    background-image: url(../medias/img/spritesheet-v2.png);
+    background-image: url(../medias/img/spritesheet-v2-256px.jpg);
     
   
     /* Styles pour l'animation */
@@ -333,11 +334,28 @@ section.info {
 section.info .card img {
     min-width: 25vw;
     min-height: 25vw;
+    max-width: 50vw;
+    max-height: 50vw;
+    margin: auto;
     /*aspect-ratio: 1/1;*/
 }
 
+section.info .card .iconPage {
+    min-width: 25vw;
+    min-height: 25vw;
+    max-width: 50vw;
+    max-height: 50vw;
+    margin: auto;
+}
+
+section.info .card .iconPage .illustrationIcon {
+    min-width: 15vw;
+    min-height: 15vw;
+    max-width: 40vw;
+    max-height: 40vw;
+}
+
 section.infoProjet .card img {
-    align-self: center;
     max-width: 45vw;
     height: auto;
 }
@@ -349,8 +367,21 @@ section.infoProjet .card img {
         font-size: 1.1em;
     }
     
-    .iconPage {
+    .hero .iconPage {
         width: 18vw;
+    }
+
+    section.info img {
+        width: 20vw;
+    }
+
+    section.info .sprite {
+        min-width: 25vw;
+        max-width: 40vw;
+    }
+
+    section.info .iconPage {
+        width: 25vw;
     }
 }
 
@@ -386,7 +417,7 @@ section.infoProjet .card img {
         width: 50vw;
     }
 
-    .iconPage {
+    .hero .iconPage {
         width: 25vw;
     }
 
@@ -398,13 +429,37 @@ section.infoProjet .card img {
         font-size: 18px;
     }
 
+    /*--Section info page accueil--*/
+
+    section.info img {
+        width: 45vw;
+    }
+
+    section.info .iconPage {
+        width: 45vw;
+    }
+
     /*--Page projet--*/
 
     section.infoProjet .card img {
-        align-self: center;
-        min-width: 120vw;
-        max-width: 120vw;
+        align-self: flex-end;
+        min-width: 100%;
+        max-width: 100vw;
         height: auto;
+    }
+
+    section.info .card .sprite {
+        width: 45vw;
+    }
+
+    section.info .iconPage {
+        min-width: 45vw;
+        max-width: 50vw;
+    }
+
+    section.info .iconPage .illustrationIcon {
+        min-width: 45vw;
+        max-width: 50vw;
     }
 }
 
