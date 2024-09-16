@@ -225,7 +225,28 @@ main button.btnTop:hover {
 /*-- Section Hero Page Projet 1 --*/
 
 .hero.pageProjet1 {
-    background-image: url(../medias/img/projets/projet_web/escadron_des_morts_cap1.png), linear-gradient(var(--Bittersweet), var(--Maize));
+    background-image: url(../medias/svg/web-v1.svg), linear-gradient(var(--Bittersweet), var(--Maize));
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page A propos --*/
+
+.hero.pageAPropos {
+    background-image: url(../medias/img/photo/me.jpg), linear-gradient(var(--Bittersweet), var(--Maize));
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page 3D --*/
+
+.hero.pageTroisD {
+    background-image: url(../medias/img/icon.png), linear-gradient(var(--Bittersweet), var(--Maize));
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page Illustration --*/
+
+.hero.pageIllustration {
+    background-image: url(../medias/img/dessin_papier/dessin-1.JPG), linear-gradient(var(--Bittersweet), var(--Maize));
     background-blend-mode: luminosity;
 }
 
