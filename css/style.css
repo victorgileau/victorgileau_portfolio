@@ -127,7 +127,6 @@ main button.btnTop:hover {
 
 .navigationAccueil .lien .lienPage:hover::after, .navigationAccueil .lien .lienPage:hover::before {
     transform: scaleX(1);
-    
 }
 
 /*----Code de w3School----*/
@@ -200,6 +199,29 @@ main button.btnTop:hover {
     border-radius: 25px;
     backdrop-filter: blur(5px);
     color: var(--lightYellow);
+}
+
+.infoHero .contact {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.infoHero .contact button {
+    margin-left: 0.5em;
+    border-radius: 25px;
+    background-color: var(--Maize);
+    border: none;
+}
+
+.infoHero .contact button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--Maize);
+    color: var(--Maize);
+}
+
+.infoHero .contact button:active {
+    background-image: linear-gradient(to top, var(--OrangeWeb), rgba(0,0,0,0));
 }
 
 .iconPage {
@@ -318,7 +340,7 @@ main button.btnTop:hover {
 
 .photoVG {
     width: 25vw;
-    aspect-ratio: 1/1;
+    height: 25vw;
     background-image: url(../medias/img/photo/me.jpg), url(../medias/img/icon.png);
     background-repeat: no-repeat, repeat-x;
     background-size: cover, 150%;
@@ -464,6 +486,7 @@ section.infoProjet .card img {
     .photoVG {
         margin-top: 4em;
         width: 50vw;
+        height: 50vw;
     }
 
     .hero .iconPage {
