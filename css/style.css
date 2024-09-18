@@ -41,6 +41,10 @@ p.text {
     font-size: 20px;
 }
 
+a, .a {
+    text-decoration: none;
+}
+
 /*--Fixed Btn to top--*/
 
 main button.btnTop {
@@ -212,11 +216,20 @@ main button.btnTop:hover {
     border-radius: 25px;
     background-color: var(--Maize);
     border: none;
+    color: var(--TurkeyRed);
+}
+
+.infoHero .contact button a {
+    color: var(--TurkeyRed);
 }
 
 .infoHero .contact button:hover {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid var(--Maize);
+    color: var(--Maize);
+}
+
+.infoHero .contact button:hover a {
     color: var(--Maize);
 }
 
@@ -246,28 +259,28 @@ main button.btnTop:hover {
 
 /*-- Section Hero Page Projet 1 --*/
 
-.hero.pageProjet1 {
+.hero.page.Projet1 {
     background-image: url(../medias/svg/web-v1.svg), linear-gradient(var(--Bittersweet), var(--Maize));
     background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page A propos --*/
 
-.hero.pageAPropos {
+.hero.page.APropos {
     background-image: url(../medias/img/photo/me.jpg), linear-gradient(var(--Bittersweet), var(--Maize));
     background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page 3D --*/
 
-.hero.pageTroisD {
+.hero.page.TroisD {
     background-image: url(../medias/img/icon.png), linear-gradient(var(--Bittersweet), var(--Maize));
     background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page Illustration --*/
 
-.hero.pageIllustration {
+.hero.page.Illustration {
     background-image: url(../medias/img/dessin_papier/dessin-1.JPG), linear-gradient(var(--Bittersweet), var(--Maize));
     background-blend-mode: luminosity;
 }
