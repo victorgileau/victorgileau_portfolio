@@ -1,0 +1,141 @@
+/*-------Section Hero--------*/
+@use './variables';
+
+.hero {
+    min-height: 100vh;
+    background-image: url(../medias/img/dessin_papier/dessin-1.JPG), radial-gradient(variables.$Bittersweet, variables.$Maize);
+    background-size: cover, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 20%, left;
+    background-blend-mode: multiply;
+}
+
+.hero .container {
+    height: 100%;
+    width: 100%;
+}
+
+.infoHero {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    color: variables.$lightYellow;
+}
+
+.infoHero .contact {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.infoHero .contact button {
+    margin-left: 0.5em;
+    border-radius: 25px;
+    background-color: variables.$Maize;
+    border: none;
+    color: variables.$TurkeyRed;
+}
+
+.infoHero .contact button a {
+    color: variables.$TurkeyRed;
+}
+
+.infoHero .contact button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid variables.$Maize;
+    color: variables.$Maize;
+}
+
+.infoHero .contact button:hover a {
+    color: variables.$Maize;
+}
+
+.infoHero .contact button:active {
+    background-image: linear-gradient(to top, variables.$OrangeWeb, rgba(0,0,0,0));
+}
+
+.iconPage {
+    width: 10vw;
+    aspect-ratio: 1/1;
+    background-image: radial-gradient(variables.$Bittersweet 10%, variables.$OrangeWeb);
+    background-size: 100%;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.iconPage svg {
+    width: 50%;
+    aspect-ratio: 1/1;
+    transition: width 0.25s ease-out;
+}
+
+.iconPage svg .lineSVG {
+    stroke: variables.$TurkeyRed;
+    stroke-width: 0;
+}
+
+/*-- Section Hero Page Projet 1 --*/
+
+.hero.page.Projet1 {
+    background-image: url(../medias/svg/web-v1.svg), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page A propos --*/
+
+.hero.page.APropos {
+    background-image: url(../medias/img/photo/me.jpg), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page 3D --*/
+
+.hero.page.TroisD {
+    background-image: url(../medias/img/icon.png), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page Illustration --*/
+
+.hero.page.Illustration {
+    background-image: url(../medias/img/dessin_papier/dessin-1.JPG), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-blend-mode: luminosity;
+}
+
+
+
+.hero .iconPage:hover {
+    background-image: radial-gradient(variables.$Bittersweet 50%, variables.$OrangeWeb);
+}
+
+.hero .iconPage:hover svg {
+    width: 75%;
+}
+
+.hero .iconPage:active svg {
+    width: 60%;
+}
+
+.photoVG {
+    width: 25vw;
+    height: 25vw;
+    background-image: url(../medias/img/photo/me.jpg), url(../medias/img/icon.png);
+    background-repeat: no-repeat, repeat-x;
+    background-size: cover, 150%;
+    background-position: 100% 30%, center;
+    background-blend-mode: luminosity;
+    border-radius: 50%;
+    border: 1vw solid variables.$Bittersweet;
+    box-shadow: 0 0 1vw variables.$Bittersweet;
+    transition: border 0.1s ease-in, box-shadow 0.2s ease-in-out, background-blend-mode 0.2s ease-in-out;
+}
+
+.photoVG:hover {
+    border: 2vw solid variables.$TurkeyRed;
+    box-shadow: 0 0 3vw variables.$TurkeyRed;
+    background-blend-mode: normal;
+}
+
+.photoVG:active {
+    border-width: 1vw;
+}

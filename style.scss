@@ -1,0 +1,221 @@
+@use './partials/variables';
+@use './partials/icon';
+@use './partials/nav';
+@use './partials/hero';
+@use './partials/galeriIllustration';
+@use './partials/footer';
+@use './partials/mixins/spriteAnimation';
+
+@font-face {
+    font-family: 'Lostar';
+    src: url(../medias/fonts/lostar/Lostar.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../medias/fonts/Bebas_Neue/BebasNeue-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'TitilliumLight';
+    src: url(../medias/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format(truetype);
+}
+
+
+
+body {
+    height: 120vh;
+    overflow-x: hidden;
+}
+
+/*---Tout----*/
+
+h1, .h1 {
+    font-family: 'BebasNeue';
+    letter-spacing: 0.1em;
+}
+
+p.text {
+    font-family: 'TitilliumLight';
+    font-size: 20px;
+}
+
+a, .a {
+    text-decoration: none;
+}
+
+/*--Fixed Btn to top--*/
+
+main button.btnTop {
+    position: fixed;
+    bottom: 2vw;
+    right: 5vw;
+    z-index: 10;
+    background-color: variables.$Maize;
+    padding: 2vw;
+    border: 2px solid variables.$TurkeyRed;
+    border-radius: 100%;
+
+    color: variables.$TurkeyRed;
+    font-family: 'TitilliumLight';
+    text-decoration: none;
+}
+
+main button.btnTop:hover {
+    background-color: variables.$OrangeWeb;
+}
+
+.sprite {
+    @include spriteAnimation.spriteAnimation;
+}
+
+/*----Info de base----*/
+
+section.info {
+    background-image: linear-gradient(to top, variables.$OrangeWeb, variables.$Maize);
+    min-height: 50vh;
+}
+
+section.info .card img {
+    min-width: 15vw;
+    min-height: 15vw;
+    max-width: 50vw;
+    max-height: 50vw;
+    margin: auto;
+    /*aspect-ratio: 1/1;*/
+}
+
+section.info .card .iconPage {
+    min-width: 15vw;
+    min-height: 15vw;
+    max-width: 50vw;
+    max-height: 50vw;
+    margin: auto;
+}
+
+section.info .card .iconPage .illustrationIcon {
+    min-width: 12vw;
+    min-height: 12vw;
+    max-width: 40vw;
+    max-height: 40vw;
+}
+
+section.infoProjet .card img {
+    max-width: 45vw;
+    height: auto;
+}
+
+/*---Media query---*/
+
+@media screen and (min-width: 2000px) {
+    section.info .card .sprite {
+        width: 15vw;
+    }
+
+    .hero.page {
+        background-size: 80%, 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navigationAccueil .lien a.lienPage, .navigationAccueil .lienPage.logoNav, .navigationAccueil .lienPage.logoNavMobile {
+        font-size: 1.1em;
+    }
+    
+    .hero .iconPage {
+        width: 18vw;
+    }
+
+    section.info img {
+        width: 20vw;
+    }
+
+    section.info .sprite {
+        min-width: 25vw;
+        max-width: 40vw;
+    }
+
+    section.info .iconPage {
+        width: 25vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigationAccueil {
+        height: 10vh;
+        padding: 0 5vw;
+    }
+
+    .logoNavMobile {
+        display: inline-block;
+        font-size: 0.8vmin;
+    }
+
+    .logoNav {
+        display: none;
+    }
+
+    .navigationAccueil .lien {
+        display: none;
+    }
+
+    .dropbtn {
+        display: inline-block;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .photoVG {
+        margin-top: 4em;
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .hero .iconPage {
+        width: 25vw;
+    }
+
+    h1, .h1 {
+        font-size: 3em;
+    }
+
+    p.text {
+        font-size: 18px;
+    }
+
+    /*--Section info page accueil--*/
+
+    section.info img {
+        width: 45vw;
+    }
+
+    section.info .iconPage {
+        width: 45vw;
+    }
+
+    /*--Page projet--*/
+
+    section.infoProjet .card img {
+        align-self: flex-end;
+        min-width: 100%;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    section.info .card .sprite {
+        width: 45vw;
+    }
+
+    section.info .iconPage {
+        min-width: 45vw;
+        max-width: 50vw;
+    }
+
+    section.info .iconPage .illustrationIcon {
+        min-width: 45vw;
+        max-width: 50vw;
+    }
+}
+

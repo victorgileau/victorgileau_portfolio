@@ -1,0 +1,54 @@
+/*Changment de couleur svg*/
+@use './variables';
+
+.iconPage svg .cls-1.lineSVG {
+    fill: variables.$OrangeWeb;
+}
+.iconPage svg .cls-2.lineSVG {
+    fill: variables.$Maize;
+}
+.iconPage svg .cls-3.lineSVG {
+    fill: variables.$lightYellow;
+}
+
+.iconPage svg .lineSVGTwo {
+    stroke: variables.$TurkeyRed;
+    stroke-width: 0;
+}
+
+.iconPage svg .cls-1.lineSVGTwo {
+    fill: variables.$OrangeWeb;
+}
+.iconPage svg .cls-2.lineSVGTwo {
+    fill: variables.$TurkeyRed;
+}
+.iconPage svg .cls-3.lineSVGTwo {
+    fill: variables.$Bittersweet;
+}
+
+.illustrationIcon .cls-1, .cls-2 {
+    fill: variables.$TurkeyRed;
+}
+
+.illustrationIcon .cls-3 {
+    fill: variables.$Maize;
+}
+
+.illustrationIcon .cls-4 {
+    fill: url(#Dégradé_sans_nom_15);
+}
+
+.illustrationIcon .cls-5, .illustrationIcon .cls-6, .illustrationIcon .cls-2 {
+    stroke: variables.$TurkeyRed;
+    stroke-miterlimit: 10;
+}
+
+.illustrationIcon .cls-5, .illustrationIcon .cls-7 {
+    fill: variables.$red;
+}
+
+.illustrationIcon .cls-6 {
+    fill: variables.$OrangeWeb;
+}
+
+/*Fin changment de couleur svg*/

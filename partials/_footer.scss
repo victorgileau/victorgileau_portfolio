@@ -1,0 +1,22 @@
+/*--Footer---*/
+@use './variables';
+
+footer {
+    background-image: linear-gradient(to right, variables.$Bittersweet, variables.$TurkeyRed);
+}
+
+footer .container {
+    padding: 1em 0;
+}
+
+footer .container .row div {
+    margin: 1em 0;
+    text-align: center;
+}
+
+footer .container .row a {
+    font-family: 'TitilliumLight';
+    font-size: 1.1em;
+    color: variables.$lightYellow;
+    text-decoration: none;
+}

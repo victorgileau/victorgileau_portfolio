@@ -1,0 +1,35 @@
+@use './variables';
+
+.titre--illustration {
+    font-size: 16vmin;
+    color: variables.$lightYellow;
+    text-align: center;
+    text-shadow: 5px 5px variables.$TurkeyRed;
+}
+
+.infoIllustration {
+    padding: 5vh 25vmin;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(400px, auto));
+    gap: 2vmin;
+}
+
+.infoIllustration .illustration {
+    position: relative;
+    background-image: linear-gradient(variables.$TurkeyRed, variables.$Bittersweet);
+    padding: 0.5em;
+    border-radius: 5px;
+    display: flex;
+    &__img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .infoIllustration {
+        padding: 5vh 2vw;
+    }
+}

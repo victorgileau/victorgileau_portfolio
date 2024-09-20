@@ -1,0 +1,26 @@
+@mixin spriteAnimation {
+    margin: auto;
+    width: 20vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  
+    /* Styles pour l'image d'arrière plan */
+    background-image: url(../medias/img/spritesheet-v2-256px.jpg);
+    
+  
+    /* Styles pour l'animation */
+    animation-play-state: play;
+    background-size: 4800% 100%;
+    
+    
+    animation-name: marche;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(48);
+}
+  
+@keyframes marche {
+    from { background-position: 0 0; }
+    to { background-position: 4800% 0; } 
+    /* Note: 19 images x 700px = 13300px */
+}
