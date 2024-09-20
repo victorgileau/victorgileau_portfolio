@@ -183,7 +183,7 @@ $red: rgb(255, 51, 51);
 /*-------Section Hero--------*/
 .hero {
   min-height: 100vh;
-  background-image: url(../medias/img/dessin_papier/dessin-1.JPG), radial-gradient(#ff6262, #ffeb69);
+  background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(#ff6262, #ffeb69);
   background-size: cover, 100%;
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 20%, left;
@@ -257,25 +257,25 @@ $red: rgb(255, 51, 51);
 
 /*-- Section Hero Page Projet 1 --*/
 .hero.page.Projet1 {
-  background-image: url(../medias/svg/web-v1.svg), linear-gradient(#ff6262, #ffeb69);
+  background-image: url(./medias/svg/web-v1.svg), linear-gradient(#ff6262, #ffeb69);
   background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page A propos --*/
 .hero.page.APropos {
-  background-image: url(../medias/img/photo/me.jpg), linear-gradient(#ff6262, #ffeb69);
+  background-image: url(./medias/img/photo/me.jpg), linear-gradient(#ff6262, #ffeb69);
   background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page 3D --*/
 .hero.page.TroisD {
-  background-image: url(../medias/img/icon.png), linear-gradient(#ff6262, #ffeb69);
+  background-image: url(./medias/img/icon.png), linear-gradient(#ff6262, #ffeb69);
   background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page Illustration --*/
 .hero.page.Illustration {
-  background-image: url(../medias/img/dessin_papier/dessin-1.JPG), linear-gradient(#ff6262, #ffeb69);
+  background-image: url(./medias/img/dessin_papier/dessin-1.JPG), linear-gradient(#ff6262, #ffeb69);
   background-blend-mode: luminosity;
 }
 
@@ -294,7 +294,7 @@ $red: rgb(255, 51, 51);
 .photoVG {
   width: 25vw;
   height: 25vw;
-  background-image: url(../medias/img/photo/me.jpg), url(../medias/img/icon.png);
+  background-image: url(./medias/img/photo/me.jpg), url(./medias/img/icon.png);
   background-repeat: no-repeat, repeat-x;
   background-size: cover, 150%;
   background-position: 100% 30%, center;
@@ -381,15 +381,15 @@ footer .container .row a {
 }
 @font-face {
   font-family: "Lostar";
-  src: url(../medias/fonts/lostar/Lostar.ttf) format(truetype);
+  src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);
 }
 @font-face {
   font-family: "BebasNeue";
-  src: url(../medias/fonts/Bebas_Neue/BebasNeue-Regular.ttf) format(truetype);
+  src: url(./medias/fonts/Bebas_Neue/BebasNeue-Regular.ttf) format(truetype);
 }
 @font-face {
   font-family: "TitilliumLight";
-  src: url(../medias/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format(truetype);
+  src: url(./medias/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format(truetype);
 }
 body {
   height: 120vh;
@@ -436,7 +436,7 @@ main button.btnTop:hover {
   aspect-ratio: 1/1;
   border-radius: 50%;
   /* Styles pour l'image d'arrière plan */
-  background-image: url(../medias/img/spritesheet-v2-256px.jpg);
+  background-image: url(./medias/img/spritesheet-v2-256px.jpg);
   /* Styles pour l'animation */
   animation-play-state: play;
   background-size: 4800% 100%;

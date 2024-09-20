@@ -3,7 +3,7 @@
 
 .hero {
     min-height: 100vh;
-    background-image: url(../medias/img/dessin_papier/dessin-1.JPG), radial-gradient(variables.$Bittersweet, variables.$Maize);
+    background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(variables.$Bittersweet, variables.$Maize);
     background-size: cover, 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: 50% 20%, left;
@@ -77,28 +77,28 @@
 /*-- Section Hero Page Projet 1 --*/
 
 .hero.page.Projet1 {
-    background-image: url(../medias/svg/web-v1.svg), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-image: url(./medias/svg/web-v1.svg), linear-gradient(variables.$Bittersweet, variables.$Maize);
     background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page A propos --*/
 
 .hero.page.APropos {
-    background-image: url(../medias/img/photo/me.jpg), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-image: url(./medias/img/photo/me.jpg), linear-gradient(variables.$Bittersweet, variables.$Maize);
     background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page 3D --*/
 
 .hero.page.TroisD {
-    background-image: url(../medias/img/icon.png), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-image: url(./medias/img/icon.png), linear-gradient(variables.$Bittersweet, variables.$Maize);
     background-blend-mode: luminosity;
 }
 
 /*-- Section Hero Page Illustration --*/
 
 .hero.page.Illustration {
-    background-image: url(../medias/img/dessin_papier/dessin-1.JPG), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-image: url(./medias/img/dessin_papier/dessin-1.JPG), linear-gradient(variables.$Bittersweet, variables.$Maize);
     background-blend-mode: luminosity;
 }
 
@@ -119,7 +119,7 @@
 .photoVG {
     width: 25vw;
     height: 25vw;
-    background-image: url(../medias/img/photo/me.jpg), url(../medias/img/icon.png);
+    background-image: url(./medias/img/photo/me.jpg), url(./medias/img/icon.png);
     background-repeat: no-repeat, repeat-x;
     background-size: cover, 150%;
     background-position: 100% 30%, center;
