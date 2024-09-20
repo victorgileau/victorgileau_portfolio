@@ -79,6 +79,8 @@
 .hero.page.Projet1 {
     background-image: url(./medias/svg/web-v1.svg), linear-gradient(variables.$Bittersweet, variables.$Maize);
     background-blend-mode: luminosity;
+    background-size: 100%, cover;
+    background-position: center;
 }
 
 /*-- Section Hero Page A propos --*/

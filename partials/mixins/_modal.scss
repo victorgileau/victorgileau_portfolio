@@ -1,0 +1,40 @@
+@use '../variables';
+
+@mixin modal {
+    .modal-content {
+        background-color: variables.$TurkeyRed;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__title {
+        color: variables.$lightYellow;
+    }
+
+    &__texte {
+        color: variables.$lightYellow;
+    }
+
+    &__img {
+        width: 100%;
+        align-self: center;
+    }
+
+    &__youtube {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    &__btn {
+        border: none;
+        color: variables.$OrangeWeb;
+        background-color: variables.$lightYellow;
+        &:hover {
+            background-color: variables.$OrangeWeb;
+            color: variables.$lightYellow;
+        }
+    }
+}
