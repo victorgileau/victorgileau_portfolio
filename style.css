@@ -197,6 +197,12 @@ $red: rgb(255, 51, 51);
   height: 100%;
   width: 100%;
 }
+.hero .titre--hero {
+  font-size: 16vmin;
+  color: #feffdc;
+  text-align: center;
+  text-shadow: 5px 5px #a90000;
+}
 .hero .iconPage {
   width: 10vw;
   aspect-ratio: 1/1;
@@ -283,6 +289,12 @@ $red: rgb(255, 51, 51);
   background-blend-mode: luminosity;
 }
 
+/*-- Section Hero Page Montage --*/
+.hero.page.Montage {
+  background-image: url(./medias/svg/editing_svg.svg), linear-gradient(#ff6262, #ffeb69);
+  background-blend-mode: luminosity;
+}
+
 .photoVG {
   width: 25vw;
   height: 25vw;
@@ -303,13 +315,6 @@ $red: rgb(255, 51, 51);
 }
 .photoVG:active {
   border-width: 1vw;
-}
-
-.titre--illustration {
-  font-size: 16vmin;
-  color: #feffdc;
-  text-align: center;
-  text-shadow: 5px 5px #a90000;
 }
 
 .infoIllustration {

@@ -12,6 +12,12 @@
         height: 100%;
         width: 100%;
     }
+    .titre--hero {
+        font-size: 16vmin;
+        color: variables.$lightYellow;
+        text-align: center;
+        text-shadow: 5px 5px variables.$TurkeyRed;
+    }
     .iconPage {
         width: 10vw;
         aspect-ratio: 1/1;
@@ -104,6 +110,13 @@
 
 .hero.page.Illustration {
     background-image: url(./medias/img/dessin_papier/dessin-1.JPG), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page Montage --*/
+
+.hero.page.Montage {
+    background-image: url(./medias/svg/editing_svg.svg), linear-gradient(variables.$Bittersweet, variables.$Maize);
     background-blend-mode: luminosity;
 }
 
