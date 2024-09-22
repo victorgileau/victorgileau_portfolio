@@ -184,6 +184,18 @@ $red: rgb(255, 51, 51);
 }
 
 /*----Fin Code de w3School----*/
+@media screen and (max-width: 768px) {
+  .logoNavMobile {
+    display: block;
+    font-size: 20px;
+  }
+  .dropbtn {
+    font-size: 20px;
+  }
+  .dropdown-content a {
+    font-size: 20px;
+  }
+}
 /*-------Section Hero--------*/
 .hero {
   min-height: 100vh;
@@ -203,8 +215,15 @@ $red: rgb(255, 51, 51);
   text-align: center;
   text-shadow: 5px 5px #a90000;
 }
+.hero__conteneurIcon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10vw, auto));
+  gap: 2vmin;
+}
 .hero .iconPage {
-  width: 10vw;
+  width: 100%;
+  /*height: 100%;
+  width: 10vw;*/
   aspect-ratio: 1/1;
   background-image: radial-gradient(#ff6262 10%, #ffb23e);
   background-size: 100%;
@@ -263,6 +282,40 @@ $red: rgb(255, 51, 51);
   color: #a90000;
 }
 
+@media screen and (max-width: 1200px) {
+  .hero__conteneurIcon {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15vw, auto));
+    gap: 2vmin;
+  }
+  .hero__conteneurIcon .iconPage {
+    width: 100%;
+    height: 100%;
+  }
+  .hero .infoHero .contact button {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__conteneurIcon {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25vw, auto));
+    gap: 2vmin;
+  }
+  .hero__conteneurIcon .iconPage {
+    width: 100%;
+    height: 100%;
+  }
+  .hero .infoHero h1 {
+    font-size: 64px;
+  }
+  .hero .infoHero .text {
+    font-size: 24px;
+  }
+  .hero .infoHero .contact {
+    font-size: 28px;
+  }
+}
 /*-- Section Hero Page Projet 1 --*/
 .hero.page.Projet1 {
   background-image: url(./medias/svg/web-v1.svg), linear-gradient(#ff6262, #ffeb69);
@@ -587,11 +640,8 @@ section.info .card .iconPage .illustrationIcon {
   }
 }
 @media screen and (max-width: 1200px) {
-  .navigationAccueil .lien a.lienPage, .navigationAccueil .lienPage.logoNav, .navigationAccueil .lienPage.logoNavMobile {
+  .navigationAccueil .lien a.lienPage, .navigationAccueil .lienPage.logoNav {
     font-size: 1.1em;
-  }
-  .hero .iconPage {
-    width: 18vw;
   }
   section.info .sprite {
     min-width: 25vw;
@@ -605,10 +655,6 @@ section.info .card .iconPage .illustrationIcon {
   .navigationAccueil {
     height: 10vh;
     padding: 0 5vw;
-  }
-  .logoNavMobile {
-    display: inline-block;
-    font-size: 0.8vmin;
   }
   .logoNav {
     display: none;
@@ -626,9 +672,6 @@ section.info .card .iconPage .illustrationIcon {
     margin-top: 4em;
     width: 50vw;
     height: 50vw;
-  }
-  .hero .iconPage {
-    width: 25vw;
   }
   h1, .h1 {
     font-size: 3em;

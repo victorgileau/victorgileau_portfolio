@@ -18,8 +18,15 @@
         text-align: center;
         text-shadow: 5px 5px variables.$TurkeyRed;
     }
+    &__conteneurIcon {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(10vw, auto));
+        gap: 2vmin;
+    }
     .iconPage {
-        width: 10vw;
+        width: 100%;
+        /*height: 100%;
+        width: 10vw;*/
         aspect-ratio: 1/1;
         background-image: radial-gradient(variables.$Bittersweet 10%, variables.$OrangeWeb);
         background-size: 100%;
@@ -79,7 +86,52 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .hero {
+        &__conteneurIcon {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(15vw, auto));
+            gap: 2vmin;
+            .iconPage {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .infoHero {
+            .contact {
+                button {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
 
+
+@media screen and (max-width: 768px) {
+    .hero {
+        &__conteneurIcon {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(25vw, auto));
+            gap: 2vmin;
+            .iconPage {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .infoHero {
+            h1 {
+                font-size: 64px;
+            }
+            .text {
+                font-size: 24px;
+            }
+            .contact {
+                font-size: 28px;
+            }
+        }
+    }
+}
 
 
 

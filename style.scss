@@ -130,12 +130,8 @@ section.info .card .iconPage .illustrationIcon {
 }
 
 @media screen and (max-width: 1200px) {
-    .navigationAccueil .lien a.lienPage, .navigationAccueil .lienPage.logoNav, .navigationAccueil .lienPage.logoNavMobile {
+    .navigationAccueil .lien a.lienPage, .navigationAccueil .lienPage.logoNav {
         font-size: 1.1em;
-    }
-    
-    .hero .iconPage {
-        width: 18vw;
     }
 
     section.info .sprite {
@@ -152,11 +148,6 @@ section.info .card .iconPage .illustrationIcon {
     .navigationAccueil {
         height: 10vh;
         padding: 0 5vw;
-    }
-
-    .logoNavMobile {
-        display: inline-block;
-        font-size: 0.8vmin;
     }
 
     .logoNav {
@@ -179,10 +170,6 @@ section.info .card .iconPage .illustrationIcon {
         margin-top: 4em;
         width: 50vw;
         height: 50vw;
-    }
-
-    .hero .iconPage {
-        width: 25vw;
     }
 
     h1, .h1 {

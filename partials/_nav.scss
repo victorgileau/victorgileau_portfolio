@@ -113,3 +113,16 @@
 .dropdown:hover .dropbtn {background-color: var(--Bittersweet);}
 
 /*----Fin Code de w3School----*/
+
+@media screen and (max-width: 768px) {
+    .logoNavMobile {
+        display: block;
+        font-size: 20px;
+    }
+    .dropbtn {
+        font-size: 20px;
+    }
+    .dropdown-content a {
+        font-size: 20px;
+    }
+}
