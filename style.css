@@ -69,6 +69,7 @@ $red: rgb(255, 51, 51);
 /*Fin changment de couleur svg*/
 /*-------Navigation--------*/
 .navigationAccueil {
+  width: 100vw;
   min-height: 10vh;
   max-height: 20vh;
   padding: 0 6vw;
@@ -476,6 +477,7 @@ footer .container .row a {
   src: url(./medias/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format(truetype);
 }
 body {
+  width: 100vw;
   height: 120vh;
   overflow-x: hidden;
 }
