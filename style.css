@@ -501,6 +501,9 @@ h1, .h1 {
 p.text {
   font-family: "TitilliumLight";
   font-size: 20px;
+}
+
+.info p.text {
   color: #000;
 }
 

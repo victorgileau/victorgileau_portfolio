@@ -42,8 +42,14 @@ h1, .h1 {
 p.text {
     font-family: 'TitilliumLight';
     font-size: 20px;
-    color: variables.$black;
 }
+
+.info {
+    p.text {
+        color: variables.$black;
+    }
+}
+
 
 a, .a {
     text-decoration: none;
