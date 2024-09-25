@@ -108,6 +108,7 @@ $red: rgb(255, 51, 51);
   text-decoration: none;
   font-weight: bold;
   position: relative;
+  align-self: center;
 }
 
 .navigationAccueil .lien .lienPage::after, .navigationAccueil .lien .lienPage::before {
@@ -200,6 +201,7 @@ $red: rgb(255, 51, 51);
 /*-------Section Hero--------*/
 .hero {
   min-height: 100vh;
+  max-height: 120vh;
   background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(#ff6262, #ffeb69);
   background-size: cover, 100%;
   background-repeat: no-repeat, no-repeat;
@@ -207,6 +209,7 @@ $red: rgb(255, 51, 51);
   background-blend-mode: multiply;
 }
 .hero .container {
+  padding: 10vh 0;
   height: 100%;
   width: 100%;
 }
@@ -221,8 +224,8 @@ $red: rgb(255, 51, 51);
   grid-template-columns: repeat(auto-fill, minmax(10vw, auto));
   gap: 2vmin;
 }
-.hero .iconPage {
-  width: 100%;
+.hero__conteneurIcon .iconPage {
+  width: 90%;
   /*height: 100%;
   width: 10vw;*/
   aspect-ratio: 1/1;
@@ -231,21 +234,21 @@ $red: rgb(255, 51, 51);
   border-radius: 50%;
   text-align: center;
 }
-.hero .iconPage:hover {
+.hero__conteneurIcon .iconPage:hover {
   background-image: radial-gradient(#ff6262 50%, #ffb23e);
 }
-.hero .iconPage svg {
+.hero__conteneurIcon .iconPage svg {
   width: 50%;
   aspect-ratio: 1/1;
   transition: width 0.25s ease-out;
 }
-.hero .iconPage svg:hover {
+.hero__conteneurIcon .iconPage svg:hover {
   width: 75%;
 }
-.hero .iconPage svg:active {
+.hero__conteneurIcon .iconPage svg:active {
   width: 60%;
 }
-.hero .iconPage svg .lineSVG {
+.hero__conteneurIcon .iconPage svg .lineSVG {
   stroke: #a90000;
   stroke-width: 0;
 }

@@ -3,12 +3,14 @@
 
 .hero {
     min-height: 100vh;
+    max-height: 120vh;
     background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(variables.$Bittersweet, variables.$Maize);
     background-size: cover, 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: 50% 20%, left;
     background-blend-mode: multiply;
     .container {
+        padding: 10vh 0;
         height: 100%;
         width: 100%;
     }
@@ -22,34 +24,35 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(10vw, auto));
         gap: 2vmin;
-    }
-    .iconPage {
-        width: 100%;
-        /*height: 100%;
-        width: 10vw;*/
-        aspect-ratio: 1/1;
-        background-image: radial-gradient(variables.$Bittersweet 10%, variables.$OrangeWeb);
-        background-size: 100%;
-        border-radius: 50%;
-        text-align: center;
-        &:hover {
-            background-image: radial-gradient(variables.$Bittersweet 50%, variables.$OrangeWeb);
-        }
-        svg {
-            width: 50%;
+        .iconPage {
+            width: 90%;
+            /*height: 100%;
+            width: 10vw;*/
             aspect-ratio: 1/1;
-            transition: width 0.25s ease-out;
+            background-image: radial-gradient(variables.$Bittersweet 10%, variables.$OrangeWeb);
+            background-size: 100%;
+            border-radius: 50%;
+            text-align: center;
             &:hover {
-                width: 75%;
+                background-image: radial-gradient(variables.$Bittersweet 50%, variables.$OrangeWeb);
             }
-            &:active {
-                width: 60%;
+            svg {
+                width: 50%;
+                aspect-ratio: 1/1;
+                transition: width 0.25s ease-out;
+                &:hover {
+                    width: 75%;
+                }
+                &:active {
+                    width: 60%;
+                }
+                .lineSVG {
+                    stroke: variables.$TurkeyRed;
+                    stroke-width: 0;
+                }
             }
-            .lineSVG {
-                stroke: variables.$TurkeyRed;
-                stroke-width: 0;
-            }
-        }
+    }
+    
     }
     .infoHero {
         background-color: rgba(0, 0, 0, 0);
