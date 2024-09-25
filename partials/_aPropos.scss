@@ -1,0 +1,10 @@
+@use './variables';
+
+section.info.infoAPropos {
+    p.text {
+        &--capacite {
+            color: variables.$TurkeyRed;
+            text-shadow: 0px 0px 5px variables.$lightYellow;
+        }
+    }
+}

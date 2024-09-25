@@ -5,8 +5,8 @@
 .infoIllustration {
     padding: 5vh 25vmin;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-    grid-template-rows: repeat(auto-fill, minmax(400px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(600px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(700px, auto));
     gap: 2vmin;
 }
 
@@ -25,6 +25,8 @@
 
 @media screen and (max-width: 1200px) {
     .infoIllustration {
+        grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+        grid-template-rows: repeat(auto-fill, minmax(400px, auto));
         padding: 5vh 2vw;
     }
 }

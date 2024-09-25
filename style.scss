@@ -7,6 +7,7 @@
 @use './partials/mixins/spriteAnimation';
 @use './partials/imgInfoWeb';
 @use './partials/mixins/modal';
+@use './partials/aPropos';
 
 @font-face {
     font-family: 'Lostar';
@@ -41,6 +42,7 @@ h1, .h1 {
 p.text {
     font-family: 'TitilliumLight';
     font-size: 20px;
+    color: variables.$black;
 }
 
 a, .a {

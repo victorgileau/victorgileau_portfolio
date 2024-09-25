@@ -377,8 +377,8 @@ $red: rgb(255, 51, 51);
 .infoIllustration {
   padding: 5vh 25vmin;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  grid-template-rows: repeat(auto-fill, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(600px, auto));
+  grid-template-rows: repeat(auto-fill, minmax(700px, auto));
   gap: 2vmin;
 }
 
@@ -398,6 +398,8 @@ $red: rgb(255, 51, 51);
 
 @media screen and (max-width: 1200px) {
   .infoIllustration {
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(400px, auto));
     padding: 5vh 2vw;
   }
 }
@@ -467,6 +469,11 @@ footer .container .row a {
     height: auto;
   }
 }
+section.info.infoAPropos p.text--capacite {
+  color: #a90000;
+  text-shadow: 0px 0px 5px #feffdc;
+}
+
 @font-face {
   font-family: "Lostar";
   src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);
@@ -494,6 +501,7 @@ h1, .h1 {
 p.text {
   font-family: "TitilliumLight";
   font-size: 20px;
+  color: #000;
 }
 
 a, .a {
