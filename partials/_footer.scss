@@ -5,18 +5,36 @@ footer {
     background-image: linear-gradient(to right, variables.$Bittersweet, variables.$TurkeyRed);
 }
 
-footer .container {
+footer  {
     padding: 1em 0;
+    .conteneur {
+        padding: 0 20px;
+        margin: auto;
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: 3em 3em;
+        .lien {
+            justify-self: center;
+            &__aLien {
+                font-family: 'TitilliumLight';
+                font-size: 1.1em;
+                color: variables.$lightYellow;
+                text-decoration: none;
+                font-style: normal;
+            }
+        }
+        .credit {
+            grid-column: span 5;
+        }
+    }
 }
 
-footer .container .row div {
-    margin: 1em 0;
-    text-align: center;
+footer .conteneur .lien {
+    
 }
 
-footer .container .row a {
-    font-family: 'TitilliumLight';
-    font-size: 1.1em;
-    color: variables.$lightYellow;
-    text-decoration: none;
+footer a {
+    
 }

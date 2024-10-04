@@ -27,9 +27,10 @@
 
 
 body {
-    width: 100vw;
     height: 120vh;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 /*---Tout----*/
@@ -72,8 +73,13 @@ a, .a {
 
 main button.btnTop {
     position: fixed;
-    bottom: 2vw;
-    right: 5vw;
+    bottom: 10vmin;
+    right: 8vw;
+    width: 5vw;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 10;
     background-color: variables.$Maize;
     padding: 2vw;
@@ -83,6 +89,12 @@ main button.btnTop {
     color: variables.$TurkeyRed;
     font-family: 'TitilliumLight';
     text-decoration: none;
+}
+
+main button.btnTop::after {
+    content: 'Top';
+    align-self: center;
+    justify-self: center;
 }
 
 main button.btnTop:hover {
@@ -120,10 +132,10 @@ section.info .card .iconPage {
 }
 
 section.info .card .iconPage .illustrationIcon {
-    min-width: 12vw;
-    min-height: 12vw;
-    max-width: 40vw;
-    max-height: 40vw;
+    min-width: 15vw;
+    min-height: 15vw;
+    max-width: 50vw;
+    max-height: 50vw;
 }
 
 /*---Media query---*/
@@ -151,12 +163,21 @@ section.info .card .iconPage .illustrationIcon {
     section.info .iconPage {
         width: 25vw;
     }
+
+    main button.btnTop  {
+        width: 10vw;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .navigationAccueil {
         height: 10vh;
         padding: 0 5vw;
+    }
+
+    main button.btnTop  {
+        width: 10vw;
+        bottom: 20vmin;
     }
 
     .logoNav {

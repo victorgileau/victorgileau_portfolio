@@ -200,8 +200,11 @@ $red: rgb(255, 51, 51);
 }
 /*-------Section Hero--------*/
 .hero {
+  width: 100vw;
   min-height: 100vh;
-  max-height: 120vh;
+  display: flex;
+  align-items: center;
+  height: auto;
   background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(#ff6262, #ffeb69);
   background-size: cover, 100%;
   background-repeat: no-repeat, no-repeat;
@@ -212,6 +215,15 @@ $red: rgb(255, 51, 51);
   padding: 10vh 0;
   height: 100%;
   width: 100%;
+}
+.hero .container .row {
+  width: 100%;
+  align-items: center;
+}
+.hero .container .photoVGContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero .titre--hero {
   font-size: 16vmin;
@@ -225,7 +237,10 @@ $red: rgb(255, 51, 51);
   gap: 2vmin;
 }
 .hero__conteneurIcon .iconPage {
-  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   /*height: 100%;
   width: 10vw;*/
   aspect-ratio: 1/1;
@@ -253,6 +268,7 @@ $red: rgb(255, 51, 51);
   stroke-width: 0;
 }
 .hero .infoHero {
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 25px;
   -webkit-backdrop-filter: blur(5px);
@@ -296,11 +312,17 @@ $red: rgb(255, 51, 51);
     width: 100%;
     height: 100%;
   }
+  .hero .infoHero {
+    margin: auto;
+  }
   .hero .infoHero .contact button {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 768px) {
+  .hero .container .photoVGContainer {
+    margin-bottom: 6vh;
+  }
   .hero__conteneurIcon {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25vw, auto));
@@ -408,20 +430,30 @@ footer {
   background-image: linear-gradient(to right, #ff6262, #a90000);
 }
 
-footer .container {
+footer {
   padding: 1em 0;
 }
-
-footer .container .row div {
-  margin: 1em 0;
-  text-align: center;
+footer .conteneur {
+  padding: 0 20px;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: 3em 3em;
 }
-
-footer .container .row a {
+footer .conteneur .lien {
+  justify-self: center;
+}
+footer .conteneur .lien__aLien {
   font-family: "TitilliumLight";
   font-size: 1.1em;
   color: #feffdc;
   text-decoration: none;
+  font-style: normal;
+}
+footer .conteneur .credit {
+  grid-column: span 5;
 }
 
 @keyframes marche {
@@ -487,9 +519,10 @@ section.info.infoAPropos p.text--capacite {
   src: url(./medias/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format(truetype);
 }
 body {
-  width: 100vw;
   height: 120vh;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /*---Tout----*/
@@ -583,8 +616,13 @@ a, .a {
 /*--Fixed Btn to top--*/
 main button.btnTop {
   position: fixed;
-  bottom: 2vw;
-  right: 5vw;
+  bottom: 10vmin;
+  right: 8vw;
+  width: 5vw;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 10;
   background-color: #ffeb69;
   padding: 2vw;
@@ -593,6 +631,12 @@ main button.btnTop {
   color: #a90000;
   font-family: "TitilliumLight";
   text-decoration: none;
+}
+
+main button.btnTop::after {
+  content: "Top";
+  align-self: center;
+  justify-self: center;
 }
 
 main button.btnTop:hover {
@@ -640,10 +684,10 @@ section.info .card .iconPage {
 }
 
 section.info .card .iconPage .illustrationIcon {
-  min-width: 12vw;
-  min-height: 12vw;
-  max-width: 40vw;
-  max-height: 40vw;
+  min-width: 15vw;
+  min-height: 15vw;
+  max-width: 50vw;
+  max-height: 50vw;
 }
 
 /*---Media query---*/
@@ -666,11 +710,18 @@ section.info .card .iconPage .illustrationIcon {
   section.info .iconPage {
     width: 25vw;
   }
+  main button.btnTop {
+    width: 10vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .navigationAccueil {
     height: 10vh;
     padding: 0 5vw;
+  }
+  main button.btnTop {
+    width: 10vw;
+    bottom: 20vmin;
   }
   .logoNav {
     display: none;
