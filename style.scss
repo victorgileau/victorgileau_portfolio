@@ -133,10 +133,12 @@ section.info .card .iconPage {
 }
 
 section.info .card .iconPage .illustrationIcon {
-    min-width: 15vw;
-    min-height: 15vw;
-    max-width: 50vw;
-    max-height: 50vw;
+    width: 100%;
+    aspect-ratio: 1/1;
+    svg {
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
 }
 
 /*---Media query---*/
@@ -167,11 +169,6 @@ section.info .card .iconPage .illustrationIcon {
 
     main button.btnTop  {
         width: 10vw;
-    }
-
-    section.info .card .iconPage .illustrationIcon {
-        min-width: 60%;
-        aspect-ratio: 1/1;
     }
 }
 
