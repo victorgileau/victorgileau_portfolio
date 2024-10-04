@@ -27,6 +27,7 @@
 
 
 body {
+    width: 100%;
     height: 120vh;
     overflow-x: hidden;
     margin: 0;
@@ -166,6 +167,11 @@ section.info .card .iconPage .illustrationIcon {
 
     main button.btnTop  {
         width: 10vw;
+    }
+
+    section.info .card .iconPage .illustrationIcon {
+        min-width: 60%;
+        aspect-ratio: 1/1;
     }
 }
 
