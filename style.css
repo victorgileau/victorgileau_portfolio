@@ -68,40 +68,42 @@ $red: rgb(255, 51, 51);
 
 /*Fin changment de couleur svg*/
 /*-------Navigation--------*/
-.navigationAccueil {
+.bgNav {
+  z-index: 10;
+  position: fixed;
   width: 100vw;
   min-height: 10vh;
-  max-height: 20vh;
-  padding: 0 6vw;
+  height: auto;
+  background-image: linear-gradient(to right, #a90000, #ff6262);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  background-image: linear-gradient(to right, #a90000, #ff6262);
+}
+.bgNav .navigationAccueil {
+  height: 100%;
+  width: calc(100% - 1vw);
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  padding: 0 1vw;
   /*--Text--*/
   font-family: "BebasNeue";
   letter-spacing: 0.1em;
 }
-
-.navigationAccueil .logoNav, .navigationAccueil .logoNavMobile {
-  justify-self: flex-start;
+.bgNav .navigationAccueil .logoNav, .bgNav .navigationAccueil .logoNavMobile {
+  justify-self: start;
   font-size: 24px;
 }
-
-.logoNavMobile {
+.bgNav .navigationAccueil .logoNavMobile {
   display: none;
 }
-
-.navigationAccueil .lien {
-  position: absolute;
-  right: 10vw;
-  width: 35vw;
+.bgNav .navigationAccueil .lien {
+  justify-self: flex-end;
   display: flex;
   justify-content: space-between;
 }
-
-.navigationAccueil .lien a.lienPage, .navigationAccueil .lienPage.logoNav, .navigationAccueil .lienPage.logoNavMobile {
+.bgNav .navigationAccueil .lien a.lienPage {
   font-size: 1.5em;
   padding: 0 1vw;
   color: #feffdc;
@@ -110,8 +112,7 @@ $red: rgb(255, 51, 51);
   position: relative;
   align-self: center;
 }
-
-.navigationAccueil .lien .lienPage::after, .navigationAccueil .lien .lienPage::before {
+.bgNav .navigationAccueil .lien a.lienPage::after, .bgNav .navigationAccueil .lien a.lienPage::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -123,14 +124,21 @@ $red: rgb(255, 51, 51);
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
-
-.navigationAccueil .lien .lienPage::before {
+.bgNav .navigationAccueil .lien a.lienPage::before {
   bottom: auto;
   top: 0;
 }
-
-.navigationAccueil .lien .lienPage:hover::after, .navigationAccueil .lien .lienPage:hover::before {
+.bgNav .navigationAccueil .lien a.lienPage:hover::after, .bgNav .navigationAccueil .lien a.lienPage:hover::before {
   transform: scaleX(1);
+}
+.bgNav .navigationAccueil .lienPage.logoNav, .bgNav .navigationAccueil .lienPage.logoNavMobile {
+  font-size: 1.5em;
+  padding: 0 1vw;
+  color: #feffdc;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  align-self: center;
 }
 
 /*----Code de w3School----*/
@@ -187,14 +195,38 @@ $red: rgb(255, 51, 51);
 
 /*----Fin Code de w3School----*/
 @media screen and (max-width: 768px) {
-  .logoNavMobile {
-    display: block;
+  .bgNav .navigationAccueil {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+  }
+  .bgNav .navigationAccueil .logoNavMobile {
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     font-size: 20px;
   }
-  .dropbtn {
+  .bgNav .navigationAccueil .lien {
+    display: none;
+  }
+  .bgNav .navigationAccueil .dropdown {
+    display: grid;
+    grid-column: 100%;
+    grid-template-rows: 100% auto;
+    padding: 2vmin;
+  }
+  .bgNav .navigationAccueil .dropdown .dropbtn {
+    grid-column: 1;
+    width: 100%;
     font-size: 20px;
   }
-  .dropdown-content a {
+  .bgNav .navigationAccueil .dropdown .dropdown-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .bgNav .navigationAccueil .dropdown .dropdown-content a {
     font-size: 20px;
   }
 }
@@ -439,7 +471,7 @@ footer .conteneur {
   width: 100%;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 3em 3em;
 }
 footer .conteneur .lien {
@@ -452,10 +484,44 @@ footer .conteneur .lien__aLien {
   text-decoration: none;
   font-style: normal;
 }
+footer .conteneur .lien__aLien:hover {
+  color: #ffeb69;
+}
 footer .conteneur .credit {
+  grid-row: auto;
   grid-column: span 5;
 }
+footer .conteneur .credit em:hover {
+  color: #feffdc;
+}
 
+@media screen and (max-width: 768px) {
+  footer .conteneur {
+    grid-template-columns: 100%;
+    grid-template-rows: 3em 3em 3em 3em 3em 3em;
+  }
+  footer .conteneur .lien--1 {
+    grid-row: 1;
+  }
+  footer .conteneur .lien--2 {
+    grid-row: 2;
+  }
+  footer .conteneur .lien--3 {
+    grid-row: 3;
+  }
+  footer .conteneur .lien--4 {
+    grid-row: 4;
+  }
+  footer .conteneur .lien--5 {
+    grid-row: 5;
+  }
+  footer .conteneur .lien--6 {
+    grid-row: 6;
+  }
+  footer .credit {
+    grid-row: 4;
+  }
+}
 @keyframes marche {
   from {
     background-position: 0 0;
