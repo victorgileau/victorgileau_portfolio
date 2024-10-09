@@ -1,6 +1,15 @@
 @use './variables';
 
 
+.lienPlusIllustration {
+    width: 100%;
+    padding: 5vh 25vmin;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .infoIllustration {
     padding: 5vh 25vmin;
@@ -8,18 +17,17 @@
     grid-template-columns: repeat(auto-fill, minmax(600px, auto));
     grid-template-rows: repeat(auto-fill, minmax(700px, auto));
     gap: 2vmin;
-}
-
-.infoIllustration .illustration {
-    position: relative;
-    background-image: linear-gradient(variables.$TurkeyRed, variables.$Bittersweet);
-    padding: 0.5em;
-    border-radius: 5px;
-    display: flex;
-    &__img {
-        display: block;
-        width: 100%;
-        object-fit: cover;
+    .illustration {
+        position: relative;
+        background-image: linear-gradient(variables.$TurkeyRed, variables.$Bittersweet);
+        padding: 0.5em;
+        border-radius: 5px;
+        display: flex;
+        &__img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 }
 

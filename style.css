@@ -471,6 +471,15 @@ $red: rgb(255, 51, 51);
   border-width: 1vw;
 }
 
+.lienPlusIllustration {
+  width: 100%;
+  padding: 5vh 25vmin;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .infoIllustration {
   padding: 5vh 25vmin;
   display: grid;
@@ -478,7 +487,6 @@ $red: rgb(255, 51, 51);
   grid-template-rows: repeat(auto-fill, minmax(700px, auto));
   gap: 2vmin;
 }
-
 .infoIllustration .illustration {
   position: relative;
   background-image: linear-gradient(#a90000, #ff6262);
