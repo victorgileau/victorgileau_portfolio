@@ -215,7 +215,7 @@ $red: rgb(255, 51, 51);
     display: grid;
     grid-column: 100%;
     grid-template-rows: 100% auto;
-    padding: 2vmin;
+    padding: 2vmin 0;
   }
   .bgNav .navigationAccueil .dropdown .dropbtn {
     grid-column: 1;
@@ -232,8 +232,8 @@ $red: rgb(255, 51, 51);
 }
 /*-------Section Hero--------*/
 .hero {
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   height: auto;
@@ -243,16 +243,57 @@ $red: rgb(255, 51, 51);
   background-position: 50% 20%, left;
   background-blend-mode: multiply;
 }
-.hero .container {
+.hero .conteneur {
+  margin-top: 50px;
+  height: auto;
+  min-height: 100vh;
   padding: 10vh 0;
-  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
-.hero .container .row {
-  width: 100%;
+.hero .conteneur .infoHero {
+  height: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 25px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: #feffdc;
+}
+.hero .conteneur .infoHero .contact {
+  display: flex;
   align-items: center;
+  flex-direction: row;
 }
-.hero .container .photoVGContainer {
+.hero .conteneur .infoHero .contact button {
+  margin-left: 0.5em;
+  border-radius: 25px;
+  background-color: #ffeb69;
+  border: none;
+  color: #a90000;
+}
+.hero .conteneur .infoHero .contact button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #ffeb69;
+  color: #ffeb69;
+}
+.hero .conteneur .infoHero .contact button:hover a {
+  color: #ffeb69;
+}
+.hero .conteneur .infoHero .contact button:active {
+  background-image: linear-gradient(to top, #ffb23e, rgba(0, 0, 0, 0));
+}
+.hero .conteneur .infoHero .contact button a {
+  color: #a90000;
+}
+.hero .conteneur .photoVGContainer {
+  order: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,7 +306,7 @@ $red: rgb(255, 51, 51);
 }
 .hero__conteneurIcon {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10vw, auto));
+  grid-template-columns: repeat(auto-fill, minmax(18vmin, auto));
   gap: 2vmin;
 }
 .hero__conteneurIcon .iconPage {
@@ -299,61 +340,66 @@ $red: rgb(255, 51, 51);
   stroke: #a90000;
   stroke-width: 0;
 }
-.hero .infoHero {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 25px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  color: #feffdc;
-}
-.hero .infoHero .contact {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-.hero .infoHero .contact button {
-  margin-left: 0.5em;
-  border-radius: 25px;
-  background-color: #ffeb69;
-  border: none;
-  color: #a90000;
-}
-.hero .infoHero .contact button:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #ffeb69;
-  color: #ffeb69;
-}
-.hero .infoHero .contact button:hover a {
-  color: #ffeb69;
-}
-.hero .infoHero .contact button:active {
-  background-image: linear-gradient(to top, #ffb23e, rgba(0, 0, 0, 0));
-}
-.hero .infoHero .contact button a {
-  color: #a90000;
-}
 
+@media screen and (min-width: 2000px) {
+  .hero .conteneur .photoVGContainer .photoVG {
+    width: 500px;
+    height: 500px;
+    max-width: none;
+    max-height: none;
+  }
+}
 @media screen and (max-width: 1200px) {
+  .hero {
+    height: auto;
+  }
   .hero__conteneurIcon {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15vw, auto));
     gap: 2vmin;
   }
   .hero__conteneurIcon .iconPage {
     width: 100%;
     height: 100%;
   }
-  .hero .infoHero {
+  .hero .conteneur {
+    height: auto;
+  }
+  .hero .conteneur .infoHero {
     margin: auto;
   }
-  .hero .infoHero .contact button {
+  .hero .conteneur .infoHero .contact button {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 768px) {
-  .hero .container .photoVGContainer {
+  .hero {
+    height: auto;
+  }
+  .hero .conteneur {
+    margin-top: 0;
+    height: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+  }
+  .hero .conteneur .photoVGContainer {
+    grid-row: 1;
     margin-bottom: 6vh;
+  }
+  .hero .conteneur .photoVGContainer .photoVG {
+    max-width: 50vw;
+    max-height: 50vw;
+  }
+  .hero .conteneur .infoHero {
+    grid-row: 2;
+  }
+  .hero .conteneur .infoHero h1 {
+    font-size: 64px;
+  }
+  .hero .conteneur .infoHero .text {
+    font-size: 24px;
+  }
+  .hero .conteneur .infoHero .contact {
+    font-size: 28px;
   }
   .hero__conteneurIcon {
     display: grid;
@@ -363,15 +409,6 @@ $red: rgb(255, 51, 51);
   .hero__conteneurIcon .iconPage {
     width: 100%;
     height: 100%;
-  }
-  .hero .infoHero h1 {
-    font-size: 64px;
-  }
-  .hero .infoHero .text {
-    font-size: 24px;
-  }
-  .hero .infoHero .contact {
-    font-size: 28px;
   }
 }
 /*-- Section Hero Page Projet 1 --*/
@@ -407,8 +444,10 @@ $red: rgb(255, 51, 51);
 }
 
 .photoVG {
-  width: 25vw;
-  height: 25vw;
+  height: 1000px;
+  max-height: 30vw;
+  width: 1000px;
+  max-width: 30vw;
   background-image: url(./medias/img/photo/me.jpg), url(./medias/img/icon.png);
   background-repeat: no-repeat, repeat-x;
   background-size: cover, 150%;
