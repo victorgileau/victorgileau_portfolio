@@ -411,6 +411,10 @@ $red: rgb(255, 51, 51);
     height: 100%;
   }
 }
+.hero.page {
+  min-height: 80vh;
+}
+
 /*-- Section Hero Page Projet 1 --*/
 .hero.page.Projet1 {
   background-image: url(./medias/svg/web-v1.svg), linear-gradient(#ff6262, #ffeb69);
@@ -625,7 +629,7 @@ section.info.infoAPropos p.text--capacite {
 }
 body {
   width: 100%;
-  height: 120vh;
+  min-height: 100vh;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
