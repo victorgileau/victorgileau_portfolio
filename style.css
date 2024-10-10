@@ -501,11 +501,11 @@ a .photoVG:active {
   justify-content: center;
 }
 .lienPlusIllustration .svgSoc {
+  margin: 0 2vmin;
+  height: 200px;
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 50px;
-  height: 200px;
   aspect-ratio: 1/1;
   z-index: 5;
 }
@@ -582,6 +582,11 @@ a .photoVG:active {
     grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     grid-template-rows: repeat(auto-fill, minmax(400px, auto));
     padding: 5vh 2vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lienPlusIllustration .svgSoc {
+    height: 120px;
   }
 }
 /*--Footer---*/
@@ -699,6 +704,53 @@ section.info.infoAPropos p.text--capacite {
   text-shadow: 0px 0px 5px #feffdc;
 }
 
+.modalProjet .modal-content {
+  background-color: #a90000;
+}
+.modalProjet .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modalProjet__title {
+  color: #feffdc;
+}
+.modalProjet__texte {
+  color: #feffdc;
+}
+.modalProjet__img {
+  width: 100%;
+  align-self: center;
+}
+.modalProjet__youtube {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.modalProjet__btn {
+  border: none;
+  color: #ffb23e;
+  background-color: #feffdc;
+}
+.modalProjet__btn:hover {
+  background-color: #ffb23e;
+  color: #feffdc;
+}
+.modalProjet__btn.btn-close {
+  align-self: start;
+}
+
+@media screen and (max-width: 768px) {
+  .modalProjet {
+    width: 100vw;
+  }
+  .modalProjet__title {
+    font-size: 48px;
+    width: 80%;
+  }
+  .modalProjet__texte {
+    font-size: 24px;
+  }
+}
 @font-face {
   font-family: "Lostar";
   src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);
@@ -741,70 +793,6 @@ a, .a {
 .btnModal {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-}
-
-.modalProjetWeb .modal-content {
-  background-color: #a90000;
-}
-.modalProjetWeb .modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.modalProjetWeb__title {
-  color: #feffdc;
-}
-.modalProjetWeb__texte {
-  color: #feffdc;
-}
-.modalProjetWeb__img {
-  width: 100%;
-  align-self: center;
-}
-.modalProjetWeb__youtube {
-  width: 100%;
-  aspect-ratio: 16/9;
-}
-.modalProjetWeb__btn {
-  border: none;
-  color: #ffb23e;
-  background-color: #feffdc;
-}
-.modalProjetWeb__btn:hover {
-  background-color: #ffb23e;
-  color: #feffdc;
-}
-
-.modalProjet3D .modal-content {
-  background-color: #a90000;
-}
-.modalProjet3D .modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.modalProjet3D__title {
-  color: #feffdc;
-}
-.modalProjet3D__texte {
-  color: #feffdc;
-}
-.modalProjet3D__img {
-  width: 100%;
-  align-self: center;
-}
-.modalProjet3D__youtube {
-  width: 100%;
-  aspect-ratio: 16/9;
-}
-.modalProjet3D__btn {
-  border: none;
-  color: #ffb23e;
-  background-color: #feffdc;
-}
-.modalProjet3D__btn:hover {
-  background-color: #ffb23e;
-  color: #feffdc;
 }
 
 /*--Fixed Btn to top--*/

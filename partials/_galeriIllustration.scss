@@ -14,6 +14,8 @@
     align-items: center;
     justify-content: center;
     .svgSoc {
+        margin: 0 2vmin;
+        height: 200px;
         @include lienMediaSociaux.SvgAnimeHover;
     }
 }
@@ -44,5 +46,13 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, auto));
         grid-template-rows: repeat(auto-fill, minmax(400px, auto));
         padding: 5vh 2vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lienPlusIllustration {
+        .svgSoc {
+            height: 120px;
+        }
     }
 }

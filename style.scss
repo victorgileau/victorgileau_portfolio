@@ -8,6 +8,7 @@
 @use './partials/imgInfoWeb';
 @use './partials/mixins/modal';
 @use './partials/aPropos';
+@use './partials/infoPage';
 
 @font-face {
     font-family: 'Lostar';
@@ -60,14 +61,6 @@ a, .a {
 .btnModal {
     background-color: rgba(0,0,0,0);
     border: none;
-}
-
-.modalProjetWeb {
-    @include modal.modal;
-}
-
-.modalProjet3D {
-    @include modal.modal;
 }
 
 /*--Fixed Btn to top--*/

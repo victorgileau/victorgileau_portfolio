@@ -1,0 +1,13 @@
+@use './mixins/modal';
+
+
+.modalProjet {
+    @include modal.modal;
+}
+
+@media screen and (max-width: 768px) {
+    .modalProjet {
+        width: 100vw;
+        @include modal.modalMobile;
+    }
+}
