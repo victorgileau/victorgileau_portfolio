@@ -15,9 +15,6 @@
     justify-content: center;
     .svgSoc {
         @include lienMediaSociaux.SvgAnimeHover;
-        svg {
-            
-        }
     }
 }
 
