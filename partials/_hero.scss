@@ -119,10 +119,10 @@
         .conteneur {
             .photoVGContainer {
                 .photoVG {
-                    width: 500px;
-                    height: 500px;
-                    max-width: none;
-                    max-height: none;
+                    //width: 500px;
+                    //height: 500px;
+                    //max-width: none;
+                    //max-height: none;
                 }
             }
         }
@@ -141,6 +141,7 @@
             }
         }
         .conteneur {
+            position: relative;
             height: auto;
             .infoHero {
                 margin: auto;
@@ -148,6 +149,15 @@
                     button {
                         font-size: 24px;
                     }
+                }
+            }
+            .photoVGContainer {
+                position: relative;
+                width: 100%;
+                .photoVG {
+                    //width: 100%;
+                    //max-width: none;
+                    //aspect-ratio: 1/1;
                 }
             }
         }
@@ -167,10 +177,17 @@
             .photoVGContainer {
                 grid-row: 1;
                 margin-bottom: 6vh;
-                .photoVG {
-                    max-width: 50vw;
-                    max-height: 50vw;
+                display: flex;
+                justify-content: center;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    .photoVG {
+                        width: 50%;
+                    }
                 }
+                
             }
             .infoHero {
                 grid-row: 2;
@@ -240,27 +257,27 @@
     background-blend-mode: luminosity;
 }
 
-.photoVG {
-    height: 1000px;
-    max-height: 30vw;
-    width: 1000px;
-    max-width: 30vw;
-    //aspect-ratio: 1/1;
-    background-image: url(./medias/img/photo/me.jpg), url(./medias/img/icon.png);
-    background-repeat: no-repeat, repeat-x;
-    background-size: cover, 150%;
-    background-position: 100% 30%, center;
-    background-blend-mode: luminosity;
-    border-radius: 50%;
-    border: 1vw solid variables.$Bittersweet;
-    box-shadow: 0 0 1vw variables.$Bittersweet;
-    transition: border 0.1s ease-in, box-shadow 0.2s ease-in-out, background-blend-mode 0.2s ease-in-out;
-    &:hover {
-        border: 2vw solid variables.$TurkeyRed;
-        box-shadow: 0 0 3vw variables.$TurkeyRed;
-        background-blend-mode: normal;
-    }
-    &:active {
-        border-width: 1vw;
+a {
+    width: 100%;
+    .photoVG {
+        width: 100%;
+        aspect-ratio: 1/1;
+        background-image: url(./medias/img/photo/me.jpg), url(./medias/img/icon.png);
+        background-repeat: no-repeat, repeat-x;
+        background-size: cover, 150%;
+        background-position: 100% 30%, center;
+        background-blend-mode: luminosity;
+        border-radius: 50%;
+        border: 1vw solid variables.$Bittersweet;
+        box-shadow: 0 0 1vw variables.$Bittersweet;
+        transition: border 0.1s ease-in, box-shadow 0.2s ease-in-out, background-blend-mode 0.2s ease-in-out;
+        &:hover {
+            border: 2vw solid variables.$TurkeyRed;
+            box-shadow: 0 0 3vw variables.$TurkeyRed;
+            background-blend-mode: normal;
+        }
+        &:active {
+            border-width: 1vw;
+        }
     }
 }

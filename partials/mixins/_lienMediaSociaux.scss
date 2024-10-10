@@ -1,1 +1,63 @@
 @use '../variables';
+
+@mixin SvgAnimeHover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 50px;
+    height: 200px;
+    aspect-ratio: 1/1;
+    z-index: 5;
+    svg {
+        path {
+            transition-duration: 0.2s;
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        z-index: -1;
+        width: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: center;
+        position: absolute;
+        background-color: variables.$Bittersweet;
+        background-size: cover;
+        border-radius: 25px;
+        transition-duration: 0.2s;
+    }
+    &:hover::after {
+        width: 105%;
+        aspect-ratio: 1/1;
+    }
+    &:hover {
+        svg {
+            .in {
+                fill: red;
+            }
+            .lineOut {
+                stroke-width: 0;
+            }
+            .out {
+                fill: #fff;
+            }
+            .smallCircle {
+                fill: #fff;
+            }
+            .lineMiddle, .lineIn {
+                stroke: #fff;
+                stroke-width: 8;
+            }
+            .gradientTop {
+                stop-color: #344997;
+            }
+            .gradientMiddle {
+                stop-color: #E71A4A;
+            }
+            .gradientBottom {
+                stop-color: #F3BF18;
+            }
+        }
+    }
+}

@@ -91,21 +91,30 @@ $red: rgb(255, 51, 51);
   font-family: "BebasNeue";
   letter-spacing: 0.1em;
 }
-.bgNav .navigationAccueil .logoNav, .bgNav .navigationAccueil .logoNavMobile {
+.bgNav .navigationAccueil .logos {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.bgNav .navigationAccueil .logos .logoNav, .bgNav .navigationAccueil .logos .logoNavMobile {
+  align-self: center;
   justify-self: start;
   font-size: 24px;
 }
-.bgNav .navigationAccueil .logoNavMobile {
+.bgNav .navigationAccueil .logos .lienPage.logoNavMobile {
   display: none;
 }
 .bgNav .navigationAccueil .lien {
+  width: 100%;
   justify-self: flex-end;
   display: flex;
   justify-content: space-between;
 }
 .bgNav .navigationAccueil .lien a.lienPage {
+  text-align: center;
+  width: auto;
   font-size: 1.5em;
-  padding: 0 1vw;
+  padding: 0 0.5vw;
   color: #feffdc;
   text-decoration: none;
   font-weight: bold;
@@ -133,7 +142,7 @@ $red: rgb(255, 51, 51);
 }
 .bgNav .navigationAccueil .lienPage.logoNav, .bgNav .navigationAccueil .lienPage.logoNavMobile {
   font-size: 1.5em;
-  padding: 0 1vw;
+  padding: 0 0.5vw;
   color: #feffdc;
   text-decoration: none;
   font-weight: bold;
@@ -199,14 +208,18 @@ $red: rgb(255, 51, 51);
     grid-template-columns: 60% 40%;
     grid-template-rows: auto;
   }
-  .bgNav .navigationAccueil .logoNavMobile {
+  .bgNav .navigationAccueil .logos {
     height: 100%;
-    grid-column: 1;
-    grid-row: 1;
     display: flex;
     align-items: center;
     justify-content: start;
-    font-size: 20px;
+  }
+  .bgNav .navigationAccueil .logos .logoNavMobile.lienPage {
+    display: inline;
+    width: auto;
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 36px;
   }
   .bgNav .navigationAccueil .lien {
     display: none;
@@ -341,14 +354,6 @@ $red: rgb(255, 51, 51);
   stroke-width: 0;
 }
 
-@media screen and (min-width: 2000px) {
-  .hero .conteneur .photoVGContainer .photoVG {
-    width: 500px;
-    height: 500px;
-    max-width: none;
-    max-height: none;
-  }
-}
 @media screen and (max-width: 1200px) {
   .hero {
     height: auto;
@@ -362,6 +367,7 @@ $red: rgb(255, 51, 51);
     height: 100%;
   }
   .hero .conteneur {
+    position: relative;
     height: auto;
   }
   .hero .conteneur .infoHero {
@@ -369,6 +375,10 @@ $red: rgb(255, 51, 51);
   }
   .hero .conteneur .infoHero .contact button {
     font-size: 24px;
+  }
+  .hero .conteneur .photoVGContainer {
+    position: relative;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -384,10 +394,16 @@ $red: rgb(255, 51, 51);
   .hero .conteneur .photoVGContainer {
     grid-row: 1;
     margin-bottom: 6vh;
+    display: flex;
+    justify-content: center;
   }
-  .hero .conteneur .photoVGContainer .photoVG {
-    max-width: 50vw;
-    max-height: 50vw;
+  .hero .conteneur .photoVGContainer a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .hero .conteneur .photoVGContainer a .photoVG {
+    width: 50%;
   }
   .hero .conteneur .infoHero {
     grid-row: 2;
@@ -447,11 +463,12 @@ $red: rgb(255, 51, 51);
   background-blend-mode: luminosity;
 }
 
-.photoVG {
-  height: 1000px;
-  max-height: 30vw;
-  width: 1000px;
-  max-width: 30vw;
+a {
+  width: 100%;
+}
+a .photoVG {
+  width: 100%;
+  aspect-ratio: 1/1;
   background-image: url(./medias/img/photo/me.jpg), url(./medias/img/icon.png);
   background-repeat: no-repeat, repeat-x;
   background-size: cover, 150%;
@@ -462,13 +479,17 @@ $red: rgb(255, 51, 51);
   box-shadow: 0 0 1vw #ff6262;
   transition: border 0.1s ease-in, box-shadow 0.2s ease-in-out, background-blend-mode 0.2s ease-in-out;
 }
-.photoVG:hover {
+a .photoVG:hover {
   border: 2vw solid #a90000;
   box-shadow: 0 0 3vw #a90000;
   background-blend-mode: normal;
 }
-.photoVG:active {
+a .photoVG:active {
   border-width: 1vw;
+}
+
+.info h1.plusInfoIllustrationText {
+  text-align: center;
 }
 
 .lienPlusIllustration {
@@ -479,7 +500,61 @@ $red: rgb(255, 51, 51);
   align-items: center;
   justify-content: center;
 }
-
+.lienPlusIllustration .svgSoc {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 50px;
+  height: 200px;
+  aspect-ratio: 1/1;
+  z-index: 5;
+}
+.lienPlusIllustration .svgSoc svg path {
+  transition-duration: 0.2s;
+}
+.lienPlusIllustration .svgSoc::after {
+  content: "";
+  display: block;
+  z-index: -1;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  position: absolute;
+  background-color: #ff6262;
+  background-size: cover;
+  border-radius: 25px;
+  transition-duration: 0.2s;
+}
+.lienPlusIllustration .svgSoc:hover::after {
+  width: 105%;
+  aspect-ratio: 1/1;
+}
+.lienPlusIllustration .svgSoc:hover svg .in {
+  fill: red;
+}
+.lienPlusIllustration .svgSoc:hover svg .lineOut {
+  stroke-width: 0;
+}
+.lienPlusIllustration .svgSoc:hover svg .out {
+  fill: #fff;
+}
+.lienPlusIllustration .svgSoc:hover svg .smallCircle {
+  fill: #fff;
+}
+.lienPlusIllustration .svgSoc:hover svg .lineMiddle, .lienPlusIllustration .svgSoc:hover svg .lineIn {
+  stroke: #fff;
+  stroke-width: 8;
+}
+.lienPlusIllustration .svgSoc:hover svg .gradientTop {
+  stop-color: #344997;
+}
+.lienPlusIllustration .svgSoc:hover svg .gradientMiddle {
+  stop-color: #E71A4A;
+}
+.lienPlusIllustration .svgSoc:hover svg .gradientBottom {
+  stop-color: #F3BF18;
+}
 .infoIllustration {
   padding: 5vh 25vmin;
   display: grid;

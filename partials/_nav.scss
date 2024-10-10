@@ -28,18 +28,29 @@
         /*--Text--*/
         font-family: 'BebasNeue';
         letter-spacing: 0.1em;
-        .logoNav, .logoNavMobile {
-            justify-self: start;
-            font-size: 24px;
+        .logos {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .logoNav, .logoNavMobile {
+                align-self: center;
+                justify-self: start;
+                font-size: 24px;
+            }
+            .lienPage.logoNavMobile {
+                display: none;
+            }
         }
-        .logoNavMobile {
-            display: none;
-        }
+        
+        
         .lien {
+            width: 100%;
             justify-self: flex-end;
             display: flex;
             justify-content: space-between;
             a.lienPage {
+                text-align: center;
+                width: auto;
                 @include lienNav.lienNaveNormal;
                 @include lienNav.lienNavHover;
             }
@@ -104,15 +115,21 @@
         .navigationAccueil {
             grid-template-columns: 60% 40%;
             grid-template-rows: auto;
-            .logoNavMobile {
+            .logos {
                 height: 100%;
-                grid-column: 1;
-                grid-row: 1;
                 display: flex;
                 align-items: center;
                 justify-content: start;
-                font-size: 20px;
+                .logoNavMobile.lienPage {
+                    display: inline;
+                    width: auto;
+                    grid-column: 1;
+                    grid-row: 1;
+                    
+                    font-size: 36px;
+                }
             }
+            
             .lien {
                 display: none;
             }
