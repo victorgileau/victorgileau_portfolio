@@ -2,6 +2,7 @@
 @use './variables';
 
 .hero {
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
@@ -14,19 +15,20 @@
     background-blend-mode: multiply;
     .conteneur {
         margin-top: 50px;
+
         height: auto;
         min-height: 100vh;
+
         padding: 10vh 0;
         margin-left: auto;
         margin-right: auto;
-        //height: 100vh;
-        width: 100%;
+        width: 90%;
         max-width: 1200px;
         display: grid;
         grid-template-columns: 60% 40%;
         column-gap: 10px;
         .infoHero {
-            height: auto;
+            width: 100%;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0);
             border-radius: 25px;
@@ -114,16 +116,12 @@
     
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1200px) {
     .hero {
         .conteneur {
-            .photoVGContainer {
-                .photoVG {
-                    //width: 500px;
-                    //height: 500px;
-                    //max-width: none;
-                    //max-height: none;
-                }
+            .infoHero {
+                align-self: center;
+                height: 75%;
             }
         }
     }
@@ -154,11 +152,13 @@
             .photoVGContainer {
                 position: relative;
                 width: 100%;
+                /*
                 .photoVG {
                     //width: 100%;
                     //max-width: none;
                     //aspect-ratio: 1/1;
                 }
+                    */
             }
         }
         
@@ -167,9 +167,12 @@
 
 
 @media screen and (max-width: 768px) {
+
     .hero {
+        min-height: 100vh;
         height: auto;
         .conteneur {
+            margin-bottom: 10vh;
             margin-top: 0;
             height: auto;
             grid-template-columns: 100%;
@@ -185,6 +188,11 @@
                     width: 100%;
                     .photoVG {
                         width: 50%;
+                        
+                        margin-top: 4em;
+                        width: 50vw;
+                        height: 50vw;
+                        
                     }
                 }
                 

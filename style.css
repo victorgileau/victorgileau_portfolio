@@ -245,6 +245,7 @@ $red: rgb(255, 51, 51);
 }
 /*-------Section Hero--------*/
 .hero {
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
@@ -263,7 +264,7 @@ $red: rgb(255, 51, 51);
   padding: 10vh 0;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   display: grid;
   grid-template-columns: 60% 40%;
@@ -271,7 +272,7 @@ $red: rgb(255, 51, 51);
        column-gap: 10px;
 }
 .hero .conteneur .infoHero {
-  height: auto;
+  width: 100%;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 25px;
@@ -354,6 +355,12 @@ $red: rgb(255, 51, 51);
   stroke-width: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero .conteneur .infoHero {
+    align-self: center;
+    height: 75%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .hero {
     height: auto;
@@ -379,13 +386,22 @@ $red: rgb(255, 51, 51);
   .hero .conteneur .photoVGContainer {
     position: relative;
     width: 100%;
+    /*
+    .photoVG {
+        //width: 100%;
+        //max-width: none;
+        //aspect-ratio: 1/1;
+    }
+        */
   }
 }
 @media screen and (max-width: 768px) {
   .hero {
+    min-height: 100vh;
     height: auto;
   }
   .hero .conteneur {
+    margin-bottom: 10vh;
     margin-top: 0;
     height: auto;
     grid-template-columns: 100%;
@@ -404,6 +420,9 @@ $red: rgb(255, 51, 51);
   }
   .hero .conteneur .photoVGContainer a .photoVG {
     width: 50%;
+    margin-top: 4em;
+    width: 50vw;
+    height: 50vw;
   }
   .hero .conteneur .infoHero {
     grid-row: 2;
@@ -603,11 +622,25 @@ footer .conteneur {
   width: 100%;
   max-width: 1200px;
   display: grid;
+  row-gap: 10px;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 3em 3em;
+  grid-template-rows: 3em 3em 3em;
+}
+footer .conteneur .lien--6 {
+  grid-column: 2;
+  grid-row: 2;
+}
+footer .conteneur .lien--7 {
+  grid-column: 3;
+  grid-row: 2;
+}
+footer .conteneur .lien--8 {
+  grid-column: 4;
+  grid-row: 2;
 }
 footer .conteneur .lien {
-  justify-self: center;
+  align-content: center;
+  text-align: center;
 }
 footer .conteneur .lien__aLien {
   font-family: "TitilliumLight";
@@ -619,39 +652,71 @@ footer .conteneur .lien__aLien {
 footer .conteneur .lien__aLien:hover {
   color: #ffeb69;
 }
-footer .conteneur .credit {
-  grid-row: auto;
-  grid-column: span 5;
-}
 footer .conteneur .credit em:hover {
   color: #feffdc;
+}
+footer .conteneur .lien--9.credit {
+  grid-row: auto;
+  grid-column: span 5;
 }
 
 @media screen and (max-width: 768px) {
   footer .conteneur {
-    grid-template-columns: 100%;
+    width: 80%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 3em 3em 3em 3em 3em 3em;
   }
   footer .conteneur .lien--1 {
+    grid-column: 1;
     grid-row: 1;
   }
   footer .conteneur .lien--2 {
+    grid-column: 1;
     grid-row: 2;
   }
   footer .conteneur .lien--3 {
+    grid-column: 1;
     grid-row: 3;
   }
   footer .conteneur .lien--4 {
+    grid-column: 1;
     grid-row: 4;
   }
   footer .conteneur .lien--5 {
+    grid-column: 1;
     grid-row: 5;
   }
   footer .conteneur .lien--6 {
+    grid-column: 2;
     grid-row: 6;
   }
-  footer .credit {
-    grid-row: 4;
+  footer .conteneur .lien--7 {
+    grid-column: 2;
+    grid-row: 7;
+  }
+  footer .conteneur .lien--8 {
+    grid-column: 2;
+    grid-row: 8;
+  }
+  footer .conteneur .lien--6 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  footer .conteneur .lien--7 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  footer .conteneur .lien--8 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  footer .conteneur .lien--9.credit {
+    grid-column: span 2;
+    grid-row: 6;
+    text-align: center;
+  }
+  footer .conteneur .lien {
+    text-align: left;
   }
 }
 @keyframes marche {
@@ -774,7 +839,10 @@ main .errorPageNotFound {
 }
 main .errorPageNotFound .pointer {
   z-index: 1;
-  background-image: radial-gradient(#a90000, #feffdc);
+  background-image: radial-gradient(#a90000, #feffdc), url(./medias/img/illustrations/pumkin-man-photoshop.jpg);
+  background-blend-mode: multiply;
+  background-position: center, 40% 10%;
+  background-size: 100%, 200%;
   height: 300px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -789,7 +857,7 @@ main .errorPageNotFound .pointer {
 }
 main .errorPageNotFound .errorWindow {
   z-index: 2;
-  background-color: #feffdc;
+  background-color: #ffeb69;
   position: absolute;
   top: 0;
   left: 0;
@@ -803,7 +871,8 @@ main .errorPageNotFound .errorWindow {
 }
 main .errorPageNotFound .errorWindow h1 {
   text-align: center;
-  font-size: 45vmin;
+  font-size: 70vmin;
+  line-height: 60vmin;
   color: #000;
 }
 main .errorPageNotFound .errorWindow p.text {
@@ -817,6 +886,9 @@ main .errorPageNotFound .errorWindow .btnPageIndex {
   border: none;
   color: #ffeb69;
 }
+main .errorPageNotFound .errorWindow .btnPageIndex a {
+  font-size: 5vmin;
+}
 main .errorPageNotFound .errorWindow .btnPageIndex:hover {
   background-color: #ff6262;
   border: 1px solid #a90000;
@@ -827,6 +899,9 @@ main .errorPageNotFound .errorWindow .btnPageIndex:hover a {
 }
 main .errorPageNotFound .errorWindow .btnPageIndex:active {
   background-image: linear-gradient(to top, #a90000, rgba(0, 0, 0, 0));
+}
+main .errorPageNotFound .errorWindow .btnPageIndex:active a {
+  color: #ffeb69;
 }
 main .errorPageNotFound .errorWindow .btnPageIndex a {
   color: #ffeb69;
@@ -844,6 +919,10 @@ main .errorPageNotFound .errorWindow .btnPageIndex a {
   0% {
     height: 25vh;
     border: 5vmin solid #a90000;
+  }
+  90% {
+    height: 80vh;
+    border: 0 solid #a90000;
   }
   100% {
     height: 80vh;
@@ -1018,14 +1097,6 @@ section.info .card .iconPage .illustrationIcon svg {
   }
   .dropbtn {
     display: inline-block;
-  }
-  .hero {
-    min-height: 80vh;
-  }
-  .photoVG {
-    margin-top: 4em;
-    width: 50vw;
-    height: 50vw;
   }
   h1, .h1 {
     font-size: 3em;

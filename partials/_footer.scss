@@ -1,6 +1,10 @@
 /*--Footer---*/
 @use './variables';
 
+$arrayNum: (6: 2, 7: 3, 8: 4);
+$arrayNumTwo: (6: 1, 7: 2, 8: 3);
+
+
 footer {
     background-image: linear-gradient(to right, variables.$Bittersweet, variables.$TurkeyRed);
 }
@@ -13,10 +17,18 @@ footer  {
         width: 100%;
         max-width: 1200px;
         display: grid;
+        row-gap: 10px;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 3em 3em;
+        grid-template-rows: 3em 3em 3em;
+        @each $i, $contentI in $arrayNum {
+            .lien--#{$i} {
+                grid-column: $contentI;
+                grid-row: 2;
+            }
+        }
         .lien {
-            justify-self: center;
+            align-content: center;
+            text-align: center;
             &__aLien {
                 font-family: 'TitilliumLight';
                 font-size: 1.1em;
@@ -29,11 +41,13 @@ footer  {
             }
         }
         .credit {
-            grid-row: auto;
-            grid-column: span 5;
             em:hover {
                 color: variables.$lightYellow;
             }
+        }
+        .lien--9.credit {
+            grid-row: auto;
+            grid-column: span 5;
         }
     }
 }
@@ -41,16 +55,36 @@ footer  {
 @media screen and (max-width: 768px) {
     footer {
         .conteneur {
-            grid-template-columns: 100%;
+            width: 80%;
+            grid-template-columns: 50% 50%;
             grid-template-rows: 3em 3em 3em 3em 3em 3em;
-            @for $i from 1 through 6 {
+            @for $i from 1 through 5 {
                 .lien--#{$i} {
+                    grid-column: 1;
                     grid-row: $i;
                 }
             }
+            @for $i from 6 through 8 {
+                .lien--#{$i} {
+                    grid-column: 2;
+                    grid-row: $i;
+                }
+            }
+            @each $i, $contentI in $arrayNumTwo {
+                .lien--#{$i} {
+                    grid-column: 2;
+                    grid-row: $contentI;
+                }
+            } 
+            .lien--9.credit {
+                grid-column: span 2;
+                grid-row: 6;
+                text-align: center;
+            }
+            .lien {
+                text-align: left;
+            }
         }
-        .credit {
-            grid-row: 4;
-        }
+        
     }
 }
