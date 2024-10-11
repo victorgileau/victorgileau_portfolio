@@ -1,0 +1,49 @@
+@use '../variables';
+
+@mixin btnHoverYellow {
+    margin-left: 0.5em;
+    border-radius: 25px;
+    background-color: variables.$Maize;
+    border: none;
+    color: variables.$TurkeyRed;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid variables.$Maize;
+        color: variables.$Maize;
+        a {
+            color: variables.$Maize;
+        }
+    }
+    &:active {
+        background-image: linear-gradient(to top, variables.$OrangeWeb, rgba(0,0,0,0));
+    }
+    a {
+        color: variables.$TurkeyRed;
+        
+    }
+}
+
+@mixin btnHoverPageError {
+    margin-left: 0.5em;
+    border-radius: 25px;
+    background-color: variables.$TurkeyRed;
+    border: none;
+    color: variables.$Maize;
+    &:hover {
+        background-color: variables.$Bittersweet;
+        border: 1px solid variables.$TurkeyRed;
+        color: variables.$lightYellow;
+        a {
+            color: variables.$TurkeyRed;
+        }
+    }
+    &:active {
+        background-image: linear-gradient(to top, variables.$TurkeyRed, rgba(0,0,0,0));
+        a {
+            color: varibales.$Maize;
+        }
+    }
+    a {
+        color: variables.$Maize;
+    }
+}

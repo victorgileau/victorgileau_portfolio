@@ -751,19 +751,105 @@ section.info.infoAPropos p.text--capacite {
     font-size: 24px;
   }
 }
+footer {
+  z-index: 1000;
+}
+
+main {
+  z-index: 100;
+  background-color: #ffb23e;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
 main .errorPageNotFound {
   height: 100vh;
-  background-color: #ffb23e;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
 }
-main .errorPageNotFound h1 {
-  font-size: 72px;
+main .errorPageNotFound .pointer {
+  z-index: 1;
+  background-image: radial-gradient(#a90000, #feffdc);
+  height: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  position: absolute;
+  animation-name: pointerAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+main .errorPageNotFound .errorWindow {
+  z-index: 2;
+  background-color: #feffdc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen;
+  width: 100%;
+  height: 100%;
+}
+main .errorPageNotFound .errorWindow h1 {
+  text-align: center;
+  font-size: 45vmin;
+  color: #000;
+}
+main .errorPageNotFound .errorWindow p.text {
+  color: #000;
+  font-size: 5vmin;
+}
+main .errorPageNotFound .errorWindow .btnPageIndex {
+  margin-left: 0.5em;
+  border-radius: 25px;
+  background-color: #a90000;
+  border: none;
+  color: #ffeb69;
+}
+main .errorPageNotFound .errorWindow .btnPageIndex:hover {
+  background-color: #ff6262;
+  border: 1px solid #a90000;
   color: #feffdc;
-  text-shadow: 2px 2px 10px #a90000;
+}
+main .errorPageNotFound .errorWindow .btnPageIndex:hover a {
+  color: #a90000;
+}
+main .errorPageNotFound .errorWindow .btnPageIndex:active {
+  background-image: linear-gradient(to top, #a90000, rgba(0, 0, 0, 0));
+}
+main .errorPageNotFound .errorWindow .btnPageIndex a {
+  color: #ffeb69;
 }
 
+@media screen and (max-width: 768px) {
+  main .errorPageNotFound {
+    max-width: none;
+  }
+  main .errorPageNotFound .errorWindow h1 {
+    font-size: 60vmin;
+  }
+}
+@keyframes pointerAnimation {
+  0% {
+    height: 25vh;
+    border: 5vmin solid #a90000;
+  }
+  100% {
+    height: 80vh;
+    border: 0 solid #a90000;
+  }
+}
 @font-face {
   font-family: "Lostar";
   src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);
@@ -806,6 +892,10 @@ a, .a {
 .btnModal {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+}
+
+footer {
+  z-index: 100;
 }
 
 /*--Fixed Btn to top--*/

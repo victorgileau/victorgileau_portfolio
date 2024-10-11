@@ -1,16 +1,95 @@
 @use './variables';
+@use './mixins/btnHover';
+
+footer {
+    z-index: 1000;
+}
 
 main {
+    z-index: 100;
+    background-color: variables.$OrangeWeb;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
     .errorPageNotFound {
         height: 100vh;
-        background-color: variables.$OrangeWeb;
+        width: 100vw;
+        position: relative;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        h1 {
-            font-size: 72px;
-            color: variables.$lightYellow;
-            text-shadow: 2px 2px 10px variables.$TurkeyRed;
+        top: 0;
+        .pointer {
+            z-index: 1;
+            background-image: radial-gradient(variables.$TurkeyRed, variables.$lightYellow);
+            height: 300px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+            position: absolute;
+            animation-name: pointerAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
         }
+        .errorWindow {
+            z-index: 2;
+            background-color: variables.$lightYellow;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            mix-blend-mode: screen;
+            width: 100%;
+            height: 100%;
+            h1 {
+                text-align: center;
+                font-size: 45vmin;
+                color: #000;
+                //text-shadow: 2px 2px 10px variables.$TurkeyRed;
+            }
+            p.text {
+                color: #000;
+                font-size: 5vmin;
+            }
+            .btnPageIndex {
+                a {
+                    font-size: 5vmin;
+                }
+                @include btnHover.btnHoverPageError;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        .errorPageNotFound {
+            max-width: none;
+            .errorWindow {
+                h1 {
+                    font-size: 60vmin;
+                }
+            }
+        }
+    }
+}
+
+@keyframes pointerAnimation {
+    0% {
+        height: 25vh;
+        border: 5vmin solid variables.$TurkeyRed;
+    }
+    100% {
+        height: 80vh;
+        border: 0 solid variables.$TurkeyRed;
     }
 }
