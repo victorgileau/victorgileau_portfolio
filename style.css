@@ -419,10 +419,9 @@ $red: rgb(255, 51, 51);
     width: 100%;
   }
   .hero .conteneur .photoVGContainer a .photoVG {
-    width: 50%;
     margin-top: 4em;
-    width: 50vw;
-    height: 50vw;
+    width: 60vw;
+    height: 60vw;
   }
   .hero .conteneur .infoHero {
     grid-row: 2;
@@ -460,7 +459,8 @@ $red: rgb(255, 51, 51);
 
 /*-- Section Hero Page A propos --*/
 .hero.page.APropos {
-  background-image: url(./medias/img/photo/me.jpg), linear-gradient(#ff6262, #ffeb69);
+  background-image: url(./medias/img/photo/essai-1_carre-v1.jpg), linear-gradient(#ff6262, #ffeb69);
+  background-position: 50% 40%;
   background-blend-mode: luminosity;
 }
 
@@ -488,10 +488,10 @@ a {
 a .photoVG {
   width: 100%;
   aspect-ratio: 1/1;
-  background-image: url(./medias/img/photo/me.jpg), url(./medias/img/icon.png);
+  background-image: url(./medias/img/photo/essai-1_v1.jpg), url(./medias/img/icon.png);
   background-repeat: no-repeat, repeat-x;
   background-size: cover, 150%;
-  background-position: 100% 30%, center;
+  background-position: 100% 20%, center;
   background-blend-mode: luminosity;
   border-radius: 50%;
   border: 1vw solid #ff6262;
@@ -764,7 +764,40 @@ footer .conteneur .lien--9.credit {
     height: auto;
   }
 }
-section.info.infoAPropos p.text--capacite {
+section.info.infoAPropos .conteneur {
+  padding: 10vh 0;
+  width: 95%;
+  margin: auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+section.info.infoAPropos .conteneur__titre {
+  text-align: center;
+  grid-column: span 2;
+  grid-row: 1;
+}
+section.info.infoAPropos .conteneur__start {
+  grid-column: 1;
+  grid-row: 2;
+}
+section.info.infoAPropos .conteneur__end {
+  grid-column: 2;
+  grid-row: 2;
+}
+section.info.infoAPropos .conteneur__center {
+  text-align: center;
+  grid-column: span 2;
+  grid-row: 3;
+}
+section.info.infoAPropos .conteneur .text__list {
+  list-style-type: none;
+}
+section.info.infoAPropos .conteneur .text__listPoint {
+  color: #a90000;
+  text-shadow: 0px 0px 5px #feffdc;
+}
+section.info.infoAPropos .conteneur .text--capacite {
   color: #a90000;
   text-shadow: 0px 0px 5px #feffdc;
 }
@@ -955,9 +988,17 @@ h1, .h1 {
   letter-spacing: 0.1em;
 }
 
-p.text {
+.text {
   font-family: "TitilliumLight";
   font-size: 20px;
+}
+.text__important {
+  color: #a90000;
+  text-decoration: none;
+  font-style: normal;
+}
+.text__important {
+  background-color: #ffb23e;
 }
 
 .info p.text {

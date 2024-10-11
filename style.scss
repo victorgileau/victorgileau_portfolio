@@ -43,9 +43,18 @@ h1, .h1 {
     letter-spacing: 0.1em;
 }
 
-p.text {
+.text {
     font-family: 'TitilliumLight';
     font-size: 20px;
+    &__important {
+        color: variables.$TurkeyRed;
+        text-decoration: none;
+        font-style: normal;
+        
+    }
+    &__important {
+        background-color: variables.$OrangeWeb;
+    }
 }
 
 .info {

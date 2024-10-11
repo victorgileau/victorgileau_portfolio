@@ -1,10 +1,47 @@
 @use './variables';
 
 section.info.infoAPropos {
-    p.text {
-        &--capacite {
-            color: variables.$TurkeyRed;
-            text-shadow: 0px 0px 5px variables.$lightYellow;
+    .conteneur {
+        padding: 10vh 0;
+        width: 95%;
+        margin: auto;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        &__titre {
+            text-align: center;
+            grid-column: span 2;
+            grid-row: 1;
+        }
+        &__start {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        &__end {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        &__center {
+            text-align: center;
+            grid-column: span 2;
+            grid-row: 3;
+        }
+
+        .text {
+            &__list {
+                list-style-type: none;
+            }
+            &__listPoint {
+                color: variables.$TurkeyRed;
+                text-shadow: 0px 0px 5px variables.$lightYellow;
+            }
+            &--capacite {
+                color: variables.$TurkeyRed;
+                text-shadow: 0px 0px 5px variables.$lightYellow;
+                
+                
+            }
         }
     }
+    
 }
