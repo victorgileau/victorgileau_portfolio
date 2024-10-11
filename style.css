@@ -751,6 +751,19 @@ section.info.infoAPropos p.text--capacite {
     font-size: 24px;
   }
 }
+main .errorPageNotFound {
+  height: 100vh;
+  background-color: #ffb23e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .errorPageNotFound h1 {
+  font-size: 72px;
+  color: #feffdc;
+  text-shadow: 2px 2px 10px #a90000;
+}
+
 @font-face {
   font-family: "Lostar";
   src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);

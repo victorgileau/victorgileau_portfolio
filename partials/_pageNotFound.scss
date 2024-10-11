@@ -1,0 +1,16 @@
+@use './variables';
+
+main {
+    .errorPageNotFound {
+        height: 100vh;
+        background-color: variables.$OrangeWeb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 72px;
+            color: variables.$lightYellow;
+            text-shadow: 2px 2px 10px variables.$TurkeyRed;
+        }
+    }
+}
