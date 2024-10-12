@@ -85,7 +85,7 @@ section.info.infoAPropos {
                     color: variables.$OrangeWeb;
                     text-shadow: 0px 0px 5px variables.$lightYellow;
                     .logoList {
-                        -webkit-filter: drop-shadow(0px 0px 5px variables.$OrangeWeb);
+                        filter: drop-shadow(0px 0px 5px variables.$OrangeWeb);
                     }
                 }
                 &--bigger {

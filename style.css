@@ -906,7 +906,7 @@ section.info.infoAPropos .conteneur .text__listPoint:hover {
   text-shadow: 0px 0px 5px #feffdc;
 }
 section.info.infoAPropos .conteneur .text__listPoint:hover .logoList {
-  -webkit-filter: drop-shadow(0px 0px 5px #ffb23e);
+  filter: drop-shadow(0px 0px 5px #ffb23e);
 }
 section.info.infoAPropos .conteneur .text__listPoint--bigger {
   grid-column: span 2;
