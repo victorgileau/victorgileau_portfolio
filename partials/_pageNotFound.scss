@@ -22,7 +22,7 @@ main {
         top: 0;
         .pointer {
             z-index: 1;
-            background-image: radial-gradient(variables.$TurkeyRed, variables.$lightYellow), url(./medias/img/illustrations/pumkin-man-photoshop.jpg);
+            background-image: radial-gradient(variables.$TurkeyRed, variables.$lightYellow);
             background-blend-mode: multiply;
             background-position: center, 40% 10%;
             background-size: 100%, 200%;
@@ -37,7 +37,14 @@ main {
             animation-iteration-count: infinite;
             animation-timing-function: ease;
             animation-direction: alternate;
-            
+            overflow: hidden;
+            img {
+                opacity: 0.5;
+                width: 200%;
+                right: -60%;
+                top: -30px;
+                position: absolute;
+            }
         }
         .errorWindow {
             z-index: 2;
@@ -65,8 +72,12 @@ main {
                 font-size: 5vmin;
             }
             .btnPageIndex {
+                display: flex;
+                align-items: center;
                 a {
-                    font-size: 5vmin;
+                    font-family: 'BebasNeue';
+                    font-size: 4vmin;
+                    line-height: 6vmin;
                 }
                 @include btnHover.btnHoverPageError;
             }

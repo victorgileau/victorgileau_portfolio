@@ -1108,7 +1108,7 @@ main .errorPageNotFound {
 }
 main .errorPageNotFound .pointer {
   z-index: 1;
-  background-image: radial-gradient(#a90000, #feffdc), url(./medias/img/illustrations/pumkin-man-photoshop.jpg);
+  background-image: radial-gradient(#a90000, #feffdc);
   background-blend-mode: multiply;
   background-position: center, 40% 10%;
   background-size: 100%, 200%;
@@ -1123,6 +1123,14 @@ main .errorPageNotFound .pointer {
   animation-iteration-count: infinite;
   animation-timing-function: ease;
   animation-direction: alternate;
+  overflow: hidden;
+}
+main .errorPageNotFound .pointer img {
+  opacity: 0.5;
+  width: 200%;
+  right: -60%;
+  top: -30px;
+  position: absolute;
 }
 main .errorPageNotFound .errorWindow {
   z-index: 2;
@@ -1149,6 +1157,8 @@ main .errorPageNotFound .errorWindow p.text {
   font-size: 5vmin;
 }
 main .errorPageNotFound .errorWindow .btnPageIndex {
+  display: flex;
+  align-items: center;
   margin-left: 0.5em;
   border-radius: 25px;
   background-color: #a90000;
@@ -1156,7 +1166,9 @@ main .errorPageNotFound .errorWindow .btnPageIndex {
   color: #ffeb69;
 }
 main .errorPageNotFound .errorWindow .btnPageIndex a {
-  font-size: 5vmin;
+  font-family: "BebasNeue";
+  font-size: 4vmin;
+  line-height: 6vmin;
 }
 main .errorPageNotFound .errorWindow .btnPageIndex:hover {
   background-color: #ff6262;
