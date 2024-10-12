@@ -121,7 +121,8 @@
         .conteneur {
             .infoHero {
                 align-self: center;
-                height: 75%;
+                min-height: 75%;
+                max-height: 100%;
             }
         }
     }

@@ -88,3 +88,23 @@ footer  {
         
     }
 }
+
+@media screen and (max-width: 400px) {
+    footer {
+        .conteneur {
+            grid-template-columns: 100%;
+            grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+            @for $i from 1 through 9 {
+                .lien--#{$i} {
+                    text-align: center;
+                    grid-column: 1;
+                    grid-row: $i;
+                }
+            }
+            .lien--9.credit {
+                grid-column: 1;
+                grid-row: 9;
+            }
+        }
+    }
+}
