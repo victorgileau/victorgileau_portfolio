@@ -820,6 +820,18 @@ footer .conteneur .lien--9.credit {
     height: auto;
   }
 }
+.hero.APropos {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+.hero.APropos .titre {
+  align-self: end;
+}
+
 section.info.infoAPropos {
   position: relative;
 }
@@ -1006,6 +1018,22 @@ section.info.infoAPropos .conteneur .text--capacite {
   flex-direction: column;
   align-items: flex-start;
 }
+.modalProjet .modal-body .bottomLink {
+  width: 100%;
+  height: auto;
+}
+.modalProjet .modal-body .bottomLink a .btn {
+  justify-self: end;
+  margin: 0 10px;
+  width: auto;
+}
+.modalProjet .modal-body .bottomLink__line {
+  width: 100%;
+  height: 2px;
+  border-radius: 25px;
+  background-color: #ffb23e;
+  margin: 10px 0;
+}
 .modalProjet__title {
   color: #feffdc;
 }
@@ -1023,14 +1051,26 @@ section.info.infoAPropos .conteneur .text--capacite {
 .modalProjet__btn {
   border: none;
   color: #ffb23e;
-  background-color: #feffdc;
+  background-color: #a90000;
+  border: 1px solid #ffb23e;
 }
 .modalProjet__btn:hover {
   background-color: #ffb23e;
-  color: #feffdc;
+  color: #a90000;
 }
 .modalProjet__btn.btn-close {
+  position: relative;
   align-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalProjet__btn.btn-close::after {
+  content: "X";
+  font-weight: bolder;
+}
+.modalProjet__btn.btn-close:hover::after {
+  content: "";
 }
 
 @media screen and (max-width: 768px) {

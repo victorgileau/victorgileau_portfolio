@@ -1,5 +1,17 @@
 @use './variables';
 
+.hero.APropos {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    .titre {
+        align-self: end;
+    }
+}
+
 section.info.infoAPropos {
     position: relative;
     .conteneur {
