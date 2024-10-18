@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*dark Blue*/
 /* Couleur Original
 $lightYellow: #feffdc;
 $Maize: #ffeb69;
@@ -7,12 +8,22 @@ $Bittersweet: #ff6262;
 $TurkeyRed: #a90000;
 $red: rgb(255, 51, 51);
 */
-/*dark v1
-$lightYellow-dark-blue: #010023;
-$Maize-dark-blue: #001496;
-$OrangeWeb-dark-blue: #004dc1; 
-$Bittersweet-dark-blue: #009d9d;
-$TurkeyRed-dark-blue: #56ffff;
+/*dark v1*/
+/*
+$lightYellow-dark-blue: #d1d1d1;
+$Maize-dark-blue: #4e4e4e;
+$OrangeWeb-dark-blue: #353535; 
+$Bittersweet-dark-blue: #1e1e1e;
+$TurkeyRed-dark-blue: #000000;
+$red-dark-blue: rgb(51, 54, 255);
+*/
+/*dark v2*/
+/*
+$lightYellow-dark-blue: #ab97d2;
+$Maize-dark-blue: #9185b0;
+$OrangeWeb-dark-blue: #755a94; 
+$Bittersweet-dark-blue: #472373;
+$TurkeyRed-dark-blue: #2a0159;
 $red-dark-blue: rgb(51, 54, 255);
 */
 /*Changment de couleur svg*/
@@ -1715,8 +1726,21 @@ main.darkBlue .toggle__slider {
 
 @media screen and (max-height: 900px) {
   main .conteneurToggle {
-    top: 120px;
+    top: 110px;
   }
+  main .conteneurToggle .toggle {
+    margin-right: 1em;
+  }
+}
+@media screen and (min-height: 1000px) {
+  main .conteneurToggle {
+    top: 12vh;
+  }
+  main .conteneurToggle .toggle {
+    margin-right: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
   main .conteneurToggle .toggle {
     margin-right: 1em;
   }
