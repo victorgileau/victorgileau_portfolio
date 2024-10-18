@@ -137,11 +137,12 @@
         align-items: center;
         justify-content: center;
         &::after {
-            content: 'X';
+            content: '';
             font-weight: bolder;
         }
         &:hover::after {
-            content: '';
+            content: 'X';
+            font-size: 150%;
         }
     }
 }

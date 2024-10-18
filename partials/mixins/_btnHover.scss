@@ -47,3 +47,28 @@
         color: variables.$Maize;
     }
 }
+
+@mixin btnHoverPageErrorDark {
+    margin-left: 0.5em;
+    border-radius: 25px;
+    background-color: variables.$TurkeyRed-dark-blue;
+    border: none;
+    color: variables.$Maize-dark-blue;
+    &:hover {
+        background-color: variables.$Bittersweet-dark-blue;
+        border: 1px solid variables.$TurkeyRed-dark-blue;
+        color: variables.$lightYellow-dark-blue;
+        a {
+            color: variables.$TurkeyRed-dark-blue;
+        }
+    }
+    &:active {
+        background-image: linear-gradient(to top, variables.$TurkeyRed-dark-blue, rgba(0,0,0,0));
+        a {
+            color: variables.$Maize-dark-blue;
+        }
+    }
+    a {
+        color: variables.$Maize-dark-blue;
+    }
+}

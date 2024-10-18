@@ -3,7 +3,7 @@
 
 main.darkBlue {
     .hero {
-        background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-image: url(./medias/img/dessin_papier/dessin-1-bonsoir.webp), radial-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
         .conteneur {
             .photoVG {
                 border: 1vw solid variables.$Bittersweet-dark-blue;
@@ -41,8 +41,8 @@ main.darkBlue {
             }
         }
         .titre--hero {
-            color: variables.$lightYellow-dark-blue;
-            text-shadow: 5px 5px variables.$TurkeyRed-dark-blue;
+            color: variables.$TurkeyRed-dark-blue;
+            text-shadow: 5px 5px variables.$lightYellow-dark-blue;
         }
         &__conteneurIcon {
             .iconPage {
@@ -79,7 +79,7 @@ main.darkBlue {
     /*-- Section Hero Page Illustration --*/
     
     .hero.page.Illustration {
-        background-image: url(./medias/img/dessin_papier/dessin-1.JPG), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-image: url(./medias/img/dessin_papier/dessin-1-bonsoir.webp), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
         background-blend-mode: luminosity;
     }
     

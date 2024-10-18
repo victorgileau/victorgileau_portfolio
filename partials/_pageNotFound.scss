@@ -1,8 +1,20 @@
 @use './variables';
 @use './mixins/btnHover';
 
-footer {
-    z-index: 1000;
+main.darkBlue {
+    background-color: variables.$OrangeWeb-dark-blue;
+    .errorPageNotFound {
+        .pointer {
+            background-image: radial-gradient(variables.$TurkeyRed-dark-blue, variables.$lightYellow-dark-blue);
+            animation-name: pointerAnimationDark;
+        }
+        .errorWindow {
+            background-color: variables.$OrangeWeb-dark-blue;
+            .btnPageIndex {
+                @include btnHover.btnHoverPageErrorDark;
+            }
+        }
+    }
 }
 
 main {
@@ -111,5 +123,20 @@ main {
     100% {
         height: 80vh;
         border: 0 solid variables.$TurkeyRed;
+    }
+}
+
+@keyframes pointerAnimationDark {
+    0% {
+        height: 25vh;
+        border: 5vmin solid variables.$TurkeyRed-dark-blue;
+    }
+    90% {
+        height: 80vh;
+        border: 0 solid variables.$TurkeyRed-dark-blue;
+    }
+    100% {
+        height: 80vh;
+        border: 0 solid variables.$TurkeyRed-dark-blue;
     }
 }

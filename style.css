@@ -29,13 +29,13 @@ main.darkBlue .iconPage svg .lineSVGTwo {
   stroke: #56ffff;
   stroke-width: 0;
 }
-main.darkBlue .iconPage svg .cls-1.lineSVGTwo {
+main.darkBlue .iconPage svg .cls-1.lineSVGTwo, main.darkBlue .iconSVGWeb .cls-1.lineSVGTwo {
   fill: #004dc1;
 }
-main.darkBlue .iconPage svg .cls-2.lineSVGTwo {
+main.darkBlue .iconPage svg .cls-2.lineSVGTwo, main.darkBlue .iconSVGWeb .cls-2.lineSVGTwo {
   fill: #56ffff;
 }
-main.darkBlue .iconPage svg .cls-3.lineSVGTwo {
+main.darkBlue .iconPage svg .cls-3.lineSVGTwo, main.darkBlue .iconSVGWeb .cls-3.lineSVGTwo {
   fill: #009d9d;
 }
 main.darkBlue .illustrationIcon .cls-1, main.darkBlue .cls-2 {
@@ -79,15 +79,15 @@ main.darkBlue .iconPage .iconEdit {
   stroke-width: 0;
 }
 
-.iconPage svg .cls-1.lineSVGTwo {
+.iconPage svg .cls-1.lineSVGTwo, .iconSVGWeb .cls-1.lineSVGTwo {
   fill: #ffb23e;
 }
 
-.iconPage svg .cls-2.lineSVGTwo {
+.iconPage svg .cls-2.lineSVGTwo, .iconSVGWeb .cls-2.lineSVGTwo {
   fill: #a90000;
 }
 
-.iconPage svg .cls-3.lineSVGTwo {
+.iconPage svg .cls-3.lineSVGTwo, .iconSVGWeb .cls-3.lineSVGTwo {
   fill: #ff6262;
 }
 
@@ -368,7 +368,7 @@ main.darkBlue {
   /*-- Section Hero Page Montage --*/
 }
 main.darkBlue .hero {
-  background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(#009d9d, #001496);
+  background-image: url(./medias/img/dessin_papier/dessin-1-bonsoir.webp), radial-gradient(#009d9d, #001496);
 }
 main.darkBlue .hero .conteneur .photoVG {
   border: 1vw solid #009d9d;
@@ -403,8 +403,8 @@ main.darkBlue .hero .conteneur .infoHero .contact button:active {
   background-image: linear-gradient(to top, #004dc1, rgba(0, 0, 0, 0));
 }
 main.darkBlue .hero .titre--hero {
-  color: #010023;
-  text-shadow: 5px 5px #56ffff;
+  color: #56ffff;
+  text-shadow: 5px 5px #010023;
 }
 main.darkBlue .hero__conteneurIcon .iconPage {
   background-image: radial-gradient(#009d9d 10%, #004dc1);
@@ -428,7 +428,7 @@ main.darkBlue .hero.page.TroisD {
   background-blend-mode: luminosity;
 }
 main.darkBlue .hero.page.Illustration {
-  background-image: url(./medias/img/dessin_papier/dessin-1.JPG), linear-gradient(#009d9d, #001496);
+  background-image: url(./medias/img/dessin_papier/dessin-1-bonsoir.webp), linear-gradient(#009d9d, #001496);
   background-blend-mode: luminosity;
 }
 main.darkBlue .hero.page.Montage {
@@ -814,8 +814,10 @@ footer.darkBlue .conteneur .lien__aLien {
 }
 footer.darkBlue .conteneur .lien__aLien:hover {
   color: #001496;
+  text-shadow: 0 2px 2px #004dc1;
 }
 footer.darkBlue .conteneur .credit em:hover {
+  text-shadow: none;
   color: #010023;
 }
 
@@ -993,10 +995,13 @@ footer .conteneur .lien--9.credit {
   }
   /* Note: 19 images x 700px = 13300px */
 }
-main.darkBlue .cardInfoWeb__imgProjet, main.darkBlue .cardInfo3D__imgProjet {
+main.darkBlue .cardInfoWeb__imgProject, main.darkBlue .cardInfo3D__imgProject {
   border: 0 solid #56ffff;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
 }
-main.darkBlue .cardInfoWeb__imgProjet:hover, main.darkBlue .cardInfo3D__imgProjet:hover {
+main.darkBlue .cardInfoWeb__imgProject:hover, main.darkBlue .cardInfo3D__imgProject:hover {
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
   border: 1em solid #56ffff;
 }
 
@@ -1015,6 +1020,8 @@ main .cardInfoWeb__imgProject, main .cardInfo3D__imgProject {
   border: 0 solid #a90000;
 }
 main .cardInfoWeb__imgProject:hover, main .cardInfo3D__imgProject:hover {
+  transform: translateY(-0.8em);
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
   border: 1em solid #a90000;
 }
 
@@ -1311,11 +1318,12 @@ main section.info.infoAPropos .conteneur .text--capacite {
   justify-content: center;
 }
 .modalConteneur.darkBlue .modalProjet__btn.btn-close::after {
-  content: "X";
+  content: "";
   font-weight: bolder;
 }
 .modalConteneur.darkBlue .modalProjet__btn.btn-close:hover::after {
-  content: "";
+  content: "X";
+  font-size: 150%;
 }
 
 .modalProjet .modal-content {
@@ -1393,8 +1401,39 @@ main section.info.infoAPropos .conteneur .text--capacite {
     font-size: 24px;
   }
 }
-footer {
-  z-index: 1000;
+main.darkBlue {
+  background-color: #004dc1;
+}
+main.darkBlue .errorPageNotFound .pointer {
+  background-image: radial-gradient(#56ffff, #010023);
+  animation-name: pointerAnimationDark;
+}
+main.darkBlue .errorPageNotFound .errorWindow {
+  background-color: #004dc1;
+}
+main.darkBlue .errorPageNotFound .errorWindow .btnPageIndex {
+  margin-left: 0.5em;
+  border-radius: 25px;
+  background-color: #56ffff;
+  border: none;
+  color: #001496;
+}
+main.darkBlue .errorPageNotFound .errorWindow .btnPageIndex:hover {
+  background-color: #009d9d;
+  border: 1px solid #56ffff;
+  color: #010023;
+}
+main.darkBlue .errorPageNotFound .errorWindow .btnPageIndex:hover a {
+  color: #56ffff;
+}
+main.darkBlue .errorPageNotFound .errorWindow .btnPageIndex:active {
+  background-image: linear-gradient(to top, #56ffff, rgba(0, 0, 0, 0));
+}
+main.darkBlue .errorPageNotFound .errorWindow .btnPageIndex:active a {
+  color: #001496;
+}
+main.darkBlue .errorPageNotFound .errorWindow .btnPageIndex a {
+  color: #001496;
 }
 
 main {
@@ -1518,13 +1557,36 @@ main .errorPageNotFound .errorWindow .btnPageIndex a {
     border: 0 solid #a90000;
   }
 }
-main .conteneur {
-  position: relative;
-  margin: auto;
+@keyframes pointerAnimationDark {
+  0% {
+    height: 25vh;
+    border: 5vmin solid #56ffff;
+  }
+  90% {
+    height: 80vh;
+    border: 0 solid #56ffff;
+  }
+  100% {
+    height: 80vh;
+    border: 0 solid #56ffff;
+  }
+}
+main .conteneurToggle {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   max-width: 1250px;
+  height: auto;
+  display: flex;
+  justify-content: end;
+  z-index: 9;
 }
-main .conteneur .toggle {
+main .conteneurToggle .toggle {
+  opacity: 0.8;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
   transition: 0.5s;
   transition-timing-function: ease;
   padding: 5px;
@@ -1532,15 +1594,16 @@ main .conteneur .toggle {
   flex-direction: column;
   justify-content: center;
   z-index: 9;
-  position: absolute;
-  top: 100px;
-  right: 0;
   width: 100px;
   height: 50px;
   background-color: #ffb23e;
   border-radius: 25px;
 }
-main .conteneur .toggle__slider {
+main .conteneurToggle .toggle:hover {
+  opacity: 1;
+}
+main .conteneurToggle .toggle__slider {
+  cursor: pointer;
   transition: 0.5s;
   transition-timing-function: ease;
   display: flex;
@@ -1551,11 +1614,11 @@ main .conteneur .toggle__slider {
   aspect-ratio: 1/1;
   background-color: #feffdc;
 }
-main .conteneur .toggle__slider .checkbox {
+main .conteneurToggle .toggle__slider .checkbox {
+  cursor: pointer;
   opacity: 0;
   width: 100%;
   aspect-ratio: 1/1;
-  cursor: pointer;
 }
 
 main.darkBlue .toggle {
@@ -1565,6 +1628,14 @@ main.darkBlue .toggle__slider {
   background-color: #010023;
 }
 
+@media screen and (max-height: 900px) {
+  main .conteneurToggle {
+    top: 120px;
+  }
+  main .conteneurToggle .toggle {
+    margin-right: 1em;
+  }
+}
 @font-face {
   font-family: "Lostar";
   src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);
@@ -1594,10 +1665,26 @@ main.darkBlue .text__important {
   background-color: #004dc1;
 }
 main.darkBlue section.info {
-  background-image: linear-gradient(to top, #004dc1, #001496);
+  background-image: linear-gradient(to bottom, #010023, #004dc1);
 }
 main.darkBlue h1, main.darkBlue p.text {
   color: #56ffff;
+}
+main.darkBlue .sprite {
+  margin: auto;
+  width: 20vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  /* Styles pour l'image d'arrière plan */
+  background-image: url(./medias/img/spritesheet-v2-256px.jpg);
+  /* Styles pour l'animation */
+  animation-play-state: play;
+  background-size: 4800% 100%;
+  animation-name: marche;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+  background-image: url(./medias/img/spritesheet-v2-256px-blue.webp);
 }
 
 /*---Tout----*/
@@ -1631,7 +1718,7 @@ a, .a {
 }
 
 footer {
-  z-index: 100;
+  z-index: 1000;
 }
 
 .sprite {
@@ -1666,14 +1753,18 @@ section.info .card img {
     //aspect-ratio: 1/1;
 }
 */
+/*
 section.info .card .iconPage {
-  min-width: 15vw;
-  min-height: 15vw;
-  max-width: 50vw;
-  max-height: 50vw;
-  margin: auto;
+    min-width: 15vw;
+    min-height: 15vw;
+    max-width: 50vw;
+    max-height: 50vw;
+    margin: auto;
 }
-
+*/
+section.info .card .iconPage {
+  width: 100%;
+}
 section.info .card .iconPage .illustrationIcon {
   width: 100%;
   aspect-ratio: 1/1;
@@ -1682,11 +1773,20 @@ section.info .card .iconPage .illustrationIcon svg {
   width: 100%;
   aspect-ratio: 1/1;
 }
+section.info .card .iconSVGWeb {
+  align-self: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
 
 /*---Media query---*/
 @media screen and (min-width: 2000px) {
   section.info .card .sprite {
-    width: 15vw;
+    width: 100%;
+    max-width: 15vw;
+  }
+  section.info .card .iconPage .illustrationIcon {
+    width: 100%;
   }
   .hero.page {
     background-size: 80%, 100%;
@@ -1700,21 +1800,14 @@ section.info .card .iconPage .illustrationIcon svg {
     min-width: 25vw;
     max-width: 40vw;
   }
-  section.info .iconPage {
-    width: 25vw;
-  }
-  main button.btnTop {
-    width: 10vw;
+  section.info .card .iconSVGWeb {
+    width: 80%;
   }
 }
 @media screen and (max-width: 768px) {
   .navigationAccueil {
     height: 10vh;
     padding: 0 5vw;
-  }
-  main button.btnTop {
-    width: 10vw;
-    bottom: 20vmin;
   }
   .logoNav {
     display: none;
@@ -1732,13 +1825,21 @@ section.info .card .iconPage .illustrationIcon svg {
     font-size: 18px;
   }
   /*--Section info page accueil--*/
-  section.info .iconPage {
+  section.info .card .iconSVGWeb {
     width: 45vw;
   }
   section.info .card .sprite {
     width: 45vw;
   }
   section.info .card .iconPage {
-    width: 45vw;
+    width: 100%;
+  }
+  section.info .card .iconPage .illustrationIcon {
+    width: 80%;
+    aspect-ratio: 1/1;
+  }
+  section.info .card .iconPage .illustrationIcon svg {
+    width: 100%;
+    aspect-ratio: 1/1;
   }
 }/*# sourceMappingURL=style.css.map */

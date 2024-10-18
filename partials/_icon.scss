@@ -17,13 +17,13 @@ main.darkBlue {
         stroke-width: 0;
     }
     
-    .iconPage svg .cls-1.lineSVGTwo {
+    .iconPage svg .cls-1.lineSVGTwo, .iconSVGWeb .cls-1.lineSVGTwo {
         fill: variables.$OrangeWeb-dark-blue;
     }
-    .iconPage svg .cls-2.lineSVGTwo {
+    .iconPage svg .cls-2.lineSVGTwo, .iconSVGWeb .cls-2.lineSVGTwo {
         fill: variables.$TurkeyRed-dark-blue;
     }
-    .iconPage svg .cls-3.lineSVGTwo {
+    .iconPage svg .cls-3.lineSVGTwo, .iconSVGWeb .cls-3.lineSVGTwo {
         fill: variables.$Bittersweet-dark-blue;
     }
     
@@ -73,13 +73,13 @@ main.darkBlue {
     stroke-width: 0;
 }
 
-.iconPage svg .cls-1.lineSVGTwo {
+.iconPage svg .cls-1.lineSVGTwo, .iconSVGWeb .cls-1.lineSVGTwo {
     fill: variables.$OrangeWeb;
 }
-.iconPage svg .cls-2.lineSVGTwo {
+.iconPage svg .cls-2.lineSVGTwo, .iconSVGWeb .cls-2.lineSVGTwo {
     fill: variables.$TurkeyRed;
 }
-.iconPage svg .cls-3.lineSVGTwo {
+.iconPage svg .cls-3.lineSVGTwo, .iconSVGWeb .cls-3.lineSVGTwo {
     fill: variables.$Bittersweet;
 }
 

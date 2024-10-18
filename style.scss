@@ -49,10 +49,15 @@ main.darkBlue {
         }
     }
     section.info {
-        background-image: linear-gradient(to top, variables.$OrangeWeb-dark-blue, variables.$Maize-dark-blue);
+        background-image: linear-gradient(to bottom, variables.$lightYellow-dark-blue, variables.$OrangeWeb-dark-blue);
     }
     h1, p.text {
         color: variables.$TurkeyRed-dark-blue;
+    }
+    .sprite {
+        
+        @include spriteAnimation.spriteAnimation;
+        background-image: url(./medias/img/spritesheet-v2-256px-blue.webp);
     }
 }
 
@@ -92,7 +97,7 @@ a, .a {
 }
 
 footer {
-    z-index: 100;
+    z-index: 1000;
 }
 
 .sprite {
@@ -116,7 +121,7 @@ section.info .card img {
     //aspect-ratio: 1/1;
 }
 */
-
+/*
 section.info .card .iconPage {
     min-width: 15vw;
     min-height: 15vw;
@@ -124,11 +129,21 @@ section.info .card .iconPage {
     max-height: 50vw;
     margin: auto;
 }
-
-section.info .card .iconPage .illustrationIcon {
-    width: 100%;
-    aspect-ratio: 1/1;
-    svg {
+*/
+section.info .card {
+    .iconPage {
+        width: 100%;
+        .illustrationIcon {
+            width: 100%;
+            aspect-ratio: 1/1;
+            svg {
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+    .iconSVGWeb {
+        align-self: center;
         width: 100%;
         aspect-ratio: 1/1;
     }
@@ -138,7 +153,12 @@ section.info .card .iconPage .illustrationIcon {
 
 @media screen and (min-width: 2000px) {
     section.info .card .sprite {
-        width: 15vw;
+        width: 100%;
+        max-width: 15vw;
+    }
+
+    section.info .card .iconPage .illustrationIcon {
+        width: 100%;
     }
 
     .hero.page {
@@ -156,12 +176,8 @@ section.info .card .iconPage .illustrationIcon {
         max-width: 40vw;
     }
 
-    section.info .iconPage {
-        width: 25vw;
-    }
-
-    main button.btnTop  {
-        width: 10vw;
+    section.info .card .iconSVGWeb {
+        width: 80%;
     }
 }
 
@@ -169,11 +185,6 @@ section.info .card .iconPage .illustrationIcon {
     .navigationAccueil {
         height: 10vh;
         padding: 0 5vw;
-    }
-
-    main button.btnTop  {
-        width: 10vw;
-        bottom: 20vmin;
     }
 
     .logoNav {
@@ -200,16 +211,25 @@ section.info .card .iconPage .illustrationIcon {
 
     /*--Section info page accueil--*/
 
-    section.info .iconPage {
+    section.info .card .iconSVGWeb {
         width: 45vw;
     }
 
     section.info .card .sprite {
         width: 45vw;
     }
-
-    section.info .card .iconPage {
-        width: 45vw;
+    section.info .card {
+        .iconPage {
+            width: 100%;
+            .illustrationIcon {
+                width: 80%;
+                aspect-ratio: 1/1;
+                svg {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
     }
 }
 

@@ -12,12 +12,16 @@ footer.darkBlue {
                 color: variables.$lightYellow-dark-blue;
                 &:hover {
                     color: variables.$Maize-dark-blue;
+                    text-shadow: 0 2px 2px variables.$OrangeWeb-dark-blue;
                 }
             }
         }
         .credit {
-            em:hover {
-                color: variables.$lightYellow-dark-blue;
+            em {
+                &:hover {
+                    text-shadow: none;
+                    color: variables.$lightYellow-dark-blue;
+                }
             }
         }
     }

@@ -2,10 +2,12 @@
 
 main.darkBlue {
     .cardInfoWeb, .cardInfo3D {
-        &__imgProjet {
+        &__imgProject {
             border: 0 solid variables.$TurkeyRed-dark-blue;
-
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
             &:hover {
+                box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
                 border: 1em solid variables.$TurkeyRed-dark-blue;
             }
         }
@@ -26,6 +28,8 @@ main {
             transition-timing-function: linear;
             border: 0 solid variables.$TurkeyRed;
             &:hover {
+                transform: translateY(-0.8em);
+                box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
                 border: 1em solid variables.$TurkeyRed;
             }
         }
