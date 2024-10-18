@@ -1,5 +1,6 @@
 /*Changment de couleur svg*/
 @use './variables';
+@use './mixins/lienMediaSociaux';
 
 main.darkBlue {
     .iconPage svg .cls-1.lineSVG {
@@ -55,6 +56,46 @@ main.darkBlue {
     .iconPage .iconEdit {
         fill: variables.$lightYellow-dark-blue;
         stroke: variables.$TurkeyRed-dark-blue;
+    }
+
+    /*--Lien medias sociaux--*/
+    .lienPlusIllustration {
+        .svgSoc {
+            @include lienMediaSociaux.SvgAnimeHover;
+            svg {
+                .in {
+                    fill: variables.$lightYellow-dark-blue;
+                }
+                .lineOut {
+                    stroke-width: 6;
+                    stroke: variables.$TurkeyRed-dark-blue;
+                }
+                .out {
+                    fill: variables.$TurkeyRed-dark-blue;
+                }
+                .smallCircle {
+                    fill: variables.$lightYellow-dark-blue;
+                }
+                .lineMiddle, .lineIn {
+                    stroke: variables.$lightYellow-dark-blue;
+                    stroke-width: 6;
+                }
+                .gradientTop {
+                    stop-color: variables.$TurkeyRed-dark-blue;
+                }
+                .gradientMiddle {
+                    stop-color: variables.$Bittersweet-dark-blue;
+                }
+                .gradientBottom {
+                    stop-color: variables.$lightYellow-dark-blue;
+                }
+            }
+            &::after {
+                background-color: variables.$Bittersweet-dark-blue;
+            }
+            
+        }
+        
     }
 }
 

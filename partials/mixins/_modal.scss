@@ -75,10 +75,11 @@
 
 @mixin modalDark {
     .modal-content {
-        background-color: variables.$TurkeyRed-dark-blue;
+        background-image: linear-gradient(variables.$OrangeWeb-dark-blue, variables.$Bittersweet-dark-blue, variables.$OrangeWeb-dark-blue) ;
     }
 
     .modal-body {
+        
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -103,11 +104,11 @@
     }
 
     &__title {
-        color: variables.$lightYellow-dark-blue;
+        color: variables.$TurkeyRed-dark-blue;
     }
 
     &__texte {
-        color: variables.$lightYellow-dark-blue;
+        color: variables.$TurkeyRed-dark-blue;
     }
 
     &__img {
@@ -124,10 +125,10 @@
         border: none;
         color: variables.$OrangeWeb-dark-blue;
         background-color: variables.$TurkeyRed-dark-blue;
-        border: 1px solid variables.$OrangeWeb-dark-blue;
         &:hover {
             background-color: variables.$OrangeWeb-dark-blue;
             color: variables.$TurkeyRed-dark-blue;
+            border: 1px solid variables.$TurkeyRed-dark-blue;
         }
     }
     &__btn.btn-close {

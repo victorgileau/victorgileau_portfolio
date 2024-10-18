@@ -16,6 +16,9 @@ $TurkeyRed-dark-blue: #56ffff;
 $red-dark-blue: rgb(51, 54, 255);
 */
 /*Changment de couleur svg*/
+main.darkBlue {
+  /*--Lien medias sociaux--*/
+}
 main.darkBlue .iconPage svg .cls-1.lineSVG {
   fill: #004dc1;
 }
@@ -60,6 +63,88 @@ main.darkBlue .illustrationIcon .cls-6 {
 main.darkBlue .iconPage .iconEdit {
   fill: #010023;
   stroke: #56ffff;
+}
+main.darkBlue .lienPlusIllustration .svgSoc {
+  position: relative;
+  display: flex;
+  align-items: center;
+  aspect-ratio: 1/1;
+  z-index: 5;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg path {
+  transition-duration: 0.2s;
+}
+main.darkBlue .lienPlusIllustration .svgSoc::after {
+  content: "";
+  display: block;
+  z-index: -1;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  position: absolute;
+  background-color: #ff6262;
+  background-size: cover;
+  border-radius: 25px;
+  transition-duration: 0.2s;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover::after {
+  width: 105%;
+  aspect-ratio: 1/1;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .in {
+  fill: red;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .lineOut {
+  stroke-width: 0;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .out {
+  fill: #fff;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .smallCircle {
+  fill: #fff;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .lineMiddle, main.darkBlue .lienPlusIllustration .svgSoc:hover svg .lineIn {
+  stroke: #fff;
+  stroke-width: 8;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .gradientTop {
+  stop-color: #344997;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .gradientMiddle {
+  stop-color: #E71A4A;
+}
+main.darkBlue .lienPlusIllustration .svgSoc:hover svg .gradientBottom {
+  stop-color: #F3BF18;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .in {
+  fill: #010023;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .lineOut {
+  stroke-width: 6;
+  stroke: #56ffff;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .out {
+  fill: #56ffff;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .smallCircle {
+  fill: #010023;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .lineMiddle, main.darkBlue .lienPlusIllustration .svgSoc svg .lineIn {
+  stroke: #010023;
+  stroke-width: 6;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .gradientTop {
+  stop-color: #56ffff;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .gradientMiddle {
+  stop-color: #009d9d;
+}
+main.darkBlue .lienPlusIllustration .svgSoc svg .gradientBottom {
+  stop-color: #010023;
+}
+main.darkBlue .lienPlusIllustration .svgSoc::after {
+  background-color: #009d9d;
 }
 
 .iconPage svg .cls-1.lineSVG {
@@ -1263,7 +1348,7 @@ main section.info.infoAPropos .conteneur .text--capacite {
   }
 }
 .modalConteneur.darkBlue .modalProjet .modal-content {
-  background-color: #56ffff;
+  background-image: linear-gradient(#004dc1, #009d9d, #004dc1);
 }
 .modalConteneur.darkBlue .modalProjet .modal-body {
   display: flex;
@@ -1287,10 +1372,10 @@ main section.info.infoAPropos .conteneur .text--capacite {
   margin: 10px 0;
 }
 .modalConteneur.darkBlue .modalProjet__title {
-  color: #010023;
+  color: #56ffff;
 }
 .modalConteneur.darkBlue .modalProjet__texte {
-  color: #010023;
+  color: #56ffff;
 }
 .modalConteneur.darkBlue .modalProjet__img {
   width: 100%;
@@ -1304,11 +1389,11 @@ main section.info.infoAPropos .conteneur .text--capacite {
   border: none;
   color: #004dc1;
   background-color: #56ffff;
-  border: 1px solid #004dc1;
 }
 .modalConteneur.darkBlue .modalProjet__btn:hover {
   background-color: #004dc1;
   color: #56ffff;
+  border: 1px solid #56ffff;
 }
 .modalConteneur.darkBlue .modalProjet__btn.btn-close {
   position: relative;
