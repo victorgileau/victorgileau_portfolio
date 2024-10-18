@@ -4,6 +4,24 @@
 $arrayNum: (6: 2, 7: 3, 8: 4);
 $arrayNumTwo: (6: 1, 7: 2, 8: 3);
 
+footer.darkBlue {
+    background-image: linear-gradient(to right, variables.$Bittersweet-dark-blue, variables.$TurkeyRed-dark-blue);
+    .conteneur {
+        .lien {
+            &__aLien {
+                color: variables.$lightYellow-dark-blue;
+                &:hover {
+                    color: variables.$Maize-dark-blue;
+                }
+            }
+        }
+        .credit {
+            em:hover {
+                color: variables.$lightYellow-dark-blue;
+            }
+        }
+    }
+}
 
 footer {
     background-image: linear-gradient(to right, variables.$Bittersweet, variables.$TurkeyRed);

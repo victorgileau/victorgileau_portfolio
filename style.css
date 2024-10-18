@@ -7,7 +7,61 @@ $Bittersweet: #ff6262;
 $TurkeyRed: #a90000;
 $red: rgb(255, 51, 51);
 */
+/*dark v1
+$lightYellow-dark-blue: #010023;
+$Maize-dark-blue: #001496;
+$OrangeWeb-dark-blue: #004dc1; 
+$Bittersweet-dark-blue: #009d9d;
+$TurkeyRed-dark-blue: #56ffff;
+$red-dark-blue: rgb(51, 54, 255);
+*/
 /*Changment de couleur svg*/
+main.darkBlue .iconPage svg .cls-1.lineSVG {
+  fill: #004dc1;
+}
+main.darkBlue .iconPage svg .cls-2.lineSVG {
+  fill: #001496;
+}
+main.darkBlue .iconPage svg .cls-3.lineSVG {
+  fill: #010023;
+}
+main.darkBlue .iconPage svg .lineSVGTwo {
+  stroke: #56ffff;
+  stroke-width: 0;
+}
+main.darkBlue .iconPage svg .cls-1.lineSVGTwo {
+  fill: #004dc1;
+}
+main.darkBlue .iconPage svg .cls-2.lineSVGTwo {
+  fill: #56ffff;
+}
+main.darkBlue .iconPage svg .cls-3.lineSVGTwo {
+  fill: #009d9d;
+}
+main.darkBlue .illustrationIcon .cls-1, main.darkBlue .cls-2 {
+  fill: #56ffff;
+}
+main.darkBlue .illustrationIcon .cls-3 {
+  fill: #001496;
+}
+main.darkBlue .illustrationIcon .cls-4 {
+  fill: url(#Dégradé_sans_nom_16);
+}
+main.darkBlue .illustrationIcon .cls-5, main.darkBlue .illustrationIcon .cls-6, main.darkBlue .illustrationIcon .cls-2 {
+  stroke: #56ffff;
+  stroke-miterlimit: 10;
+}
+main.darkBlue .illustrationIcon .cls-5, main.darkBlue .illustrationIcon .cls-7 {
+  fill: rgb(51, 54, 255);
+}
+main.darkBlue .illustrationIcon .cls-6 {
+  fill: #004dc1;
+}
+main.darkBlue .iconPage .iconEdit {
+  fill: #010023;
+  stroke: #56ffff;
+}
+
 .iconPage svg .cls-1.lineSVG {
   fill: #ffb23e;
 }
@@ -64,10 +118,70 @@ $red: rgb(255, 51, 51);
 
 .iconPage .iconEdit {
   fill: #feffdc;
+  stroke: #a90000;
 }
 
 /*Fin changment de couleur svg*/
 /*-------Navigation--------*/
+.bgNav.darkBlue {
+  background-image: linear-gradient(to right, #56ffff, #009d9d);
+  /*----Code de w3School----*/
+  /* Dropdown Button */
+  /* The container <div> - needed to position the dropdown content */
+  /* Dropdown Content (Hidden by Default) */
+  /* Links inside the dropdown */
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu on hover */
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /*----Fin Code de w3School----*/
+}
+.bgNav.darkBlue .navigationAccueil .lien a.lienPage {
+  color: #010023;
+}
+.bgNav.darkBlue .navigationAccueil .lien a.lienPage::after, .bgNav.darkBlue .navigationAccueil .lien a.lienPage::before {
+  background-color: #010023;
+}
+.bgNav.darkBlue .navigationAccueil .lienPage.logoNav, .bgNav.darkBlue .navigationAccueil .lienPage.logoNavMobile {
+  color: #010023;
+}
+.bgNav.darkBlue .dropbtn {
+  background-color: #56ffff;
+  color: #010023;
+  border: none;
+  display: none;
+  border-radius: 10px;
+  padding: 15px;
+}
+.bgNav.darkBlue .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.bgNav.darkBlue .dropdown-content {
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: #010023;
+  min-width: 15vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.bgNav.darkBlue .dropdown-content a {
+  color: #56ffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.bgNav.darkBlue .dropdown-content a:hover {
+  background-color: #001496;
+  border-radius: 10px;
+}
+.bgNav.darkBlue .dropdown:hover .dropdown-content {
+  display: block;
+}
+.bgNav.darkBlue .dropdown:hover .dropbtn {
+  background-color: #009d9d;
+}
+
 .bgNav {
   z-index: 10;
   position: fixed;
@@ -204,6 +318,9 @@ $red: rgb(255, 51, 51);
 
 /*----Fin Code de w3School----*/
 @media screen and (max-width: 768px) {
+  .bgNav.darkBlue .navigationAccueil .dropbtn {
+    display: grid;
+  }
   .bgNav .navigationAccueil {
     grid-template-columns: 60% 40%;
     grid-template-rows: auto;
@@ -244,6 +361,81 @@ $red: rgb(255, 51, 51);
   }
 }
 /*-------Section Hero--------*/
+main.darkBlue {
+  /*-- Section Hero Page A propos --*/
+  /*-- Section Hero Page 3D --*/
+  /*-- Section Hero Page Illustration --*/
+  /*-- Section Hero Page Montage --*/
+}
+main.darkBlue .hero {
+  background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(#009d9d, #001496);
+}
+main.darkBlue .hero .conteneur .photoVG {
+  border: 1vw solid #009d9d;
+  box-shadow: 0 0 1vw #009d9d;
+  background-blend-mode: difference;
+}
+main.darkBlue .hero .conteneur .photoVG:hover {
+  border: 2vw solid #56ffff;
+  box-shadow: 0 0 3vw #56ffff;
+  background-blend-mode: normal;
+}
+main.darkBlue .hero .conteneur .infoHero {
+  color: #010023;
+}
+main.darkBlue .hero .conteneur .infoHero .contact button {
+  background-color: #001496;
+  border: none;
+  color: #56ffff;
+}
+main.darkBlue .hero .conteneur .infoHero .contact button a {
+  color: #56ffff;
+}
+main.darkBlue .hero .conteneur .infoHero .contact button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #001496;
+  color: #001496;
+}
+main.darkBlue .hero .conteneur .infoHero .contact button:hover a {
+  color: #001496;
+}
+main.darkBlue .hero .conteneur .infoHero .contact button:active {
+  background-image: linear-gradient(to top, #004dc1, rgba(0, 0, 0, 0));
+}
+main.darkBlue .hero .titre--hero {
+  color: #010023;
+  text-shadow: 5px 5px #56ffff;
+}
+main.darkBlue .hero__conteneurIcon .iconPage {
+  background-image: radial-gradient(#009d9d 10%, #004dc1);
+}
+main.darkBlue .hero__conteneurIcon .iconPage:hover {
+  background-image: radial-gradient(#009d9d 50%, #004dc1);
+}
+main.darkBlue .hero.page.Projet1 {
+  background-image: url(./medias/svg/web-v1.svg), linear-gradient(#009d9d, #001496);
+  background-blend-mode: luminosity;
+  background-size: 100%, cover;
+  background-position: center;
+}
+main.darkBlue .hero.page.APropos {
+  background-image: url(./medias/img/photo/essai-1_carre-v1.jpg), linear-gradient(#009d9d, #001496);
+  background-position: 50% 40%;
+  background-blend-mode: luminosity;
+}
+main.darkBlue .hero.page.TroisD {
+  background-image: url(./medias/img/icon.png), linear-gradient(#009d9d, #001496);
+  background-blend-mode: luminosity;
+}
+main.darkBlue .hero.page.Illustration {
+  background-image: url(./medias/img/dessin_papier/dessin-1.JPG), linear-gradient(#009d9d, #001496);
+  background-blend-mode: luminosity;
+}
+main.darkBlue .hero.page.Montage {
+  background-image: url(./medias/svg/editing_svg.svg), linear-gradient(#009d9d, #001496);
+  background-blend-mode: luminosity;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -508,6 +700,10 @@ a .photoVG:active {
   border-width: 1vw;
 }
 
+main.darkBlue .infoIllustration .illustration {
+  background-image: linear-gradient(#56ffff, #009d9d);
+}
+
 .info h1.plusInfoIllustrationText {
   text-align: center;
 }
@@ -610,6 +806,19 @@ a .photoVG:active {
   }
 }
 /*--Footer---*/
+footer.darkBlue {
+  background-image: linear-gradient(to right, #009d9d, #56ffff);
+}
+footer.darkBlue .conteneur .lien__aLien {
+  color: #010023;
+}
+footer.darkBlue .conteneur .lien__aLien:hover {
+  color: #001496;
+}
+footer.darkBlue .conteneur .credit em:hover {
+  color: #010023;
+}
+
 footer {
   background-image: linear-gradient(to right, #ff6262, #a90000);
 }
@@ -784,10 +993,17 @@ footer .conteneur .lien--9.credit {
   }
   /* Note: 19 images x 700px = 13300px */
 }
-.cardInfoWeb, .cardInfo3D {
+main.darkBlue .cardInfoWeb__imgProjet, main.darkBlue .cardInfo3D__imgProjet {
+  border: 0 solid #56ffff;
+}
+main.darkBlue .cardInfoWeb__imgProjet:hover, main.darkBlue .cardInfo3D__imgProjet:hover {
+  border: 1em solid #56ffff;
+}
+
+main .cardInfoWeb, main .cardInfo3D {
   margin-bottom: 5vh;
 }
-.cardInfoWeb__imgProject, .cardInfo3D__imgProject {
+main .cardInfoWeb__imgProject, main .cardInfo3D__imgProject {
   min-width: 30vw;
   max-width: 60vw;
   aspect-ratio: 16/9;
@@ -796,8 +1012,9 @@ footer .conteneur .lien--9.credit {
   border-radius: 6px;
   transition-duration: 0.2s;
   transition-timing-function: linear;
+  border: 0 solid #a90000;
 }
-.cardInfoWeb__imgProject:hover, .cardInfo3D__imgProject:hover {
+main .cardInfoWeb__imgProject:hover, main .cardInfo3D__imgProject:hover {
   border: 1em solid #a90000;
 }
 
@@ -820,7 +1037,27 @@ footer .conteneur .lien--9.credit {
     height: auto;
   }
 }
-.hero.APropos {
+main.darkBlue section.info.infoAPropos .conteneur__titre {
+  color: #010023;
+}
+main.darkBlue section.info.infoAPropos .conteneur .text__listPoint {
+  background-color: #004dc1;
+  color: #56ffff;
+}
+main.darkBlue section.info.infoAPropos .conteneur .text__listPoint:hover {
+  background-color: #56ffff;
+  color: #004dc1;
+  text-shadow: 0px 0px 5px #010023;
+}
+main.darkBlue section.info.infoAPropos .conteneur .text__listPoint:hover .logoList {
+  filter: drop-shadow(0px 0px 5px #004dc1);
+}
+main.darkBlue section.info.infoAPropos .conteneur .text--capacite {
+  color: #56ffff;
+  text-shadow: 0px 0px 5px #010023;
+}
+
+main .hero.APropos {
   position: relative;
   width: 100%;
   display: flex;
@@ -828,15 +1065,14 @@ footer .conteneur .lien--9.credit {
   justify-content: center;
   height: 90vh;
 }
-.hero.APropos .titre {
+main .hero.APropos .titre {
   align-self: end;
 }
-
-section.info.infoAPropos {
+main section.info.infoAPropos {
   width: 100%;
   position: relative;
 }
-section.info.infoAPropos .conteneur {
+main section.info.infoAPropos .conteneur {
   position: relative;
   padding: 10vh 0;
   width: 90%;
@@ -847,38 +1083,38 @@ section.info.infoAPropos .conteneur {
   -moz-column-gap: 25px;
        column-gap: 25px;
 }
-section.info.infoAPropos .conteneur__titre {
+main section.info.infoAPropos .conteneur__titre {
   text-align: center;
   grid-column: span 2;
   grid-row: 1;
 }
-section.info.infoAPropos .conteneur__titre h1 {
+main section.info.infoAPropos .conteneur__titre h1 {
   font-size: 4em;
 }
-section.info.infoAPropos .conteneur__start {
+main section.info.infoAPropos .conteneur__start {
   grid-column: 1;
   grid-row: 2;
 }
-section.info.infoAPropos .conteneur__end {
+main section.info.infoAPropos .conteneur__end {
   grid-column: 2;
   grid-row: 2;
 }
-section.info.infoAPropos .conteneur__startTwo {
+main section.info.infoAPropos .conteneur__startTwo {
   grid-row: 3;
 }
-section.info.infoAPropos .conteneur__EndTwo {
+main section.info.infoAPropos .conteneur__EndTwo {
   grid-row: 3;
 }
-section.info.infoAPropos .conteneur__center {
+main section.info.infoAPropos .conteneur__center {
   padding: 5vh 0;
   text-align: center;
   grid-column: span 2;
   grid-row: 4;
 }
-section.info.infoAPropos .conteneur .text {
+main section.info.infoAPropos .conteneur .text {
   width: 100%;
 }
-section.info.infoAPropos .conteneur .text__list {
+main section.info.infoAPropos .conteneur .text__list {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, auto));
@@ -886,20 +1122,20 @@ section.info.infoAPropos .conteneur .text__list {
   margin: 0;
   padding: 0;
 }
-section.info.infoAPropos .conteneur .text__list--3D {
+main section.info.infoAPropos .conteneur .text__list--3D {
   grid-template-columns: 90%;
   grid-template-rows: 30vh;
 }
-section.info.infoAPropos .conteneur .text__list--3D .text__listPoint .logoList {
+main section.info.infoAPropos .conteneur .text__list--3D .text__listPoint .logoList {
   height: 30vh;
 }
-section.info.infoAPropos .conteneur .text__list--2D {
+main section.info.infoAPropos .conteneur .text__list--2D {
   grid-template-columns: repeat(auto-fill, minmax(130px, auto));
 }
-section.info.infoAPropos .conteneur .text__list--2D .text__listPoint .logoList {
+main section.info.infoAPropos .conteneur .text__list--2D .text__listPoint .logoList {
   height: 20vh;
 }
-section.info.infoAPropos .conteneur .text__listPoint {
+main section.info.infoAPropos .conteneur .text__listPoint {
   background-color: #ffb23e;
   color: #a90000;
   border-radius: 25px;
@@ -912,113 +1148,176 @@ section.info.infoAPropos .conteneur .text__listPoint {
   justify-content: space-between;
   transition-duration: 0.2s;
 }
-section.info.infoAPropos .conteneur .text__listPoint .logoList {
+main section.info.infoAPropos .conteneur .text__listPoint .logoList {
   align-self: end;
   border-radius: 10px;
 }
-section.info.infoAPropos .conteneur .text__listPoint:hover {
+main section.info.infoAPropos .conteneur .text__listPoint:hover {
   transform: translateY(-10px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   background-color: #a90000;
   color: #ffb23e;
   text-shadow: 0px 0px 5px #feffdc;
 }
-section.info.infoAPropos .conteneur .text__listPoint:hover .logoList {
+main section.info.infoAPropos .conteneur .text__listPoint:hover .logoList {
   filter: drop-shadow(0px 0px 5px #ffb23e);
 }
-section.info.infoAPropos .conteneur .text__listPoint--bigger {
+main section.info.infoAPropos .conteneur .text__listPoint--bigger {
   grid-column: span 2;
 }
-section.info.infoAPropos .conteneur .text__listPoint--3D {
+main section.info.infoAPropos .conteneur .text__listPoint--3D {
   grid-row: span 2;
   grid-column: 1/4;
 }
-section.info.infoAPropos .conteneur .text__listPoint--adobe {
+main section.info.infoAPropos .conteneur .text__listPoint--adobe {
   grid-row: span 2;
   grid-column: span 2;
   display: grid;
   grid-template-columns: 50% 50%;
 }
-section.info.infoAPropos .conteneur .text__listPoint--adobe p.textAdobe {
+main section.info.infoAPropos .conteneur .text__listPoint--adobe p.textAdobe {
   grid-column: span 2;
 }
-section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList {
+main section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList {
   justify-self: center;
 }
-section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList--adobe1 {
+main section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList--adobe1 {
   grid-column: span 2;
   grid-row: 2;
 }
-section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList--adobe2 {
+main section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList--adobe2 {
   grid-row: 3;
 }
-section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList--adobe3 {
+main section.info.infoAPropos .conteneur .text__listPoint--adobe .logoList--adobe3 {
   grid-row: 3;
 }
-section.info.infoAPropos .conteneur .text__listPoint .logoList {
+main section.info.infoAPropos .conteneur .text__listPoint .logoList {
   align-self: center;
   width: auto;
   height: 10vh;
 }
-section.info.infoAPropos .conteneur .text__listPoint .logoList--large {
+main section.info.infoAPropos .conteneur .text__listPoint .logoList--large {
   max-width: 100%;
   max-height: 10vh;
 }
-section.info.infoAPropos .conteneur .text--capacite {
+main section.info.infoAPropos .conteneur .text--capacite {
   color: #a90000;
   text-shadow: 0px 0px 5px #feffdc;
 }
 
 @media screen and (min-width: 1200px) {
-  section.info.infoAPropos .conteneur {
+  main section.info.infoAPropos .conteneur {
     padding: 10vh 0;
   }
 }
 @media screen and (max-width: 850px) {
-  section.info.infoAPropos .conteneur .text__listPoint--VisStuCode {
+  main section.info.infoAPropos .conteneur .text__listPoint--VisStuCode {
     order: 2;
   }
 }
 @media screen and (max-width: 768px) {
-  section.info.infoAPropos .conteneur {
+  main section.info.infoAPropos .conteneur {
     grid-template-columns: 100%;
   }
-  section.info.infoAPropos .conteneur__titre {
+  main section.info.infoAPropos .conteneur__titre {
     text-align: center;
     grid-column: 1;
     grid-row: 1;
   }
-  section.info.infoAPropos .conteneur__start {
+  main section.info.infoAPropos .conteneur__start {
     grid-column: 1;
     grid-row: 2;
   }
-  section.info.infoAPropos .conteneur__end {
+  main section.info.infoAPropos .conteneur__end {
     grid-column: 1;
     grid-row: 3;
   }
-  section.info.infoAPropos .conteneur__startTwo {
+  main section.info.infoAPropos .conteneur__startTwo {
     grid-column: 1;
     grid-row: 4;
   }
-  section.info.infoAPropos .conteneur__endTwo {
+  main section.info.infoAPropos .conteneur__endTwo {
     grid-column: 1;
     grid-row: 5;
   }
-  section.info.infoAPropos .conteneur__center {
+  main section.info.infoAPropos .conteneur__center {
     text-align: center;
     grid-column: 1;
     grid-row: 6;
   }
-  section.info.infoAPropos .conteneur .text__list--2D {
+  main section.info.infoAPropos .conteneur .text__list--2D {
     grid-template-columns: repeat(auto-fill, minmax(100%, auto));
   }
-  section.info.infoAPropos .conteneur .text__listPoint--VisStuCode {
+  main section.info.infoAPropos .conteneur .text__listPoint--VisStuCode {
     order: 2;
   }
-  section.info.infoAPropos .conteneur .text__listPoint--3D {
+  main section.info.infoAPropos .conteneur .text__listPoint--3D {
     grid-column: span 4;
   }
 }
+.modalConteneur.darkBlue .modalProjet .modal-content {
+  background-color: #56ffff;
+}
+.modalConteneur.darkBlue .modalProjet .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modalConteneur.darkBlue .modalProjet .modal-body .bottomLink {
+  width: 100%;
+  height: auto;
+}
+.modalConteneur.darkBlue .modalProjet .modal-body .bottomLink a .btn {
+  justify-self: end;
+  margin: 0 10px;
+  width: auto;
+}
+.modalConteneur.darkBlue .modalProjet .modal-body .bottomLink__line {
+  width: 100%;
+  height: 2px;
+  border-radius: 25px;
+  background-color: #004dc1;
+  margin: 10px 0;
+}
+.modalConteneur.darkBlue .modalProjet__title {
+  color: #010023;
+}
+.modalConteneur.darkBlue .modalProjet__texte {
+  color: #010023;
+}
+.modalConteneur.darkBlue .modalProjet__img {
+  width: 100%;
+  align-self: center;
+}
+.modalConteneur.darkBlue .modalProjet__youtube {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.modalConteneur.darkBlue .modalProjet__btn {
+  border: none;
+  color: #004dc1;
+  background-color: #56ffff;
+  border: 1px solid #004dc1;
+}
+.modalConteneur.darkBlue .modalProjet__btn:hover {
+  background-color: #004dc1;
+  color: #56ffff;
+}
+.modalConteneur.darkBlue .modalProjet__btn.btn-close {
+  position: relative;
+  align-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalConteneur.darkBlue .modalProjet__btn.btn-close::after {
+  content: "X";
+  font-weight: bolder;
+}
+.modalConteneur.darkBlue .modalProjet__btn.btn-close:hover::after {
+  content: "";
+}
+
 .modalProjet .modal-content {
   background-color: #a90000;
 }
@@ -1219,6 +1518,53 @@ main .errorPageNotFound .errorWindow .btnPageIndex a {
     border: 0 solid #a90000;
   }
 }
+main .conteneur {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 1250px;
+}
+main .conteneur .toggle {
+  transition: 0.5s;
+  transition-timing-function: ease;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100px;
+  height: 50px;
+  background-color: #ffb23e;
+  border-radius: 25px;
+}
+main .conteneur .toggle__slider {
+  transition: 0.5s;
+  transition-timing-function: ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  height: 80%;
+  aspect-ratio: 1/1;
+  background-color: #feffdc;
+}
+main .conteneur .toggle__slider .checkbox {
+  opacity: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+main.darkBlue .toggle {
+  background-color: #004dc1;
+}
+main.darkBlue .toggle__slider {
+  background-color: #010023;
+}
+
 @font-face {
   font-family: "Lostar";
   src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);
@@ -1242,6 +1588,18 @@ body main {
   width: 100%;
 }
 
+/*-- Dark --*/
+main.darkBlue .text__important {
+  color: #56ffff;
+  background-color: #004dc1;
+}
+main.darkBlue section.info {
+  background-image: linear-gradient(to top, #004dc1, #001496);
+}
+main.darkBlue h1, main.darkBlue p.text {
+  color: #56ffff;
+}
+
 /*---Tout----*/
 h1, .h1 {
   font-family: "BebasNeue";
@@ -1256,8 +1614,6 @@ h1, .h1 {
   color: #a90000;
   text-decoration: none;
   font-style: normal;
-}
-.text__important {
   background-color: #ffb23e;
 }
 
@@ -1276,36 +1632,6 @@ a, .a {
 
 footer {
   z-index: 100;
-}
-
-/*--Fixed Btn to top--*/
-main button.btnTop {
-  position: fixed;
-  bottom: 10vmin;
-  right: 8vw;
-  width: 5vw;
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  background-color: #ffeb69;
-  padding: 2vw;
-  border: 2px solid #a90000;
-  border-radius: 100%;
-  color: #a90000;
-  font-family: "TitilliumLight";
-  text-decoration: none;
-}
-
-main button.btnTop::after {
-  content: "Top";
-  align-self: center;
-  justify-self: center;
-}
-
-main button.btnTop:hover {
-  background-color: #ffb23e;
 }
 
 .sprite {

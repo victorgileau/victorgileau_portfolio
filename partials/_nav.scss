@@ -2,6 +2,71 @@
 @use './variables';
 @use './mixins/lienNav';
 
+.bgNav.darkBlue {
+    background-image: linear-gradient(to right, variables.$TurkeyRed-dark-blue, variables.$Bittersweet-dark-blue);
+    .navigationAccueil {
+        .lien {
+            a.lienPage {
+                color: variables.$lightYellow-dark-blue;
+            }
+            a.lienPage::after, a.lienPage::before {
+                background-color: variables.$lightYellow-dark-blue;
+            }
+        }
+        .lienPage.logoNav, .lienPage.logoNavMobile {
+            color: variables.$lightYellow-dark-blue;
+        }
+    }
+    /*----Code de w3School----*/
+
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: variables.$TurkeyRed-dark-blue;
+        color: variables.$lightYellow-dark-blue;
+        border: none;
+
+        display: none;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        border-radius: 10px;
+        display: none;
+        position: absolute;
+        background-color: variables.$lightYellow-dark-blue;
+        min-width: 15vw;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: variables.$TurkeyRed-dark-blue;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: variables.$Maize-dark-blue; border-radius: 10px;}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: variables.$Bittersweet-dark-blue;}
+
+    /*----Fin Code de w3School----*/
+}
+
 .bgNav {
     z-index: 10;
     position: fixed;
@@ -111,6 +176,13 @@
 /*----Fin Code de w3School----*/
 
 @media screen and (max-width: 768px) {
+    .bgNav.darkBlue {
+        .navigationAccueil {
+            .dropbtn {
+                display: grid;
+            }
+        }
+    }
     .bgNav {
         .navigationAccueil {
             grid-template-columns: 60% 40%;

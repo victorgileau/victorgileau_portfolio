@@ -73,6 +73,79 @@
     }
 }
 
+@mixin modalDark {
+    .modal-content {
+        background-color: variables.$TurkeyRed-dark-blue;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .bottomLink {
+            width: 100%;
+            height: auto;
+            a {
+                .btn {
+                    justify-self: end;
+                    margin: 0 10px;
+                    width: auto;
+                }
+            }
+            &__line {
+                width: 100%;
+                height: 2px;
+                border-radius: 25px;
+                background-color: variables.$OrangeWeb-dark-blue;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    &__title {
+        color: variables.$lightYellow-dark-blue;
+    }
+
+    &__texte {
+        color: variables.$lightYellow-dark-blue;
+    }
+
+    &__img {
+        width: 100%;
+        align-self: center;
+    }
+
+    &__youtube {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    &__btn {
+        border: none;
+        color: variables.$OrangeWeb-dark-blue;
+        background-color: variables.$TurkeyRed-dark-blue;
+        border: 1px solid variables.$OrangeWeb-dark-blue;
+        &:hover {
+            background-color: variables.$OrangeWeb-dark-blue;
+            color: variables.$TurkeyRed-dark-blue;
+        }
+    }
+    &__btn.btn-close {
+        position: relative;
+        align-self: start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+            content: 'X';
+            font-weight: bolder;
+        }
+        &:hover::after {
+            content: '';
+        }
+    }
+}
+
 @mixin modalMobile {
     &__title {
         font-size: 48px;

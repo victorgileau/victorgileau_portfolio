@@ -10,6 +10,7 @@
 @use './partials/aPropos';
 @use './partials/infoPage';
 @use './partials/pageNotFound';
+@use './partials/toggle';
 
 @font-face {
     font-family: 'Lostar';
@@ -27,7 +28,6 @@
 }
 
 
-
 body {
     width: 100%;
     min-height: 100vh;
@@ -39,12 +39,30 @@ body {
     }
 }
 
+/*-- Dark --*/
+
+main.darkBlue {
+    .text {
+        &__important {
+            color: variables.$TurkeyRed-dark-blue;
+            background-color: variables.$OrangeWeb-dark-blue;
+        }
+    }
+    section.info {
+        background-image: linear-gradient(to top, variables.$OrangeWeb-dark-blue, variables.$Maize-dark-blue);
+    }
+    h1, p.text {
+        color: variables.$TurkeyRed-dark-blue;
+    }
+}
+
 /*---Tout----*/
 
 h1, .h1 {
     font-family: 'BebasNeue';
     letter-spacing: 0.1em;
 }
+
 
 .text {
     font-family: 'TitilliumLight';
@@ -53,9 +71,6 @@ h1, .h1 {
         color: variables.$TurkeyRed;
         text-decoration: none;
         font-style: normal;
-        
-    }
-    &__important {
         background-color: variables.$OrangeWeb;
     }
 }
@@ -78,38 +93,6 @@ a, .a {
 
 footer {
     z-index: 100;
-}
-
-/*--Fixed Btn to top--*/
-
-main button.btnTop {
-    position: fixed;
-    bottom: 10vmin;
-    right: 8vw;
-    width: 5vw;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    background-color: variables.$Maize;
-    padding: 2vw;
-    border: 2px solid variables.$TurkeyRed;
-    border-radius: 100%;
-
-    color: variables.$TurkeyRed;
-    font-family: 'TitilliumLight';
-    text-decoration: none;
-}
-
-main button.btnTop::after {
-    content: 'Top';
-    align-self: center;
-    justify-self: center;
-}
-
-main button.btnTop:hover {
-    background-color: variables.$OrangeWeb;
 }
 
 .sprite {

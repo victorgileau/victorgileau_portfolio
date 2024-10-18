@@ -1,188 +1,66 @@
 @use './variables';
 
-.hero.APropos {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    .titre {
-        align-self: end;
-    }
-}
-
-section.info.infoAPropos {
-    width: 100%;
-    position: relative;
-    .conteneur {
-        position: relative;
-        padding: 10vh 0;
-        width: 90%;
-        margin: auto;
-        max-width: 1200px;
-        display: grid;
-        grid-template-columns: auto auto;
-        column-gap: 25px;
-        &__titre {
-            h1 {
-                font-size: 4em;
-            }
-            text-align: center;
-            grid-column: span 2;
-            grid-row: 1;
-        }
-        &__start {
-            grid-column: 1;
-            grid-row: 2;
-        }
-        &__end {
-            grid-column: 2;
-            grid-row: 2;
-        }
-        &__startTwo {
-            grid-row: 3;
-        }
-        &__EndTwo {
-            grid-row: 3;
-        }
-        &__center {
-            padding: 5vh 0;
-            text-align: center;
-            grid-column: span 2;
-            grid-row: 4;
-        }
-
-        .text {
-            width: 100%;
-            &__list {
-                list-style-type: none;
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(120px, auto));
-                gap: 10px;
-                margin: 0;
-                padding: 0;
-                &--3D {
-                    grid-template-columns: 90%;
-                    grid-template-rows: 30vh;
-                    .text__listPoint {
-                        .logoList {
-                            height: 30vh;
-                        }
-                    }
-                }
-                &--2D {
-                    grid-template-columns: repeat(auto-fill, minmax(130px, auto));
-                    .text__listPoint {
-                        .logoList {
-                            height: 20vh;
-                        }
-                    }
-                }
-            }
-            &__listPoint {
-                background-color: variables.$OrangeWeb;
-                color: variables.$TurkeyRed;
-                border-radius: 25px;
-                padding: 10px;
-                font-size: 20px;
-                text-shadow: 0px 0px 0px variables.$lightYellow;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                transition-duration: 0.2s;
-                .logoList {
-                    align-self: end;
-                    border-radius: 10px;
-                }
-                &:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
-                    background-color: variables.$TurkeyRed;
-                    color: variables.$OrangeWeb;
-                    text-shadow: 0px 0px 5px variables.$lightYellow;
-                    .logoList {
-                        filter: drop-shadow(0px 0px 5px variables.$OrangeWeb);
-                    }
-                }
-                &--bigger {
-                    grid-column: span 2;
-                }
-                &--3D {
-                    grid-row: span 2;
-                    grid-column: 1/4;
-                }
-                &--adobe {
-                    grid-row: span 2;
-                    grid-column: span 2;
-                    display: grid;
-                    grid-template-columns: 50% 50%;
-                    p.textAdobe {
-                        grid-column: span 2;
-                    }
-                    .logoList {
-                        justify-self: center;
-                        &--adobe1 {
-                            grid-column: span 2;
-                            grid-row: 2;
-                        }
-                        &--adobe2 {
-                            grid-row: 3;
-                        }
-                        &--adobe3 {
-                            grid-row: 3;
-                        }
-                    }
-                }
-                .logoList {
-                    align-self: center;
-                    width: auto;
-                    height: 10vh;
-                    &--large {
-                        max-width: 100%;
-                        max-height: 10vh;
-                    }
-                }
-            }
-            &--capacite {
-                color: variables.$TurkeyRed;
-                text-shadow: 0px 0px 5px variables.$lightYellow;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
+main.darkBlue {
     section.info.infoAPropos {
         .conteneur {
-            padding: 10vh 0;
-        }
-    }
-}
-
-@media screen and (max-width: 850px) {
-    section.info.infoAPropos {
-        .conteneur {
+            &__titre {
+                color: variables.$lightYellow-dark-blue;
+            }
             .text {
                 &__listPoint {
-                    &--VisStuCode {
-                        order: 2;
+                    background-color: variables.$OrangeWeb-dark-blue;
+                    color: variables.$TurkeyRed-dark-blue;
+                    &:hover {
+                        background-color: variables.$TurkeyRed-dark-blue;
+                        color: variables.$OrangeWeb-dark-blue;
+                        text-shadow: 0px 0px 5px variables.$lightYellow-dark-blue;
+                        .logoList {
+                            filter: drop-shadow(0px 0px 5px variables.$OrangeWeb-dark-blue);
+                        }
                     }
+                }
+                &--capacite {
+                    color: variables.$TurkeyRed-dark-blue;
+                    text-shadow: 0px 0px 5px variables.$lightYellow-dark-blue;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 768px) {
+
+
+main {
+    .hero.APropos {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        .titre {
+            align-self: end;
+        }
+    }
+
     section.info.infoAPropos {
+        width: 100%;
+        position: relative;
         .conteneur {
-            
-            grid-template-columns: 100%;
+            position: relative;
+            padding: 10vh 0;
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 25px;
             &__titre {
+                h1 {
+                    font-size: 4em;
+                }
                 text-align: center;
-                grid-column: 1;
+                grid-column: span 2;
                 grid-row: 1;
             }
             &__start {
@@ -190,38 +68,202 @@ section.info.infoAPropos {
                 grid-row: 2;
             }
             &__end {
-                grid-column: 1;
-                grid-row: 3;
+                grid-column: 2;
+                grid-row: 2;
             }
             &__startTwo {
-                grid-column: 1;
-                grid-row: 4;
+                grid-row: 3;
             }
-            &__endTwo {
-                grid-column: 1;
-                grid-row: 5;
+            &__EndTwo {
+                grid-row: 3;
             }
             &__center {
+                padding: 5vh 0;
                 text-align: center;
-                grid-column: 1;
-                grid-row: 6;
+                grid-column: span 2;
+                grid-row: 4;
             }
+    
             .text {
+                width: 100%;
                 &__list {
+                    list-style-type: none;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(120px, auto));
+                    gap: 10px;
+                    margin: 0;
+                    padding: 0;
+                    &--3D {
+                        grid-template-columns: 90%;
+                        grid-template-rows: 30vh;
+                        .text__listPoint {
+                            .logoList {
+                                height: 30vh;
+                            }
+                        }
+                    }
                     &--2D {
-                        grid-template-columns: repeat(auto-fill, minmax(100%, auto));
+                        grid-template-columns: repeat(auto-fill, minmax(130px, auto));
+                        .text__listPoint {
+                            .logoList {
+                                height: 20vh;
+                            }
+                        }
                     }
                 }
                 &__listPoint {
-                    &--VisStuCode {
-                        order: 2;
+                    background-color: variables.$OrangeWeb;
+                    color: variables.$TurkeyRed;
+                    border-radius: 25px;
+                    padding: 10px;
+                    font-size: 20px;
+                    text-shadow: 0px 0px 0px variables.$lightYellow;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition-duration: 0.2s;
+                    .logoList {
+                        align-self: end;
+                        border-radius: 10px;
+                    }
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+                        background-color: variables.$TurkeyRed;
+                        color: variables.$OrangeWeb;
+                        text-shadow: 0px 0px 5px variables.$lightYellow;
+                        .logoList {
+                            filter: drop-shadow(0px 0px 5px variables.$OrangeWeb);
+                        }
+                    }
+                    &--bigger {
+                        grid-column: span 2;
                     }
                     &--3D {
-                        grid-column: span 4;
+                        grid-row: span 2;
+                        grid-column: 1/4;
+                    }
+                    &--adobe {
+                        grid-row: span 2;
+                        grid-column: span 2;
+                        display: grid;
+                        grid-template-columns: 50% 50%;
+                        p.textAdobe {
+                            grid-column: span 2;
+                        }
+                        .logoList {
+                            justify-self: center;
+                            &--adobe1 {
+                                grid-column: span 2;
+                                grid-row: 2;
+                            }
+                            &--adobe2 {
+                                grid-row: 3;
+                            }
+                            &--adobe3 {
+                                grid-row: 3;
+                            }
+                        }
+                    }
+                    .logoList {
+                        align-self: center;
+                        width: auto;
+                        height: 10vh;
+                        &--large {
+                            max-width: 100%;
+                            max-height: 10vh;
+                        }
+                    }
+                }
+                &--capacite {
+                    color: variables.$TurkeyRed;
+                    text-shadow: 0px 0px 5px variables.$lightYellow;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    main {
+        section.info.infoAPropos {
+            .conteneur {
+                padding: 10vh 0;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        section.info.infoAPropos {
+            .conteneur {
+                .text {
+                    &__listPoint {
+                        &--VisStuCode {
+                            order: 2;
+                        }
                     }
                 }
             }
         }
     }
+    
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        section.info.infoAPropos {
+            .conteneur {
+                
+                grid-template-columns: 100%;
+                &__titre {
+                    text-align: center;
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+                &__start {
+                    grid-column: 1;
+                    grid-row: 2;
+                }
+                &__end {
+                    grid-column: 1;
+                    grid-row: 3;
+                }
+                &__startTwo {
+                    grid-column: 1;
+                    grid-row: 4;
+                }
+                &__endTwo {
+                    grid-column: 1;
+                    grid-row: 5;
+                }
+                &__center {
+                    text-align: center;
+                    grid-column: 1;
+                    grid-row: 6;
+                }
+                .text {
+                    &__list {
+                        &--2D {
+                            grid-template-columns: repeat(auto-fill, minmax(100%, auto));
+                        }
+                    }
+                    &__listPoint {
+                        &--VisStuCode {
+                            order: 2;
+                        }
+                        &--3D {
+                            grid-column: span 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     
 }

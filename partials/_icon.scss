@@ -1,6 +1,63 @@
 /*Changment de couleur svg*/
 @use './variables';
 
+main.darkBlue {
+    .iconPage svg .cls-1.lineSVG {
+        fill: variables.$OrangeWeb-dark-blue;
+    }
+    .iconPage svg .cls-2.lineSVG {
+        fill: variables.$Maize-dark-blue;
+    }
+    .iconPage svg .cls-3.lineSVG {
+        fill: variables.$lightYellow-dark-blue;
+    }
+    
+    .iconPage svg .lineSVGTwo {
+        stroke: variables.$TurkeyRed-dark-blue;
+        stroke-width: 0;
+    }
+    
+    .iconPage svg .cls-1.lineSVGTwo {
+        fill: variables.$OrangeWeb-dark-blue;
+    }
+    .iconPage svg .cls-2.lineSVGTwo {
+        fill: variables.$TurkeyRed-dark-blue;
+    }
+    .iconPage svg .cls-3.lineSVGTwo {
+        fill: variables.$Bittersweet-dark-blue;
+    }
+    
+    .illustrationIcon .cls-1, .cls-2 {
+        fill: variables.$TurkeyRed-dark-blue;
+    }
+    
+    .illustrationIcon .cls-3 {
+        fill: variables.$Maize-dark-blue;
+    }
+    
+    .illustrationIcon .cls-4 {
+        fill: url(#Dégradé_sans_nom_16);
+    }
+    
+    .illustrationIcon .cls-5, .illustrationIcon .cls-6, .illustrationIcon .cls-2 {
+        stroke: variables.$TurkeyRed-dark-blue;
+        stroke-miterlimit: 10;
+    }
+    
+    .illustrationIcon .cls-5, .illustrationIcon .cls-7 {
+        fill: variables.$red-dark-blue;
+    }
+    
+    .illustrationIcon .cls-6 {
+        fill: variables.$OrangeWeb-dark-blue;
+    }
+    
+    .iconPage .iconEdit {
+        fill: variables.$lightYellow-dark-blue;
+        stroke: variables.$TurkeyRed-dark-blue;
+    }
+}
+
 .iconPage svg .cls-1.lineSVG {
     fill: variables.$OrangeWeb;
 }
@@ -53,6 +110,7 @@
 
 .iconPage .iconEdit {
     fill: variables.$lightYellow;
+    stroke: variables.$TurkeyRed;
 }
 
 /*Fin changment de couleur svg*/

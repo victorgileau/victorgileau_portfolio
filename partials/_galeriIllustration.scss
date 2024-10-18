@@ -1,6 +1,13 @@
 @use './variables';
 @use './mixins/lienMediaSociaux';
 
+main.darkBlue {
+    .infoIllustration {
+        .illustration {
+            background-image: linear-gradient(variables.$TurkeyRed-dark-blue, variables.$Bittersweet-dark-blue);
+        }
+    }
+}
 
 .info h1.plusInfoIllustrationText {
     text-align: center;

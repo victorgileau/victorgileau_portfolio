@@ -1,21 +1,37 @@
 @use './variables';
 
-.cardInfoWeb, .cardInfo3D {
-    margin-bottom: 5vh;
-    &__imgProject {
-        min-width: 30vw;
-        max-width: 60vw;
-        aspect-ratio: 16/9;
-        margin: auto;
-        height: auto;
-        border-radius: 6px;
-        transition-duration: 0.2s;
-        transition-timing-function: linear;
-        &:hover {
-            border: 1em solid variables.$TurkeyRed;
+main.darkBlue {
+    .cardInfoWeb, .cardInfo3D {
+        &__imgProjet {
+            border: 0 solid variables.$TurkeyRed-dark-blue;
+
+            &:hover {
+                border: 1em solid variables.$TurkeyRed-dark-blue;
+            }
         }
     }
 }
+
+main {
+    .cardInfoWeb, .cardInfo3D {
+        margin-bottom: 5vh;
+        &__imgProject {
+            min-width: 30vw;
+            max-width: 60vw;
+            aspect-ratio: 16/9;
+            margin: auto;
+            height: auto;
+            border-radius: 6px;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+            border: 0 solid variables.$TurkeyRed;
+            &:hover {
+                border: 1em solid variables.$TurkeyRed;
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
     section.infoProjet .card img {

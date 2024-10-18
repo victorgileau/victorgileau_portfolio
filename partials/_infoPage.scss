@@ -1,5 +1,10 @@
 @use './mixins/modal';
 
+.modalConteneur.darkBlue {
+    .modalProjet {
+        @include modal.modalDark;
+    }
+}
 
 .modalProjet {
     @include modal.modal;

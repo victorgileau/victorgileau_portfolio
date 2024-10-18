@@ -1,6 +1,96 @@
 /*-------Section Hero--------*/
 @use './variables';
 
+main.darkBlue {
+    .hero {
+        background-image: url(./medias/img/dessin_papier/dessin-1.JPG), radial-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        .conteneur {
+            .photoVG {
+                border: 1vw solid variables.$Bittersweet-dark-blue;
+                box-shadow: 0 0 1vw variables.$Bittersweet-dark-blue;
+                background-blend-mode: difference;
+                &:hover {
+                    border: 2vw solid variables.$TurkeyRed-dark-blue;
+                    box-shadow: 0 0 3vw variables.$TurkeyRed-dark-blue;
+                    background-blend-mode: normal;
+                }
+            }
+            .infoHero {
+                color: variables.$lightYellow-dark-blue;
+                .contact {
+                    button {
+                        background-color: variables.$Maize-dark-blue;
+                        border: none;
+                        color: variables.$TurkeyRed-dark-blue;
+                        a {
+                            color: variables.$TurkeyRed-dark-blue;
+                        }
+                        &:hover {
+                            background-color: rgba(0, 0, 0, 0);
+                            border: 1px solid variables.$Maize-dark-blue;
+                            color: variables.$Maize-dark-blue;
+                            a {
+                                color: variables.$Maize-dark-blue;
+                            }
+                        }
+                        &:active {
+                            background-image: linear-gradient(to top, variables.$OrangeWeb-dark-blue, rgba(0,0,0,0));
+                        }
+                    }
+                }
+            }
+        }
+        .titre--hero {
+            color: variables.$lightYellow-dark-blue;
+            text-shadow: 5px 5px variables.$TurkeyRed-dark-blue;
+        }
+        &__conteneurIcon {
+            .iconPage {
+                background-image: radial-gradient(variables.$Bittersweet-dark-blue 10%, variables.$OrangeWeb-dark-blue);
+                &:hover {
+                    background-image: radial-gradient(variables.$Bittersweet-dark-blue 50%, variables.$OrangeWeb-dark-blue);
+                }
+            }
+        }
+    }
+
+    .hero.page.Projet1 {
+        background-image: url(./medias/svg/web-v1.svg), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-blend-mode: luminosity;
+        background-size: 100%, cover;
+        background-position: center;
+    }
+    
+    /*-- Section Hero Page A propos --*/
+    
+    .hero.page.APropos {
+        background-image: url(./medias/img/photo/essai-1_carre-v1.jpg), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-position: 50% 40%;
+        background-blend-mode: luminosity;
+    }
+    
+    /*-- Section Hero Page 3D --*/
+    
+    .hero.page.TroisD {
+        background-image: url(./medias/img/icon.png), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-blend-mode: luminosity;
+    }
+    
+    /*-- Section Hero Page Illustration --*/
+    
+    .hero.page.Illustration {
+        background-image: url(./medias/img/dessin_papier/dessin-1.JPG), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-blend-mode: luminosity;
+    }
+    
+    /*-- Section Hero Page Montage --*/
+    
+    .hero.page.Montage {
+        background-image: url(./medias/svg/editing_svg.svg), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-blend-mode: luminosity;
+    }
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -67,7 +157,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
         }
     }
     .titre--hero {
