@@ -2,6 +2,7 @@
 
 .modalConteneur.darkBlue {
     .modalProjet {
+        @include modal.modal;
         @include modal.modalDark;
     }
 }
