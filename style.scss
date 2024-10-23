@@ -42,24 +42,25 @@ body {
 /*-- Dark --*/
 
 main.darkBlue {
-    .text {
-        &__important {
-            color: variables.$TurkeyRed-dark-blue;
-            background-color: variables.$OrangeWeb-dark-blue;
-        }
-    }
-    section.info {
+    
+    .info {
         background-image: linear-gradient(to bottom, variables.$lightYellow-dark-blue, variables.$OrangeWeb-dark-blue);
-    }
-    h1, p.text {
-        color: variables.$TurkeyRed-dark-blue;
-        em {
-            color: variables.$OrangeWeb-dark-blue;
-            text-shadow: 0 0 3.5px variables.$OrangeWeb-dark-blue;
-            font-weight: bold;
-            font-style: normal;
+        .text {
+            color: variables.$TurkeyRed-dark-blue;
+            em {
+                color: variables.$OrangeWeb-dark-blue;
+                text-shadow: 0 0 3.5px variables.$OrangeWeb-dark-blue;
+            }
+            .text__important {
+                color: variables.$TurkeyRed-dark-blue;
+                background-color: variables.$OrangeWeb-dark-blue;
+            }
+        }
+        h1 {
+            color: variables.$TurkeyRed-dark-blue;
         }
     }
+    
     .sprite {
         
         @include spriteAnimation.spriteAnimation;
@@ -84,7 +85,7 @@ h1 {
     h1 {
         color: variables.$TurkeyRed;
     }
-    p.text {
+    .text {
         color: variables.$black;
         em {
             color: variables.$TurkeyRed;

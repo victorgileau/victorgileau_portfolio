@@ -15,7 +15,7 @@
             a {
                 .btn {
                     justify-self: end;
-                    margin: 0 10px;
+                    margin: 3px 10px;
                     width: auto;
                 }
             }
@@ -132,8 +132,7 @@
         border-radius: 10px;
     }
 
-    &__btn {
-        border: none;
+    &__btn { 
         color: variables.$OrangeWeb;
         background-color: variables.$TurkeyRed;
         border: 1px solid variables.$OrangeWeb;
@@ -238,6 +237,16 @@
 }
 
 @mixin modalMobile {
+    .modal-body {
+        .bottomLink {
+            a {
+                .btn {
+                    margin: 8px 10px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
     &__title {
         font-size: 48px;
         width: 80%;

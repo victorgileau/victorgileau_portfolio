@@ -1375,7 +1375,7 @@ main section.info.infoAPropos .conteneur .text--capacite {
 }
 .modalConteneur.darkBlue .modalProjet .modal-body .bottomLink a .btn {
   justify-self: end;
-  margin: 0 10px;
+  margin: 3px 10px;
   width: auto;
 }
 .modalConteneur.darkBlue .modalProjet .modal-body .bottomLink__line {
@@ -1483,7 +1483,6 @@ main section.info.infoAPropos .conteneur .text--capacite {
   border-radius: 10px;
 }
 .modalConteneur.darkBlue .modalProjet__btn {
-  border: none;
   color: #ffb23e;
   background-color: #a90000;
   border: 1px solid #ffb23e;
@@ -1583,7 +1582,7 @@ main section.info.infoAPropos .conteneur .text--capacite {
 }
 .modalProjet .modal-body .bottomLink a .btn {
   justify-self: end;
-  margin: 0 10px;
+  margin: 3px 10px;
   width: auto;
 }
 .modalProjet .modal-body .bottomLink__line {
@@ -1691,7 +1690,6 @@ main section.info.infoAPropos .conteneur .text--capacite {
   border-radius: 10px;
 }
 .modalProjet__btn {
-  border: none;
   color: #ffb23e;
   background-color: #a90000;
   border: 1px solid #ffb23e;
@@ -1720,6 +1718,10 @@ main section.info.infoAPropos .conteneur .text--capacite {
   .modalProjet {
     width: 100vw;
   }
+  .modalProjet .modal-body .bottomLink a .btn {
+    margin: 8px 10px;
+    font-size: 24px;
+  }
   .modalProjet__title {
     font-size: 48px;
     width: 80%;
@@ -1729,6 +1731,10 @@ main section.info.infoAPropos .conteneur .text--capacite {
   }
   .modalProjet__texteTitre {
     font-size: 32px;
+  }
+  .modalConteneur.darkBlue .modalProjet .modal-body .bottomLink a .btn {
+    margin: 8px 10px;
+    font-size: 24px;
   }
   .modalConteneur.darkBlue .modalProjet__title {
     font-size: 48px;
@@ -2013,21 +2019,22 @@ body main {
 }
 
 /*-- Dark --*/
-main.darkBlue .text__important {
+main.darkBlue .info {
+  background-image: linear-gradient(to bottom, #010023, #004dc1);
+}
+main.darkBlue .info .text {
+  color: #56ffff;
+}
+main.darkBlue .info .text em {
+  color: #004dc1;
+  text-shadow: 0 0 3.5px #004dc1;
+}
+main.darkBlue .info .text .text__important {
   color: #56ffff;
   background-color: #004dc1;
 }
-main.darkBlue section.info {
-  background-image: linear-gradient(to bottom, #010023, #004dc1);
-}
-main.darkBlue h1, main.darkBlue p.text {
+main.darkBlue .info h1 {
   color: #56ffff;
-}
-main.darkBlue h1 em, main.darkBlue p.text em {
-  color: #004dc1;
-  text-shadow: 0 0 3.5px #004dc1;
-  font-weight: bold;
-  font-style: normal;
 }
 main.darkBlue .sprite {
   margin: auto;
@@ -2060,16 +2067,16 @@ h1 {
 .info h1 {
   color: #a90000;
 }
-.info p.text {
+.info .text {
   color: #000;
 }
-.info p.text em {
+.info .text em {
   color: #a90000;
   font-weight: bold;
   font-style: normal;
   letter-spacing: 2px;
 }
-.info p.text__important {
+.info .text__important {
   color: #a90000;
   text-decoration: none;
   font-style: normal;
