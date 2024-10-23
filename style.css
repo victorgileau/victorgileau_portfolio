@@ -568,6 +568,9 @@ main.darkBlue .hero.page.Montage {
           backdrop-filter: blur(5px);
   color: #feffdc;
 }
+.hero .conteneur .infoHero h1 {
+  color: #feffdc;
+}
 .hero .conteneur .infoHero .contact {
   display: flex;
   align-items: center;

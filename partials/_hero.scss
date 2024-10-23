@@ -118,6 +118,9 @@ main.darkBlue {
         grid-template-columns: 60% 40%;
         column-gap: 10px;
         .infoHero {
+            h1 {
+                color: variables.$lightYellow;
+            }
             width: 100%;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0);
