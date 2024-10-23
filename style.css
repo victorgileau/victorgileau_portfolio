@@ -2047,7 +2047,7 @@ main.darkBlue .sprite {
 }
 
 /*---Tout----*/
-h1, .h1 {
+h1 {
   font-family: "BebasNeue";
   letter-spacing: 0.1em;
 }
@@ -2055,12 +2055,6 @@ h1, .h1 {
 .text {
   font-family: "TitilliumLight";
   font-size: 20px;
-}
-.text__important {
-  color: #a90000;
-  text-decoration: none;
-  font-style: normal;
-  background-color: #ffb23e;
 }
 
 .info h1 {
@@ -2074,6 +2068,12 @@ h1, .h1 {
   font-weight: bold;
   font-style: normal;
   letter-spacing: 2px;
+}
+.info p.text__important {
+  color: #a90000;
+  text-decoration: none;
+  font-style: normal;
+  background-color: #ffb23e;
 }
 
 a, .a {

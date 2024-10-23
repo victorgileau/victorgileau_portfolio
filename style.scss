@@ -69,7 +69,7 @@ main.darkBlue {
 
 /*---Tout----*/
 
-h1, .h1 {
+h1 {
     font-family: 'BebasNeue';
     letter-spacing: 0.1em;
 }
@@ -78,12 +78,6 @@ h1, .h1 {
 .text {
     font-family: 'TitilliumLight';
     font-size: 20px;
-    &__important {
-        color: variables.$TurkeyRed;
-        text-decoration: none;
-        font-style: normal;
-        background-color: variables.$OrangeWeb;
-    }
 }
 
 .info {
@@ -97,6 +91,12 @@ h1, .h1 {
             font-weight: bold;
             font-style: normal;
             letter-spacing: 2px;
+        }
+        &__important {
+            color: variables.$TurkeyRed;
+            text-decoration: none;
+            font-style: normal;
+            background-color: variables.$OrangeWeb;
         }
     }
 }
