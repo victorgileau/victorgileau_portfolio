@@ -53,6 +53,12 @@ main.darkBlue {
     }
     h1, p.text {
         color: variables.$TurkeyRed-dark-blue;
+        em {
+            color: variables.$OrangeWeb-dark-blue;
+            text-shadow: 0 0 3.5px variables.$OrangeWeb-dark-blue;
+            font-weight: bold;
+            font-style: normal;
+        }
     }
     .sprite {
         
@@ -66,6 +72,7 @@ main.darkBlue {
 h1, .h1 {
     font-family: 'BebasNeue';
     letter-spacing: 0.1em;
+    color: variables.$TurkeyRed;
 }
 
 
@@ -83,6 +90,12 @@ h1, .h1 {
 .info {
     p.text {
         color: variables.$black;
+        em {
+            color: variables.$TurkeyRed;
+            font-weight: bold;
+            font-style: normal;
+            letter-spacing: 2px;
+        }
     }
 }
 

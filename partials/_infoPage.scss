@@ -16,4 +16,10 @@
         width: 100vw;
         @include modal.modalMobile;
     }
+    .modalConteneur.darkBlue {
+        .modalProjet {
+            @include modal.modalMobile;
+        }
+    }
+    
 }
