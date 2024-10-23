@@ -2050,7 +2050,6 @@ main.darkBlue .sprite {
 h1, .h1 {
   font-family: "BebasNeue";
   letter-spacing: 0.1em;
-  color: #a90000;
 }
 
 .text {
@@ -2064,6 +2063,9 @@ h1, .h1 {
   background-color: #ffb23e;
 }
 
+.info h1 {
+  color: #a90000;
+}
 .info p.text {
   color: #000;
 }

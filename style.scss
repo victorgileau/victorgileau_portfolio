@@ -72,7 +72,6 @@ main.darkBlue {
 h1, .h1 {
     font-family: 'BebasNeue';
     letter-spacing: 0.1em;
-    color: variables.$TurkeyRed;
 }
 
 
@@ -88,6 +87,9 @@ h1, .h1 {
 }
 
 .info {
+    h1 {
+        color: variables.$TurkeyRed;
+    }
     p.text {
         color: variables.$black;
         em {
