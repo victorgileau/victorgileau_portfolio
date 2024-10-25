@@ -1177,6 +1177,10 @@ main.darkBlue section.info.infoAPropos .conteneur .text--capacite {
   color: #56ffff;
   text-shadow: 0px 0px 5px #010023;
 }
+main.darkBlue section.info.infoAPropos .conteneur__center .imgCV:hover {
+  box-shadow: 0 0 2vmin #56ffff;
+  border: 1.5vmin solid #56ffff;
+}
 
 main .hero.APropos {
   position: relative;
@@ -1231,6 +1235,15 @@ main section.info.infoAPropos .conteneur__center {
   text-align: center;
   grid-column: span 2;
   grid-row: 4;
+}
+main section.info.infoAPropos .conteneur__center .imgCV {
+  width: 80%;
+  border-radius: 25px;
+  transition-duration: 0.2s;
+}
+main section.info.infoAPropos .conteneur__center .imgCV:hover {
+  box-shadow: 0 0 2vmin #a90000;
+  border: 1.5vmin solid #a90000;
 }
 main section.info.infoAPropos .conteneur .text {
   width: 100%;
@@ -1365,6 +1378,9 @@ main section.info.infoAPropos .conteneur .text--capacite {
     text-align: center;
     grid-column: 1;
     grid-row: 6;
+  }
+  main section.info.infoAPropos .conteneur__center .imgCV {
+    width: 100%;
   }
   main section.info.infoAPropos .conteneur .text__list--2D {
     grid-template-columns: repeat(auto-fill, minmax(100%, auto));
