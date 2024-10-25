@@ -479,6 +479,12 @@ main.darkBlue .hero .conteneur .photoVG:hover {
 main.darkBlue .hero .conteneur .infoHero {
   color: #010023;
 }
+main.darkBlue .hero .conteneur .infoHero h1 {
+  color: #56ffff;
+}
+main.darkBlue .hero .conteneur .infoHero .text {
+  color: #56ffff;
+}
 main.darkBlue .hero .conteneur .infoHero .contact button {
   background-color: #001496;
   border: none;
@@ -572,6 +578,7 @@ main.darkBlue .hero.page.Montage {
   color: #feffdc;
 }
 .hero .conteneur .infoHero .contact {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -949,6 +956,10 @@ footer .conteneur .lien--8 {
   grid-column: 4;
   grid-row: 2;
 }
+footer .conteneur .lien--9 {
+  grid-column: 5;
+  grid-row: 2;
+}
 footer .conteneur .lien {
   align-content: center;
   text-align: center;
@@ -966,7 +977,7 @@ footer .conteneur .lien__aLien:hover {
 footer .conteneur .credit em:hover {
   color: #feffdc;
 }
-footer .conteneur .lien--9.credit {
+footer .conteneur .lien--10.credit {
   grid-row: auto;
   grid-column: span 5;
 }
@@ -1021,7 +1032,11 @@ footer .conteneur .lien--9.credit {
     grid-column: 2;
     grid-row: 3;
   }
-  footer .conteneur .lien--9.credit {
+  footer .conteneur .lien--9 {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  footer .conteneur .lien--10.credit {
     grid-column: span 2;
     grid-row: 6;
     text-align: center;
@@ -1397,6 +1412,7 @@ main section.info.infoAPropos .conteneur .text--capacite {
   font-style: normal;
   font-weight: bold;
   color: #ffb23e;
+  text-shadow: 3px 3px 2px #a90000;
 }
 .modalConteneur.darkBlue .modalProjet__texte--important {
   background-color: #ffb23e;
@@ -1413,6 +1429,7 @@ main section.info.infoAPropos .conteneur .text--capacite {
   font-style: normal;
   font-weight: bold;
   color: #ffb23e;
+  text-shadow: 3px 3px 2px #a90000;
 }
 .modalConteneur.darkBlue .modalProjet__texteTitre::before {
   content: "";
@@ -1534,7 +1551,8 @@ main section.info.infoAPropos .conteneur .text--capacite {
   color: #56ffff;
 }
 .modalConteneur.darkBlue .modalProjet__texte em {
-  color: #004dc1;
+  color: #56ffff;
+  text-shadow: 3px 3px #004dc1;
 }
 .modalConteneur.darkBlue .modalProjet__texte--important {
   color: #004dc1;
@@ -1544,7 +1562,8 @@ main section.info.infoAPropos .conteneur .text--capacite {
   color: #56ffff;
 }
 .modalConteneur.darkBlue .modalProjet__texteTitre em {
-  color: #004dc1;
+  color: #56ffff;
+  text-shadow: 3px 3px #004dc1;
 }
 .modalConteneur.darkBlue .modalProjet__texteTitre::before {
   background-color: #56ffff;
@@ -1604,6 +1623,7 @@ main section.info.infoAPropos .conteneur .text--capacite {
   font-style: normal;
   font-weight: bold;
   color: #ffb23e;
+  text-shadow: 3px 3px 2px #a90000;
 }
 .modalProjet__texte--important {
   background-color: #ffb23e;
@@ -1620,6 +1640,7 @@ main section.info.infoAPropos .conteneur .text--capacite {
   font-style: normal;
   font-weight: bold;
   color: #ffb23e;
+  text-shadow: 3px 3px 2px #a90000;
 }
 .modalProjet__texteTitre::before {
   content: "";
@@ -2026,8 +2047,8 @@ main.darkBlue .info .text {
   color: #56ffff;
 }
 main.darkBlue .info .text em {
-  color: #004dc1;
-  text-shadow: 0 0 3.5px #004dc1;
+  color: #56ffff;
+  text-shadow: 0 0 3.5px #56ffff;
 }
 main.darkBlue .info .text .text__important {
   color: #56ffff;
@@ -2137,28 +2158,33 @@ section.info .card .iconPage {
     margin: auto;
 }
 */
-section.info .card .iconPage {
+section.info .card a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.info .card a .iconPage {
   width: 100%;
 }
-section.info .card .iconPage .illustrationIcon {
+section.info .card a .iconPage .illustrationIcon {
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+section.info .card a .iconPage .illustrationIcon svg {
   width: 100%;
   aspect-ratio: 1/1;
 }
-section.info .card .iconPage .illustrationIcon svg {
-  width: 100%;
-  aspect-ratio: 1/1;
-}
-section.info .card .iconSVGWeb {
+section.info .card a .iconSVGWeb {
   align-self: center;
-  width: 100%;
+  width: 80%;
   aspect-ratio: 1/1;
 }
 
 /*---Media query---*/
 @media screen and (min-width: 2000px) {
-  section.info .card .sprite {
+  section.info .card a .sprite {
     width: 100%;
-    max-width: 15vw;
+    max-width: 400px;
   }
   section.info .card .iconPage .illustrationIcon {
     width: 100%;
@@ -2172,11 +2198,18 @@ section.info .card .iconSVGWeb {
     font-size: 1.1em;
   }
   section.info .sprite {
-    min-width: 25vw;
-    max-width: 40vw;
+    width: 100%;
+    max-width: 370px;
   }
-  section.info .card .iconSVGWeb {
-    width: 80%;
+  section.info .card a {
+    display: flex;
+    justify-content: center;
+  }
+  section.info .card a .iconPage .illustrationIcon {
+    width: 70%;
+  }
+  section.info .card a .iconSVGWeb {
+    width: 70%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2200,21 +2233,20 @@ section.info .card .iconSVGWeb {
     font-size: 18px;
   }
   /*--Section info page accueil--*/
-  section.info .card .iconSVGWeb {
+  section.info .card a .iconSVGWeb {
     width: 45vw;
   }
   section.info .card .sprite {
     width: 45vw;
   }
-  section.info .card .iconPage {
-    width: 100%;
+  section.info .card a {
+    display: flex;
+    justify-content: center;
   }
-  section.info .card .iconPage .illustrationIcon {
-    width: 80%;
-    aspect-ratio: 1/1;
+  section.info .card a .iconPage .illustrationIcon {
+    width: 60%;
   }
-  section.info .card .iconPage .illustrationIcon svg {
-    width: 100%;
-    aspect-ratio: 1/1;
+  section.info .card a .iconSVGWeb {
+    width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */

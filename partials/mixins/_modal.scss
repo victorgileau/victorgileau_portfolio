@@ -41,6 +41,7 @@
             font-style: normal;
             font-weight: bold;
             color: variables.$OrangeWeb;
+            text-shadow: 3px 3px 2px variables.$TurkeyRed;
         }
         &--important {
             background-color: variables.$OrangeWeb;
@@ -58,6 +59,7 @@
             font-style: normal;
             font-weight: bold;
             color: variables.$OrangeWeb;
+            text-shadow: 3px 3px 2px variables.$TurkeyRed;
         }
         &::before {
             content: '';
@@ -195,7 +197,8 @@
     &__texte {
         color: variables.$TurkeyRed-dark-blue;
         em {
-            color: variables.$OrangeWeb-dark-blue;
+            color: variables.$TurkeyRed-dark-blue;
+            text-shadow: 3px 3px variables.$OrangeWeb-dark-blue;
         }
         &--important {
             color: variables.$OrangeWeb-dark-blue;
@@ -206,7 +209,8 @@
     &__texteTitre {
         color: variables.$TurkeyRed-dark-blue;
         em {
-            color: variables.$OrangeWeb-dark-blue;
+            color: variables.$TurkeyRed-dark-blue;
+            text-shadow: 3px 3px variables.$OrangeWeb-dark-blue;
         }
         &::before {
             background-color: variables.$TurkeyRed-dark-blue;

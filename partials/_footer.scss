@@ -1,8 +1,8 @@
 /*--Footer---*/
 @use './variables';
 
-$arrayNum: (6: 2, 7: 3, 8: 4);
-$arrayNumTwo: (6: 1, 7: 2, 8: 3);
+$arrayNum: (6: 2, 7: 3, 8: 4, 9: 5);
+$arrayNumTwo: (6: 1, 7: 2, 8: 3, 9: 4);
 
 footer.darkBlue {
     background-image: linear-gradient(to right, variables.$Bittersweet-dark-blue, variables.$TurkeyRed-dark-blue);
@@ -67,7 +67,7 @@ footer  {
                 color: variables.$lightYellow;
             }
         }
-        .lien--9.credit {
+        .lien--10.credit {
             grid-row: auto;
             grid-column: span 5;
         }
@@ -98,7 +98,7 @@ footer  {
                     grid-row: $contentI;
                 }
             } 
-            .lien--9.credit {
+            .lien--10.credit {
                 grid-column: span 2;
                 grid-row: 6;
                 text-align: center;

@@ -17,6 +17,12 @@ main.darkBlue {
             }
             .infoHero {
                 color: variables.$lightYellow-dark-blue;
+                h1 {
+                    color: variables.$TurkeyRed-dark-blue;
+                }
+                .text {
+                    color: variables.$TurkeyRed-dark-blue;
+                }
                 .contact {
                     button {
                         background-color: variables.$Maize-dark-blue;
@@ -128,6 +134,7 @@ main.darkBlue {
             backdrop-filter: blur(5px);
             color: variables.$lightYellow;
             .contact {
+                width: 100%;
                 display: flex;
                 align-items: center;
                 flex-direction: row;

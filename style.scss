@@ -48,8 +48,8 @@ main.darkBlue {
         .text {
             color: variables.$TurkeyRed-dark-blue;
             em {
-                color: variables.$OrangeWeb-dark-blue;
-                text-shadow: 0 0 3.5px variables.$OrangeWeb-dark-blue;
+                color: variables.$TurkeyRed-dark-blue;
+                text-shadow: 0 0 3.5px variables.$TurkeyRed-dark-blue;
             }
             .text__important {
                 color: variables.$TurkeyRed-dark-blue;
@@ -146,11 +146,14 @@ section.info .card .iconPage {
     margin: auto;
 }
 */
-section.info .card {
+section.info .card a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     .iconPage {
         width: 100%;
         .illustrationIcon {
-            width: 100%;
+            width: 80%;
             aspect-ratio: 1/1;
             svg {
                 width: 100%;
@@ -160,7 +163,7 @@ section.info .card {
     }
     .iconSVGWeb {
         align-self: center;
-        width: 100%;
+        width: 80%;
         aspect-ratio: 1/1;
     }
 }
@@ -168,9 +171,9 @@ section.info .card {
 /*---Media query---*/
 
 @media screen and (min-width: 2000px) {
-    section.info .card .sprite {
+    section.info .card a .sprite {
         width: 100%;
-        max-width: 15vw;
+        max-width: 400px;
     }
 
     section.info .card .iconPage .illustrationIcon {
@@ -188,12 +191,21 @@ section.info .card {
     }
 
     section.info .sprite {
-        min-width: 25vw;
-        max-width: 40vw;
+        width: 100%;
+        max-width: 370px;
     }
 
-    section.info .card .iconSVGWeb {
-        width: 80%;
+    section.info .card a {
+        display: flex;
+        justify-content: center;
+        .iconPage {
+            .illustrationIcon {
+                width: 70%;
+            }
+        }
+        .iconSVGWeb {
+            width: 70%;
+        }
     }
 }
 
@@ -227,24 +239,23 @@ section.info .card {
 
     /*--Section info page accueil--*/
 
-    section.info .card .iconSVGWeb {
+    section.info .card a .iconSVGWeb {
         width: 45vw;
     }
 
     section.info .card .sprite {
         width: 45vw;
     }
-    section.info .card {
+    section.info .card a {
+        display: flex;
+        justify-content: center;
         .iconPage {
-            width: 100%;
             .illustrationIcon {
-                width: 80%;
-                aspect-ratio: 1/1;
-                svg {
-                    width: 100%;
-                    aspect-ratio: 1/1;
-                }
+                width: 60%;
             }
+        }
+        .iconSVGWeb {
+            width: 60%;
         }
     }
 }

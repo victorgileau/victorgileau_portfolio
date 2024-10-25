@@ -14,6 +14,8 @@ if (pointer != null) {
     }
 }
 
+/*-- Fin Code Track mouse --*/
+
 const main = document.querySelector('main');
 const containerNav = document.querySelector('.bgNav');
 const footer = document.querySelector('footer');
