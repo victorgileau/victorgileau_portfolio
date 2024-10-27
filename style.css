@@ -578,7 +578,7 @@ main.darkBlue .hero.page.Montage {
   color: #feffdc;
 }
 .hero .conteneur .infoHero .contact {
-  width: 100%;
+  width: 85%;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -1095,9 +1095,9 @@ footer .conteneur .lien--10.credit {
     grid-column: 1;
     grid-row: 9;
   }
-  footer .conteneur .lien--9.credit {
+  footer .conteneur .lien--10.credit {
     grid-column: 1;
-    grid-row: 9;
+    grid-row: 10;
   }
 }
 @keyframes marche {
@@ -1339,6 +1339,22 @@ main section.info.infoAPropos .conteneur .text--capacite {
   text-shadow: 0px 0px 5px #feffdc;
 }
 
+@media screen and (min-height: 1200px) {
+  main section.info.infoAPropos .conteneur .text__listPoint .logoList {
+    height: 7vmin;
+    max-width: 100%;
+  }
+}
+@media screen and (max-height: 700px) {
+  main section.info.infoAPropos .conteneur .text__listPoint .logoList {
+    height: 20vmin;
+    max-width: 100%;
+  }
+  main section.info.infoAPropos .conteneur .text__listPoint .logoList--large {
+    max-width: 100%;
+    max-height: 20vh;
+  }
+}
 @media screen and (min-width: 1200px) {
   main section.info.infoAPropos .conteneur {
     padding: 10vh 0;
