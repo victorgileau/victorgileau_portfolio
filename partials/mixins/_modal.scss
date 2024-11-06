@@ -2,7 +2,20 @@
 
 @mixin modal {
     .modal-content {
-        background-image: linear-gradient(variables.$TurkeyRed, variables.$red, variables.$TurkeyRed);
+        background-image: linear-gradient(variables.$TurkeyRed, variables.$red);
+    }
+
+    .headModal {
+        height: 200px;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .btn-close {
+            padding: 10px;
+        }
     }
 
     .modal-body {
@@ -162,7 +175,7 @@
 
 @mixin modalDark {
     .modal-content {
-        background-image: linear-gradient(variables.$OrangeWeb-dark-blue, variables.$Bittersweet-dark-blue, variables.$OrangeWeb-dark-blue) ;
+        background-image: linear-gradient(variables.$OrangeWeb-dark-blue, variables.$Bittersweet-dark-blue) ;
     }
 
     .modal-body {
@@ -197,8 +210,8 @@
     &__texte {
         color: variables.$TurkeyRed-dark-blue;
         em {
-            color: variables.$TurkeyRed-dark-blue;
-            text-shadow: 3px 3px variables.$OrangeWeb-dark-blue;
+            color: variables.$TurkeyRed-lignter-dark-blue;
+            text-shadow: 3px 3px 2px variables.$OrangeWeb-dark-blue;
         }
         &--important {
             color: variables.$OrangeWeb-dark-blue;
@@ -209,8 +222,8 @@
     &__texteTitre {
         color: variables.$TurkeyRed-dark-blue;
         em {
-            color: variables.$TurkeyRed-dark-blue;
-            text-shadow: 3px 3px variables.$OrangeWeb-dark-blue;
+            color: variables.$TurkeyRed-lignter-dark-blue;
+            text-shadow: 3px 3px 2px variables.$OrangeWeb-dark-blue;
         }
         &::before {
             background-color: variables.$TurkeyRed-dark-blue;
