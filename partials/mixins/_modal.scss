@@ -137,6 +137,12 @@
         width: 100%;
         align-self: center;
         border-radius: 10px;
+        &--tablette {
+            width: 70%;
+        }
+        &--mobile {
+            width: 50%;
+        }
     }
 
     &__youtube {

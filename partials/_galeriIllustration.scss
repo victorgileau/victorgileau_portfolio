@@ -40,10 +40,19 @@ main.darkBlue {
         padding: 0.5em;
         border-radius: 5px;
         display: flex;
+        min-height: 500px;
         &__img {
             display: block;
             width: 100%;
             object-fit: cover;
+            &--gifFire {
+                min-height: 200px;
+                position: absolute;
+                height: 100%;
+                aspect-ratio: 1/1;
+                object-fit: contain;
+                image-rendering: pixelated;
+            }
         }
     }
 }

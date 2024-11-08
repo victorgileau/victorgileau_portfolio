@@ -891,12 +891,22 @@ main.darkBlue .infoIllustration .illustration {
   padding: 0.5em;
   border-radius: 5px;
   display: flex;
+  min-height: 500px;
 }
 .infoIllustration .illustration__img {
   display: block;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.infoIllustration .illustration__img--gifFire {
+  min-height: 200px;
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  image-rendering: pixelated;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1137,6 +1147,12 @@ main .cardInfoWeb__imgProject:hover, main .cardInfo3D__imgProject:hover {
   transform: translateY(-0.8em);
   box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
   border: 1em solid #a90000;
+}
+main .cardInfoWeb__imgProject--flhlmq, main .cardInfo3D__imgProject--flhlmq {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1536,6 +1552,12 @@ main section.info.infoAPropos .conteneur .text--capacite {
   align-self: center;
   border-radius: 10px;
 }
+.modalConteneur.darkBlue .modalProjet__img--tablette {
+  width: 70%;
+}
+.modalConteneur.darkBlue .modalProjet__img--mobile {
+  width: 50%;
+}
 .modalConteneur.darkBlue .modalProjet__youtube {
   max-width: 1000px;
   width: 100%;
@@ -1758,6 +1780,12 @@ main section.info.infoAPropos .conteneur .text--capacite {
   width: 100%;
   align-self: center;
   border-radius: 10px;
+}
+.modalProjet__img--tablette {
+  width: 70%;
+}
+.modalProjet__img--mobile {
+  width: 50%;
 }
 .modalProjet__youtube {
   max-width: 1000px;
