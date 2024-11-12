@@ -39,7 +39,7 @@ footer  {
         width: 100%;
         max-width: 1200px;
         display: grid;
-        row-gap: 10px;
+        row-gap: 25px;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 3em 3em 3em;
         @each $i, $contentI in $arrayNum {
@@ -68,6 +68,7 @@ footer  {
             }
         }
         .lien--10.credit {
+            font-weight: bold;
             grid-row: auto;
             grid-column: span 5;
         }
@@ -80,6 +81,7 @@ footer  {
             width: 80%;
             grid-template-columns: 50% 50%;
             grid-template-rows: 3em 3em 3em 3em 3em 3em;
+            row-gap: 10px;
             @for $i from 1 through 5 {
                 .lien--#{$i} {
                     grid-column: 1;
@@ -116,6 +118,7 @@ footer  {
         .conteneur {
             grid-template-columns: 100%;
             grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+            row-gap: 10px;
             @for $i from 1 through 9 {
                 .lien--#{$i} {
                     text-align: center;
