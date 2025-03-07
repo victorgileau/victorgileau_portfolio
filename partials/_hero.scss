@@ -26,7 +26,7 @@ main.darkBlue {
                 .contact {
                     button {
                         background-color: variables.$Maize-dark-blue;
-                        border: none;
+                        border: 1px solid rgba(0,0,0,0);
                         color: variables.$TurkeyRed-dark-blue;
                         a {
                             color: variables.$TurkeyRed-dark-blue;
@@ -142,7 +142,7 @@ main.darkBlue {
                     margin-left: 0.5em;
                     border-radius: 25px;
                     background-color: variables.$Maize;
-                    border: none;
+                    border: 1px solid rgba(0,0,0,0);
                     color: variables.$TurkeyRed;
                     &:hover {
                         background-color: rgba(0, 0, 0, 0);

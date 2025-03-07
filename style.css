@@ -487,7 +487,7 @@ main.darkBlue .hero .conteneur .infoHero .text {
 }
 main.darkBlue .hero .conteneur .infoHero .contact button {
   background-color: #001496;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0);
   color: #56ffff;
 }
 main.darkBlue .hero .conteneur .infoHero .contact button a {
@@ -587,7 +587,7 @@ main.darkBlue .hero.page.Montage {
   margin-left: 0.5em;
   border-radius: 25px;
   background-color: #ffeb69;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0);
   color: #a90000;
 }
 .hero .conteneur .infoHero .contact button:hover {
