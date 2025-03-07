@@ -1185,13 +1185,13 @@ main.darkBlue section.info.infoAPropos .conteneur .text__listPoint {
   background-color: #004dc1;
   color: #56ffff;
 }
+main.darkBlue section.info.infoAPropos .conteneur .text__listPoint a:hover .logoList {
+  filter: drop-shadow(0px 0px 6.5px #004dc1) drop-shadow(0px 0px 2px #010023);
+}
 main.darkBlue section.info.infoAPropos .conteneur .text__listPoint:hover {
   background-color: #56ffff;
   color: #004dc1;
   text-shadow: 0px 0px 5px #010023;
-}
-main.darkBlue section.info.infoAPropos .conteneur .text__listPoint:hover .logoList {
-  filter: drop-shadow(0px 0px 5px #004dc1);
 }
 main.darkBlue section.info.infoAPropos .conteneur .text--capacite {
   color: #56ffff;
@@ -1281,7 +1281,8 @@ main section.info.infoAPropos .conteneur .text__list--3D {
   grid-template-rows: 30vh;
 }
 main section.info.infoAPropos .conteneur .text__list--3D .text__listPoint .logoList {
-  height: 30vh;
+  height: 25vh;
+  aspect-ratio: 1/1;
 }
 main section.info.infoAPropos .conteneur .text__list--2D {
   grid-template-columns: repeat(auto-fill, minmax(130px, auto));
@@ -1302,7 +1303,16 @@ main section.info.infoAPropos .conteneur .text__listPoint {
   justify-content: space-between;
   transition-duration: 0.2s;
 }
+main section.info.infoAPropos .conteneur .text__listPoint a {
+  display: flex;
+  justify-content: center;
+}
+main section.info.infoAPropos .conteneur .text__listPoint a:hover .logoList {
+  filter: drop-shadow(0px 0px 6.5px #ffb23e) drop-shadow(0px 0px 2px #feffdc);
+}
 main section.info.infoAPropos .conteneur .text__listPoint .logoList {
+  transition-duration: 0.2s;
+  min-height: 64px;
   align-self: end;
   border-radius: 10px;
 }
@@ -1312,9 +1322,6 @@ main section.info.infoAPropos .conteneur .text__listPoint:hover {
   background-color: #a90000;
   color: #ffb23e;
   text-shadow: 0px 0px 5px #feffdc;
-}
-main section.info.infoAPropos .conteneur .text__listPoint:hover .logoList {
-  filter: drop-shadow(0px 0px 5px #ffb23e);
 }
 main section.info.infoAPropos .conteneur .text__listPoint--bigger {
   grid-column: span 2;
