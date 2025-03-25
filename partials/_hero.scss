@@ -95,6 +95,13 @@ main.darkBlue {
         background-image: url(./medias/svg/editing_svg.svg), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
         background-blend-mode: luminosity;
     }
+
+    /*-- Section Hero Page Multi Projet --*/
+
+    .hero.page.MultiProjet {
+        background-image: url(./medias/img/gif/pumkin.gif), linear-gradient(variables.$Bittersweet-dark-blue, variables.$Maize-dark-blue);
+        background-blend-mode: luminosity;
+    }
 }
 
 .hero {
@@ -270,7 +277,7 @@ main.darkBlue {
 
     .hero {
         min-height: 100vh;
-        height: auto;
+        //height: auto;
         .conteneur {
             margin-bottom: 10vh;
             margin-top: 0;
@@ -324,6 +331,18 @@ main.darkBlue {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .hero {
+        min-height: 40vh;
+        .conteneur {
+            grid-template-rows: 20% 80%;
+            .photoVGContainer {
+                height: 100%;
+            }
+        }
+    }
+}
+
 .hero.page {
     min-height: 80vh;
 }
@@ -363,6 +382,13 @@ main.darkBlue {
 
 .hero.page.Montage {
     background-image: url(./medias/svg/editing_svg.svg), linear-gradient(variables.$Bittersweet, variables.$Maize);
+    background-blend-mode: luminosity;
+}
+
+/*-- Section Hero Page Multi Projet --*/
+
+.hero.page.MultiProjet {
+    background-image: url(./medias/img/gif/pumkin.gif), linear-gradient(variables.$Bittersweet, variables.$Maize);
     background-blend-mode: luminosity;
 }
 

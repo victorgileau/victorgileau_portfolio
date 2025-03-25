@@ -100,6 +100,7 @@
         justify-content: center;
         color: variables.$TurkeyRed;
         .logicel {
+            transition-duration: 0.2s;
             min-width: 50px;
             max-width: 200px;
             text-align: center;
@@ -128,6 +129,27 @@
                     text-decoration: none;
                 }
             }
+        }
+    }
+
+    a.linkModalImg {
+        display: flex;
+        justify-content: center;
+        img {
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+            border: solid 0.5px rgba(0,0,0,0);
+            &:hover {
+                border: solid 5px variables.$TurkeyRed;
+            }
+        }
+    }
+
+    a.linkModalText {
+        color: variables.$OrangeWeb;
+        &:hover {
+            color: variables.$lightYellow;
+            text-shadow: 2px 2px 3.5px variables.$OrangeWeb;
         }
     }
 
@@ -189,6 +211,23 @@
             &__line {
                 background-color: variables.$OrangeWeb-dark-blue;
             }
+        }
+    }
+
+    a.linkModalImg {
+        img {
+            border: solid 0.5px rgba(0,0,0,0);
+            &:hover {
+                border: solid 5px variables.$TurkeyRed-dark-blue;
+            }
+        }
+    }
+
+    a.linkModalText {
+        color: variables.$TurkeyRed-lignter-dark-blue;
+        &:hover {
+            color: variables.$TurkeyRed-dark-blue;
+            text-shadow: 2px 2px 3.5px variables.$lightYellow-dark-blue;
         }
     }
 

@@ -67,7 +67,7 @@ footer  {
                 color: variables.$lightYellow;
             }
         }
-        .lien--10.credit {
+        .lien--11.credit {
             font-weight: bold;
             grid-row: auto;
             grid-column: span 5;
@@ -82,13 +82,13 @@ footer  {
             grid-template-columns: 50% 50%;
             grid-template-rows: 3em 3em 3em 3em 3em 3em;
             row-gap: 10px;
-            @for $i from 1 through 5 {
+            @for $i from 1 through 6 {
                 .lien--#{$i} {
                     grid-column: 1;
                     grid-row: $i;
                 }
             }
-            @for $i from 6 through 8 {
+            @for $i from 7 through 9 {
                 .lien--#{$i} {
                     grid-column: 2;
                     grid-row: $i;
@@ -100,7 +100,7 @@ footer  {
                     grid-row: $contentI;
                 }
             } 
-            .lien--10.credit {
+            .lien--11.credit {
                 grid-column: span 2;
                 grid-row: 6;
                 text-align: center;
@@ -117,18 +117,18 @@ footer  {
     footer {
         .conteneur {
             grid-template-columns: 100%;
-            grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+            grid-template-rows: 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
             row-gap: 10px;
-            @for $i from 1 through 9 {
+            @for $i from 1 through 10 {
                 .lien--#{$i} {
                     text-align: center;
                     grid-column: 1;
                     grid-row: $i;
                 }
             }
-            .lien--10.credit {
+            .lien--11.credit {
                 grid-column: 1;
-                grid-row: 10;
+                grid-row: 11;
             }
         }
     }

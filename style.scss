@@ -45,6 +45,18 @@ main.darkBlue {
     
     .info {
         background-image: linear-gradient(to bottom, variables.$lightYellow-dark-blue, variables.$OrangeWeb-dark-blue);
+        .card {
+            .text {
+                a {
+                    display: inline;
+                    color: variables.$TurkeyRed-dark-blue;
+                    &:hover {
+                        color: variables.$OrangeWeb-dark-blue;
+                        text-shadow: 2px 2px 3.4px variables.$OrangeWeb-dark-blue;
+                    }
+                }
+            }
+        }
         .text {
             color: variables.$TurkeyRed-dark-blue;
             em {
@@ -84,6 +96,22 @@ h1 {
 .info {
     h1 {
         color: variables.$TurkeyRed;
+    }
+    .card {
+        .text {
+            a {
+                display: inline;
+                color: variables.$TurkeyRed;
+                font-weight: bold;
+                font-style: normal;
+                letter-spacing: 2px;
+                transition-duration: 0.2s;
+                &:hover {
+                    color: variables.$lightYellow;
+                    text-shadow: 2px 2px 3.4px variables.$OrangeWeb;
+                }
+            }
+        }
     }
     .text {
         color: variables.$black;
@@ -125,6 +153,38 @@ footer {
 section.info {
     background-image: linear-gradient(to top, variables.$OrangeWeb, variables.$Maize);
     min-height: 50vh;
+
+    .imgRound {
+        border-radius: 100%;
+        width: 80%;
+        aspect-ratio: 1/1;
+    }
+
+    .infoOneText {
+        order: 0;
+    }
+    .infoOneImg {
+        order: 1;
+    }
+    .infoTwoText {
+        order: 3;
+    }
+    .infoTwoImg {
+        order: 2;
+    }
+    .infoThreeText {
+        order: 4;
+    }
+    .infoThreeImg {
+        order: 5;
+    }
+    .infoFourText {
+        order: 6;
+    }
+    .infoFourImg {
+        order: 7;
+    }
+    
 }
 
 /*
