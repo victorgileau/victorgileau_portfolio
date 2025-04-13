@@ -557,7 +557,8 @@ main.darkBlue .hero.page.MultiProjet {
   background-blend-mode: multiply;
 }
 .hero .conteneur {
-  margin-top: 50px;
+  position: relative;
+  margin-top: 0;
   height: auto;
   min-height: 100vh;
   padding: 10vh 0;
@@ -582,13 +583,54 @@ main.darkBlue .hero.page.MultiProjet {
 .hero .conteneur .infoHero h1 {
   color: #feffdc;
 }
+.hero .conteneur .infoHero a.linkInfo {
+  transition: 0.2s;
+  position: relative;
+  width: 100px;
+  font-size: 18px;
+  color: #feffdc;
+}
+.hero .conteneur .infoHero a.linkInfo img {
+  transition: 0.2s;
+  height: 36px;
+  aspect-ratio: 1/1;
+  filter: drop-shadow(2px 2px 0px #ffb23e);
+}
+.hero .conteneur .infoHero a.linkInfo .svgGithub {
+  width: 35px;
+  aspect-ratio: 1/1;
+  display: block;
+}
+.hero .conteneur .infoHero a.linkInfo .svgGithub path {
+  fill: #feffdc;
+}
+.hero .conteneur .infoHero a.linkInfo:hover {
+  color: #ffb23e;
+  text-shadow: 1px 1px 1px #ff6262;
+}
+.hero .conteneur .infoHero a.linkInfo:hover img {
+  filter: drop-shadow(2px 2px 0px #ff6262);
+}
+.hero .conteneur .infoHero a.linkInfo:hover .svgGithub path {
+  fill: #ffb23e;
+}
 .hero .conteneur .infoHero .contact {
   width: 85%;
+  height: 20%;
   display: flex;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   flex-direction: row;
+  /*display: grid;
+  grid-template-rows: 26% 37% 37%;
+  row-gap: 5px;
+  align-items: center;
+  justify-content: start;*/
 }
 .hero .conteneur .infoHero .contact button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 0.5em;
   border-radius: 25px;
   background-color: #ffeb69;
@@ -623,7 +665,8 @@ main.darkBlue .hero.page.MultiProjet {
 }
 .hero__conteneurIcon {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18vmin, auto));
+  grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+  justify-content: center;
   gap: 2vmin;
 }
 .hero__conteneurIcon .iconPage {
@@ -671,6 +714,7 @@ main.darkBlue .hero.page.MultiProjet {
   }
   .hero__conteneurIcon {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, auto));
     gap: 2vmin;
   }
   .hero__conteneurIcon .iconPage {
@@ -733,6 +777,9 @@ main.darkBlue .hero.page.MultiProjet {
   .hero .conteneur .infoHero h1 {
     font-size: 64px;
   }
+  .hero .conteneur .infoHero a {
+    font-size: 24px;
+  }
   .hero .conteneur .infoHero .text {
     font-size: 24px;
   }
@@ -755,6 +802,19 @@ main.darkBlue .hero.page.MultiProjet {
   }
   .hero .conteneur {
     grid-template-rows: 20% 80%;
+  }
+  .hero .conteneur .infoHero .contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 26% 37% 37%;
+    row-gap: 5px;
+    align-items: center;
+    justify-content: start;
+  }
+  .hero .conteneur .infoHero .contact button {
+    width: 100%;
+    justify-self: start;
   }
   .hero .conteneur .photoVGContainer {
     height: 100%;

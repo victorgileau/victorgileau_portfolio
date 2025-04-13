@@ -117,7 +117,9 @@ main.darkBlue {
     background-position: 50% 20%, left;
     background-blend-mode: multiply;
     .conteneur {
-        margin-top: 50px;
+        position: relative;
+
+        margin-top: 0;
 
         height: auto;
         min-height: 100vh;
@@ -140,12 +142,56 @@ main.darkBlue {
             border-radius: 25px;
             backdrop-filter: blur(5px);
             color: variables.$lightYellow;
+            a.linkInfo {
+                transition: 0.2s;
+                position: relative;
+                width: 100px;
+                font-size: 18px;
+                color: variables.$lightYellow;
+                img {
+                    transition: 0.2s;
+                    height: 36px;
+                    aspect-ratio: 1/1;
+                    filter: drop-shadow(2px 2px 0px variables.$OrangeWeb);
+                }
+                .svgGithub {
+                    width: 35px;
+                    aspect-ratio: 1/1;
+                    display: block;
+                    path {
+                        fill: variables.$lightYellow;
+                    }
+                }
+                &:hover {
+                    color: variables.$OrangeWeb;
+                    text-shadow: 1px 1px 1px variables.$Bittersweet;
+                    img {
+                        filter: drop-shadow(2px 2px 0px variables.$Bittersweet);
+                    }
+                    .svgGithub {
+                        path {
+                            fill: variables.$OrangeWeb;
+                        }
+                    }
+                }
+            }
             .contact {
                 width: 85%;
+                height: 20%;
+                
                 display: flex;
-                align-items: center;
+                justify-content: start;
+                align-items: start;
                 flex-direction: row;
+                /*display: grid;
+                grid-template-rows: 26% 37% 37%;
+                row-gap: 5px;
+                align-items: center;
+                justify-content: start;*/
                 button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     margin-left: 0.5em;
                     border-radius: 25px;
                     background-color: variables.$Maize;
@@ -185,7 +231,8 @@ main.darkBlue {
     &__conteneurIcon {
         
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(18vmin, auto));
+        grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+        justify-content: center;
         gap: 2vmin;
         .iconPage {
             display: flex;
@@ -239,6 +286,7 @@ main.darkBlue {
         height: auto;
         &__conteneurIcon {
             display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(45%, auto));
             gap: 2vmin;
             .iconPage {
                 width: 100%;
@@ -309,11 +357,15 @@ main.darkBlue {
                 h1 {
                     font-size: 64px;
                 }
+                a {
+                    font-size: 24px;
+                }
                 .text {
                     font-size: 24px;
                 }
                 .contact {
                     font-size: 28px;
+                    
                 }
             }
         }
@@ -336,6 +388,21 @@ main.darkBlue {
         min-height: 40vh;
         .conteneur {
             grid-template-rows: 20% 80%;
+            .infoHero {
+                .contact {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 50%;
+                    grid-template-rows: 26% 37% 37%;
+                    row-gap: 5px;
+                    align-items: center;
+                    justify-content: start;
+                    button {
+                        width: 100%;
+                        justify-self: start;
+                    }
+                }
+            }
             .photoVGContainer {
                 height: 100%;
             }
