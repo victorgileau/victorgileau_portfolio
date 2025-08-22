@@ -2255,6 +2255,43 @@ main.darkBlue .toggle__slider {
     margin-right: 1em;
   }
 }
+.infoProjectIllu {
+  justify-self: center;
+  align-self: center;
+  padding: 5vh 25vmin;
+  position: relative;
+  width: 100%;
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2.5vmin;
+  text-align: center;
+}
+.infoProjectIllu .testImg {
+  border-radius: 10px;
+  margin-bottom: 3vmin;
+  width: 100%;
+  min-height: 60vh;
+  background-color: red;
+  background-image: url(../medias/img/illustrations/dessin-random.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .infoProjectIllu {
+    padding: 5vh 2vw;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .infoProjectIllu {
+    max-width: 1600px;
+    padding: 5vh 5vmin;
+  }
+}
 @font-face {
   font-family: "Lostar";
   src: url(./medias/fonts/lostar/Lostar.ttf) format(truetype);
