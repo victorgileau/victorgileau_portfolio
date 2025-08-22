@@ -1,3 +1,37 @@
+/*--- Code pop up image illustration ---*/
+
+const imgs = document.querySelectorAll('.testImg');
+const imgsInside = document.querySelectorAll('.imgInside');
+const backTransp = document.querySelector('.imgOpen');
+
+backTransp.addEventListener('click', () => {
+    if (backTransp.classList.contains('showFlexBack')) {
+        backTransp.classList.remove('showFlexBack');
+        imgsInside.forEach((el) => {
+            el.classList.add('dontShow');
+        });
+    }
+});
+
+imgs.forEach((el, i) => {
+    console.log(i);
+    if (document.querySelector(`.imgInside--${i}`)) {
+        el.addEventListener('click', () => {
+            backTransp.classList.add('showFlexBack');
+
+            let imgSelected = document.querySelector(`.imgInside--${i}`);
+            console.log(imgSelected);
+            if (imgSelected.classList.contains('dontShow')) {
+                imgSelected.classList.remove('dontShow');
+            }
+            
+            imgSelected.classList.add('show');
+        });
+    }
+    
+});
+
+
 /*-- Code Track mouse --*/
 
 const pointer = document.querySelector('.pointer');
