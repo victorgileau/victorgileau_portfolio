@@ -114,3 +114,24 @@ function toggleCheckBox() {
 }
 
 checkbox.addEventListener('click', toggleCheckBox);
+
+
+if (document.querySelector('.mySwiper')) {
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        allowTouchMove: false,
+        /*autoHeight: true,*/
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+} else {
+    console.log("Swiper not found");
+}
+
