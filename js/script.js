@@ -3,9 +3,10 @@
 const imgs = document.querySelectorAll('.testImg');
 const imgsInside = document.querySelectorAll('.imgInside');
 const backTransp = document.querySelector('.imgOpen');
+const closeBtn = document.querySelector('.close');
 
-if (backTransp != null) {
-    backTransp.addEventListener('click', () => {
+if (closeBtn != null) {
+    closeBtn.addEventListener('click', () => {
         if (backTransp.classList.contains('showFlexBack')) {
             backTransp.classList.remove('showFlexBack');
             imgsInside.forEach((el) => {
@@ -18,7 +19,7 @@ if (backTransp != null) {
 if (imgs != null) {
     imgs.forEach((el, i) => {
         console.log(i);
-        if (document.querySelector(`.imgInside--${i}`)) {
+        if (document.querySelector(`.imgInside--${i}`) && document.querySelector(`.testImg--${i}`)) {
             el.addEventListener('click', () => {
                 backTransp.classList.add('showFlexBack');
 
@@ -26,9 +27,11 @@ if (imgs != null) {
                 console.log(imgSelected);
                 if (imgSelected.classList.contains('dontShow')) {
                     imgSelected.classList.remove('dontShow');
+                    
+                } else {
+                    imgSelected.classList.add('dontShow');
                 }
-                
-                imgSelected.classList.add('show');
+
             });
         }
         

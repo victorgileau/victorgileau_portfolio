@@ -2279,24 +2279,17 @@ main.darkBlue .toggle__slider {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 .infoProjectIllu .testImg.full {
   width: 100vw;
   min-height: 70vh;
   margin: 8vmin 0;
 }
+.infoProjectIllu .testImg--1 {
+  background-image: url(../medias/img/illustrations/wolf-noir-blanc-rouge.jpg);
+}
 
-@media screen and (max-width: 1200px) {
-  .infoProjectIllu {
-    padding: 5vh 2vw;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .infoProjectIllu {
-    max-width: 1600px;
-    padding: 5vh 5vmin;
-  }
-}
 .imgOpen {
   position: sticky;
   z-index: 100;
@@ -2312,16 +2305,45 @@ main.darkBlue .toggle__slider {
   display: none;
 }
 .imgOpen .imgInside {
-  display: none;
-  width: 50vw;
+  display: block;
+  min-width: 60vw;
   height: 80vh;
   background-image: url(../medias/img/illustrations/dessin-random.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.imgOpen .imgInside.dontShow {
+  display: none;
+}
 .imgOpen .imgInside.show {
   display: block;
+}
+.imgOpen .imgInside--0 {
+  background-image: url(../medias/img/illustrations/dessin-random.jpg);
+}
+.imgOpen .imgInside--1 {
+  background-image: url(../medias/img/illustrations/wolf-noir-blanc-rouge.jpg);
+}
+.imgOpen .close {
+  position: absolute;
+  top: 1.5vmin;
+  right: 3.5vmin;
+  border-radius: 100%;
+  width: 100px;
+  aspect-ratio: 1/1;
+  background-image: url(../medias/svg/x.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: ease;
+}
+.imgOpen .close:hover {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 2px #feffdc);
+  box-shadow: 0 0 2px #feffdc;
 }
 
 .dontShow {
@@ -2338,6 +2360,23 @@ main.darkBlue .toggle__slider {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 1200px) {
+  .infoProjectIllu {
+    padding: 5vh 2vw;
+  }
+  .imgOpen .imgInside {
+    width: 80vw;
+  }
+  .imgOpen .close:hover {
+    box-shadow: none;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .infoProjectIllu {
+    max-width: 1600px;
+    padding: 5vh 5vmin;
+  }
+}
 /*--- Swiper ---*/
 .swiper {
   width: 80%;
@@ -2384,7 +2423,7 @@ input.inputZoom[type=checkbox]:checked ~ label > img {
 }
 
 .swiper-pagination-progressbar {
-  min-height: 1vh;
+  min-height: 1.5vh;
 }
 .swiper-pagination-progressbar span.swiper-pagination-progressbar-fill {
   background-color: none;
